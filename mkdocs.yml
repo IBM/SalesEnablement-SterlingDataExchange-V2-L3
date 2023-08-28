@@ -20,7 +20,6 @@ nav:
   - 'B2Bi Configuration Part 2': 'ConfigurationPart2.md'
   - 'Client Demonstration': 'ClientDemonstration.md'
   - 'Next Steps': 'NextSteps.md'
-  
 
 theme:
   name: material
