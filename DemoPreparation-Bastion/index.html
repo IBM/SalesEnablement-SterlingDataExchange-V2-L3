@@ -1,0 +1,1123 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="IBM Sterling Data Exchange Level 3 Demonstration Guide">
+      
+      
+        <meta name="author" content="Thomas Limanek (talimane@us.ibm.com)">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.4.0">
+    
+    
+      
+        <title>Environment Preparation and B2Bi Installation using IBM Cloud Shell - IBM Sterling Data Exchange Level 3 V2 Demonstration Guide</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.69437709.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#access-the-openshift-web-console-and-verify-the-openshift-clusters-health" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="IBM Sterling Data Exchange Level 3 V2 Demonstration Guide" class="md-header__button md-logo" aria-label="IBM Sterling Data Exchange Level 3 V2 Demonstration Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            IBM Sterling Data Exchange Level 3 V2 Demonstration Guide
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Environment Preparation and B2Bi Installation using IBM Cloud Shell
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="IBM Sterling Data Exchange Level 3 V2 Demonstration Guide" class="md-nav__button md-logo" aria-label="IBM Sterling Data Exchange Level 3 V2 Demonstration Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    IBM Sterling Data Exchange Level 3 V2 Demonstration Guide
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Overview/" class="md-nav__link">
+        Demonstration Overview
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Environment Preparation and B2Bi Installation using IBM Cloud Shell
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Environment Preparation and B2Bi Installation using IBM Cloud Shell
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#access-the-openshift-web-console-and-verify-the-openshift-clusters-health" class="md-nav__link">
+    Access the OpenShift web console and verify the OpenShift cluster's health
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#access-the-bastion-server-for-the-itz-environment" class="md-nav__link">
+    Access the Bastion server for the ITZ environment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-install-directory-and-retrieve-the-b2bi-installation-scripts" class="md-nav__link">
+    Create install directory and retrieve the B2Bi installation scripts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-the-ibm-cloud-command-line-interfaces-clis-openshift-clis-and-helm" class="md-nav__link">
+    Install the IBM Cloud command line interfaces (CLIs), OpenShift CLIs, and Helm
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authenticate-to-the-openshift-cluster" class="md-nav__link">
+    Authenticate to the OpenShift cluster
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-db2-in-the-openshift-cluster" class="md-nav__link">
+    Install Db2 in the OpenShift cluster
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configure-db2-and-create-the-required-b2bi-tables" class="md-nav__link">
+    Configure Db2 and create the required B2Bi tables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-mq-in-the-openshift-cluster" class="md-nav__link">
+    Install MQ in the OpenShift cluster
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update-the-environment-variables-with-ibm-container-entitlement-key-and-e-mail-address" class="md-nav__link">
+    Update the environment variables with IBM container entitlement key and e-mail address
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-b2bi-in-the-openshift-cluster" class="md-nav__link">
+    Install B2Bi in the OpenShift cluster
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verify-all-three-b2bi-pods-are-running-in-openshift" class="md-nav__link">
+    Verify all three B2Bi pods are running in OpenShift
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ConfigurationPart1/" class="md-nav__link">
+        B2Bi Configuration Part 1
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ConfigurationPart2/" class="md-nav__link">
+        B2Bi Configuration Part 2
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ClientDemonstration/" class="md-nav__link">
+        Client Demonstration
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../NextSteps/" class="md-nav__link">
+        Next Steps
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#access-the-openshift-web-console-and-verify-the-openshift-clusters-health" class="md-nav__link">
+    Access the OpenShift web console and verify the OpenShift cluster's health
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#access-the-bastion-server-for-the-itz-environment" class="md-nav__link">
+    Access the Bastion server for the ITZ environment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-install-directory-and-retrieve-the-b2bi-installation-scripts" class="md-nav__link">
+    Create install directory and retrieve the B2Bi installation scripts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-the-ibm-cloud-command-line-interfaces-clis-openshift-clis-and-helm" class="md-nav__link">
+    Install the IBM Cloud command line interfaces (CLIs), OpenShift CLIs, and Helm
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authenticate-to-the-openshift-cluster" class="md-nav__link">
+    Authenticate to the OpenShift cluster
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-db2-in-the-openshift-cluster" class="md-nav__link">
+    Install Db2 in the OpenShift cluster
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configure-db2-and-create-the-required-b2bi-tables" class="md-nav__link">
+    Configure Db2 and create the required B2Bi tables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-mq-in-the-openshift-cluster" class="md-nav__link">
+    Install MQ in the OpenShift cluster
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update-the-environment-variables-with-ibm-container-entitlement-key-and-e-mail-address" class="md-nav__link">
+    Update the environment variables with IBM container entitlement key and e-mail address
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-b2bi-in-the-openshift-cluster" class="md-nav__link">
+    Install B2Bi in the OpenShift cluster
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verify-all-three-b2bi-pods-are-running-in-openshift" class="md-nav__link">
+    Verify all three B2Bi pods are running in OpenShift
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+  <h1>Environment Preparation and B2Bi Installation using IBM Cloud Shell</h1>
+
+<p>This demonstration guide assumes a Red Hat OpenShift cluster running on VMware on IBM Cloud environment provisioned in IBM Technology Zone (ITZ) <a href="https://techzone.ibm.com/my/reservations/create/63a3a25a3a4689001740dbb3" target="_blank">here</a>.</p>
+<p>At this point, all users should have completed the steps in the IBM Sterling Data Exchange Level 3 learning plan to reserve the Red Hat OpenShift environment as described in the IBM Sterling Data Exchange Level 3 <a href="https://ibm.seismic.com/Link/Content/DC8JQcd2PWDTR8fB2FmjmV3cPC8P" target="_blank">Introduction video</a>. Before proceeding, validate that the reservation has been fully provisioned and is in the <strong>Ready</strong> state in ITZ. If not, please complete those steps before proceeding.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Note, some screen captures below will show the name of the ITZ environment as <strong>OpenShift Cluster (VMware on IBM Cloud) - IPI</strong>. This demonstration script now uses the ITZ environment <strong>OpenShift Cluster (VMware on IBM Cloud) - UPI</strong>. </p>
+</div>
+<p><img alt="" src="../_attachments/TZReady-2.png" /></p>
+<p>The following steps must be performed before delivering the demonstration. These steps should be performed well in advance of starting an actual client demonstration as it will take approximately <strong>90 minutes</strong> for all steps to complete.</p>
+<h2 id="access-the-openshift-web-console-and-verify-the-openshift-clusters-health">Access the OpenShift web console and verify the OpenShift cluster's health</h2>
+<ol>
+<li>From the <a href="http:https://techzone.ibm.com/my/reservations" target="_blank">ITZ My Reservations page</a>, click the tile for your OpenShift cluster reservation (must be in the <strong>Ready</strong> state).</li>
+</ol>
+<p><img alt="" src="../_attachments/ITZReservationDetailsPage.png" /></p>
+<p>At this time, make note of the <strong>Username</strong> and <strong>Password</strong> fields under the <strong>Shared Reservation</strong> heading as highlighted above. You will need these values in the next steps.</p>
+<ol start="2">
+<li>Click the <strong>Open your IBM Cloud environment</strong> <img alt="" src="../_attachments/OpenOSWebConsole.png" /> button on the reservations detail page.</li>
+</ol>
+<p>A new window or tab will open in your browser.</p>
+<ol start="3">
+<li>Enter the <strong>Username</strong> and <strong>Password</strong> for your OpenShift cluster (as described in step 1 above) and click the <strong>Log in</strong> button.</li>
+</ol>
+<p><img alt="" src="../_attachments/OpenShiftLogin.png" /></p>
+<p>Before proceeding, verify that all 3 worker nodes were properly provisioned and available.</p>
+<ol start="4">
+<li>Click the <strong>Compute</strong> menu option in left-hand menu bar and then click the <strong>Nodes</strong> menu option.</li>
+</ol>
+<p><img alt="" src="../_attachments/OpenShiftLeftHandMenu.png" /></p>
+<ol start="5">
+<li>Observe the <strong>Nodes</strong> that have the role of <strong>worker</strong>.  There should be 3 of them with a status of <strong>Ready</strong>.</li>
+</ol>
+<p><img alt="" src="../_attachments/OpenShiftThreeWorkerNodes.png" /></p>
+<div class="admonition error">
+<p class="admonition-title">Are less than 3 worker nodes available and  <strong>Ready</strong>**?</p>
+<p>If there are less than 3 worker nodes in the <strong>Ready</strong> state, it is
+very likely you will encounter issues during the installation of IBM Sterling B2B Integrator. It is highly recommended to delete the current ITZ reservation and create a new one following the earlier instructions. Alternatively, you can open a ticket with the ITZ support team using the <a href="" target="_blank">#itz-techzone-support</a> slack channel and see if the support team can fix the broken node(s).</p>
+</div>
+<h2 id="access-the-bastion-server-for-the-itz-environment">Access the <strong>Bastion</strong> server for the ITZ environment</h2>
+<p>In the next steps, you will access a virtual machine running in IBM Cloud referred to as a <strong>Bastion</strong> server. This server will be used to run various IBM Cloud, OpenShift, and other command line interfaces to install IBM Sterling B2B Integrator on the OpenShift cluster. </p>
+<p>To access the <strong>Bastion</strong> server, you must create a remote shell from your local workstation to the <strong>Bastion</strong> using a secure shell protocol client (ssh). Most operating systems (MacOS, Linux, Microsoft Windows) have an ssh client built in. There are also 3rd party and open source clients like <a href="https://www.putty.org" target="_blank">putty</a> that can be utilized.</p>
+<p>The screen images that follow utilize the native MacOS ssh client running from a terminal window. Specific instructions for other operating systems are not provided, but should be similar.</p>
+<ol start="6">
+<li>Copy the <strong>Bastion SSH connection</strong> string for your ITZ reservation details page.</li>
+</ol>
+<p><img alt="" src="../_attachments/ITZReservationDetailsPage-Bastion.png" /></p>
+<p>At this time, make note of the <strong>Bastion Password</strong> field as highlighted above. You will need this password in the next step.</p>
+<ol start="7">
+<li>Open a terminal or command line window on your local workstation.</li>
+<li>In your local terminal or command line window, paste the <strong>Bastion SSH connection</strong> string and press enter.</li>
+</ol>
+<p><img alt="" src="../_attachments/BastionCLI-1.png" /></p>
+<ol start="9">
+<li>If prompted to accept the fingerprint, enter <strong>yes</strong></li>
+</ol>
+<p><img alt="" src="../_attachments/BastionCLI-2.png" /></p>
+<ol start="10">
+<li>Enter the <strong>Bastion Password</strong> when prompted for a password.</li>
+</ol>
+<p><img alt="" src="../_attachments/BastionCLI-3.png" /></p>
+<h2 id="create-install-directory-and-retrieve-the-b2bi-installation-scripts">Create install directory and retrieve the B2Bi installation scripts</h2>
+<ol start="11">
+<li>Create a new directory for the B2Bi installation scripts.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>mkdir b2bi
+</code></pre></div>
+<ol start="12">
+<li>Set the <strong>PROJECT_DIR</strong> environment variable.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>export PROJECT_DIR=$HOME/b2bi
+</code></pre></div>
+<ol start="13">
+<li>Change directories to <strong>PROJECT_DIR</strong>.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>cd $PROJECT_DIR
+</code></pre></div>
+<ol start="14">
+<li>Download the B2Bi installation script.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>wget -O rapid-lab-b2bi-newdb-6122-ocpodf-bastion.zip https://github.com/IBM/SalesEnablement-SterlingDataExchange-V2-L3/blob/main/tools/rapid-lab-b2bi-newdb-6122-ocpodf-bastion.zip?raw=true
+</code></pre></div>
+<details class="example">
+<summary>Example output</summary>
+<p>[admin@bastion b2bi]$  wget -O rapid-lab-b2bi-newdb-61051-CloudShell.zip https://github.com/IBM/SalesEnablement-SterlingDataExchange-L3/blob/main/tools/rapid-lab-b2bi-newdb-6122-ocpodf-bastion.zip?raw=true</p>
+<p>--2023-03-22 17:43:41--  https://github.com/IBM/SalesEnablement-SterlingDataExchange-L3/blob/main/tools/rapid-lab-b2bi-newdb-6122-ocpodf-bastion.zip?raw=true</p>
+<p>Resolving github.com (github.com)... 140.82.114.4</p>
+<p>Connecting to github.com (github.com)|140.82.114.4|:443... connected.</p>
+<p>HTTP request sent, awaiting response... 302 Found
+Location: https://github.com/IBM/SalesEnablement-SterlingDataExchange-L3/raw/main/tools/rapid-lab-b2bi-newdb-6122-ocpodf-bastion.zip [following]</p>
+<p>--2023-03-22 17:43:41--  https://github.com/IBM/SalesEnablement-SterlingDataExchange-L3/raw/main/tools/rapid-lab-b2bi-newdb-6122-ocpodf-bastion.zip</p>
+<p>Reusing existing connection to github.com:443.</p>
+<p>HTTP request sent, awaiting response... 302 Found</p>
+<p>Location: https://raw.githubusercontent.com/IBM/SalesEnablement-SterlingDataExchange-L3/main/tools/rapid-lab-b2bi-newdb-6122-ocpodf-bastion.zip [following]</p>
+<p>--2023-03-22 17:43:41--  https://raw.githubusercontent.com/IBM/SalesEnablement-SterlingDataExchange-L3/main/tools/rapid-lab-b2bi-newdb-6122-ocpodf-bastion.zip</p>
+<p>Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 185.199.109.133, 185.199.110.133, 185.199.111.133, ...</p>
+<p>Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.109.133|:443... connected.</p>
+<p>HTTP request sent, awaiting response... 200 OK</p>
+<p>Length: 26769 (26K) [application/zip]</p>
+<p>Saving to: ‘rapid-lab-b2bi-newdb-61051-CloudShell.zip’</p>
+<p>rapid-lab-b2bi-newdb-610 100%[===============================&gt;]  26.14K  --.-KB/s    in 0s      </p>
+<p>2023-03-22 17:43:42 (98.2 MB/s) - ‘rapid-lab-b2bi-newdb-61051-CloudShell.zip’ saved [26769/26769]</p>
+<p>[admin@bastion b2bi]$ </p>
+</details>
+<ol start="15">
+<li>Unzip the installation script.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>unzip rapid-lab-b2bi-newdb-6122-ocpodf-bastion.zip
+</code></pre></div>
+<details class="example">
+<summary>Example output</summary>
+<p>[admin@bastion b2bi]$ unzip rapid-lab-b2bi-newdb-61051-CloudShell.zip </p>
+<p>Archive:  rapid-lab-b2bi-newdb-61051-CloudShell.zip</p>
+<p>inflating: COPYING                 </p>
+<p>inflating: README.md               </p>
+<p>inflating: deploy_b2bi.sh          </p>
+<p>inflating: deploy_db2.sh           </p>
+<p>inflating: deploy_mq.sh            </p>
+<p>inflating: edited-values.yaml      </p>
+<p>inflating: env.sh                  </p>
+<p>inflating: ocp-cli.sh              </p>
+<p>inflating: prepare_db2.sh          </p>
+<p>[admin@bastion b2bi]$ </p>
+</details>
+<h2 id="install-the-ibm-cloud-command-line-interfaces-clis-openshift-clis-and-helm">Install the IBM Cloud command line interfaces (CLIs), OpenShift CLIs, and Helm</h2>
+<ol start="16">
+<li>Run the <strong>ocp-cli.sh</strong> shell script to install the required tools.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>./ocp-cli.sh
+</code></pre></div>
+<details class="example">
+<summary>Example output</summary>
+<p>[admin@bastion b2bi]$ ./ocp-cli.sh </p>
+<p>Installing ibmcloud utility. Wait!</p>
+<p>Installing Helm. Wait!</p>
+<p>Installing OpenShift oc utility. Wait!</p>
+<p>Installing Kubernetes kubectl. Wait!</p>
+<p>cleaning up. Wait!</p>
+<p>Checking versions</p>
+<p>Client Version: 4.11.31</p>
+<p>Kustomize Version: v4.5.4</p>
+<p>version.BuildInfo{Version:"v3.11.2", GitCommit:"912ebc1cd10d38d340f048efaf0abda047c3468e", GitTreeState:"clean", GoVersion:"go1.18.10"}</p>
+<p>Flag --short has been deprecated, and will be removed in the future. The --short output will become the default.</p>
+<p>Client Version: v1.24.11</p>
+<p>Kustomize Version: v4.5.4</p>
+<p>ibmcloud version 2.15.0+79fb346-2023-02-21T22:06:52+00:00</p>
+<p>[admin@bastion b2bi]$ </p>
+</details>
+<h2 id="authenticate-to-the-openshift-cluster">Authenticate to the OpenShift cluster</h2>
+<p>For the next steps, the <strong>OpenShift</strong> login command to authenticate to the OpenShift cluster must be retrieved and executed.</p>
+<ol start="17">
+<li>
+<p>Switch to the <strong>OpenShift web console</strong> browser window or tab opened earlier.</p>
+</li>
+<li>
+<p>Click the <strong>IAM</strong> identity drop-down menu at top right of the <strong>OpenShift web console</strong> and click the <strong>Copy login command</strong> option.</p>
+</li>
+</ol>
+<p><img alt="" src="../_attachments/OSCopyLoginMenu-2.png" /></p>
+<ol start="19">
+<li>Click the <strong>Display Token</strong> link.</li>
+</ol>
+<p><img alt="" src="../_attachments/DisplayTokenLink.png" /></p>
+<ol start="20">
+<li>Copy the string in the <strong>Log in with this token</strong> field.</li>
+</ol>
+<p><img alt="" src="../_attachments/OSLoginAPIToken.png" /></p>
+<ol start="21">
+<li>Switch back to the terminal with the open <strong>ssh</strong> session to the <strong>Bastion</strong> server.</li>
+<li>Paste the <strong>oc login</strong> command line copied in step 20.</li>
+</ol>
+<div class="admonition example">
+<p class="admonition-title">Example output</p>
+<p>[admin@bastion b2bi]$ oc login --token=sha256~KGOvFlJmXVd1UhyThw76v5TwGcv4FCMdnZIGJ6KJcaA --server=https://api.ocp-2700039nft-2v51.cloud.techzone.ibm.com:6443</p>
+<p>Logged into "https://api.ocp-2700039nft-2v51.cloud.techzone.ibm.com:6443" as "kube:admin" using the token provided.</p>
+<p>You have access to 71 projects, the list has been suppressed. You can list all projects with 'oc projects'</p>
+<p>Using project "default".</p>
+<p>Welcome! See 'oc help' to get started.</p>
+<p>[admin@bastion b2bi]$ </p>
+</div>
+<h2 id="install-db2-in-the-openshift-cluster">Install Db2 in the OpenShift cluster</h2>
+<ol start="23">
+<li>Run the environment setup and Db2 deploy scripts.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>. env.sh ; ./deploy_db2.sh
+</code></pre></div>
+<details class="example">
+<summary>Example output</summary>
+<p>Now using project "db2" on server "https://c109-e.us-east.containers.cloud.ibm.com:30720".</p>
+<p>You can add applications to this project with the 'new-app' command. For example, try:</p>
+<p>oc new-app rails-postgresql-example</p>
+<p>to build a new example application in Ruby. Or use kubectl to deploy a simple Kubernetes application:</p>
+<p>kubectl create deployment hello-node --image=k8s.gcr.io/e2e-test-images/agnhost:2.33 -- /agnhost serve-hostname</p>
+<p>serviceaccount/db2 created
+clusterrole.rbac.authorization.k8s.io/system:openshift:scc:privileged added: "db2"
+secret/db2-secret created
+service/db2-ci created
+service/db2-lb created
+statefulset.apps/db2 created</p>
+</details>
+<div class="admonition warning">
+<p class="admonition-title">Wait 5 minutes...</p>
+<p>Wait approximately 5 minutes for the Db2 containers to start loading in OpenShift before executing the next step.</p>
+</div>
+<details class="tip">
+<summary>Optional: monitor events in OpenShift web console</summary>
+<p>Use the OpenShift web console to monitor the <strong>Db2</strong> project events and pod creation.
+<img alt="" src="../_attachments/OSEventsDB2.png" />
+<img alt="" src="../_attachments/OSPodsDB2.png" /></p>
+</details>
+<ol start="24">
+<li>Verify Db2 is up and running in the OpenShift cluster.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>oc logs -f ${DB2_NAME}-0
+</code></pre></div>
+<div class="admonition failure">
+<p class="admonition-title">Failure</p>
+<p>If no output is seen from the above command, or if it returns the following message:</p>
+<p><em>Error from server (BadRequest): container "db2" in pod "db2-0" is waiting to start: ContainerCreating</em></p>
+<p>wait and rerun oc logs -f ${DB2_NAME}-0 until the output starts steaming as shown in the example output below.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example output</p>
+<p>(*) Previous setup has not been detected. Creating the users...</p>
+<p>(*) Creating users ...</p>
+<p>(*) Creating instance ...</p>
+<p>DB2 installation is being initialized.</p>
+<p>Total number of tasks to be performed: 4
+Total estimated time for all tasks to be performed: 309 second(s)</p>
+<p>Task #1 start
+Description: Setting default global profile registry variables
+Task #1 end</p>
+<p>Task #2 start
+Description: Initializing instance list
+Estimated time 5 second(s)
+Task #2 end</p>
+<p>Task #3 start
+Description: Configuring DB2 instances
+Estimated time 300 second(s)
+Task #3 end</p>
+<p>Task #4 start
+Description: Updating global profile registry
+Estimated time 3 second(s)
+Task #4 end</p>
+<div class="highlight"><pre><span></span><code>...
+**Long output - truncated in this example**
+...
+</code></pre></div>
+<p>2022-10-18-16.44.43.180954+000 I33681E386            LEVEL: Warning
+PID     : 15858                TID : 139996146354048 PROC : db2start</p>
+<p>INSTANCE: db2inst1             NODE : 000</p>
+<p>HOSTNAME: db2-0</p>
+<p>FUNCTION: DB2 UDB, base sys utilities, sqleReleaseStStLockFile, probe:16078</p>
+<p>MESSAGE : Released lock on the file:</p>
+<p>DATA #1 : String, 50 bytes</p>
+<p><strong>/database/config/db2inst1/sqllib/ctrl/db2strst.lck</strong></p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Do not proceed until...</p>
+<p>Do not proceed to the next step until the following line appears in the output:</p>
+<p><strong>/database/config/db2inst1/sqllib/ctrl/db2strst.lck</strong></p>
+</div>
+<ol start="25">
+<li>Stop the <strong>oc logs</strong> command by entering <span class="keys"><kbd class="key-control">Ctrl</kbd></span><strong>+c</strong> on the keyboard.</li>
+</ol>
+<div class="admonition example">
+<p class="admonition-title">Example output</p>
+<p>...
+FUNCTION: DB2 UDB, base sys utilities, sqleReleaseStStLockFile, probe:16078</p>
+<p>MESSAGE : Released lock on the file:</p>
+<p>DATA #1 : String, 50 bytes</p>
+<p><strong>/database/config/db2inst1/sqllib/ctrl/db2strst.lck</strong></p>
+<p>^C</p>
+<p>itzuser@itz-2700039nft-srv4:~/b2bi$</p>
+</div>
+<h2 id="configure-db2-and-create-the-required-b2bi-tables">Configure Db2 and create the required B2Bi tables</h2>
+<ol start="26">
+<li>Prepare the Db2 instance running in OpenShift.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>./prepare_db2.sh
+</code></pre></div>
+<p>This script does not generate output.</p>
+<ol start="27">
+<li>Remotely connect to the Db2 container running in OpenShift.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>oc rsh pod/${DB2_NAME}-0 su - db2inst1
+</code></pre></div>
+<div class="admonition example">
+<p class="admonition-title">Example output</p>
+<p>Last login: Tue Oct 18 20:47:33 UTC 2022</p>
+<p>[db2inst1@db2-0 ~]$</p>
+</div>
+<p>A remote connection is now open to the Db2 container running in OpenShift as shown by the change in the command prompt to: <strong>[db2inst1@db2-0 ~]$</strong></p>
+<ol start="28">
+<li>Run the <strong>db2reg.sh</strong> script.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>./db2reg.sh
+</code></pre></div>
+<details class="example">
+<summary>Example output</summary>
+<p>DB20000I  The UPDATE DATABASE MANAGER CONFIGURATION command completed
+successfully.</p>
+<p>DB20000I  The UPDATE DATABASE MANAGER CONFIGURATION command completed
+successfully.</p>
+<p>DB20000I  The UPDATE DATABASE MANAGER CONFIGURATION command completed
+successfully.</p>
+<p>DB20000I  The UPDATE DATABASE MANAGER CONFIGURATION command completed
+successfully.</p>
+<p>DB20000I  The UPDATE DATABASE MANAGER CONFIGURATION command completed
+successfully.</p>
+<p>DB20000I  The UPDATE DATABASE MANAGER CONFIGURATION command completed
+successfully.</p>
+<p>DB20000I  The UPDATE DATABASE MANAGER CONFIGURATION command completed
+successfully.</p>
+<p>DB20000I  The UPDATE DATABASE MANAGER CONFIGURATION command completed
+successfully.</p>
+</details>
+<ol start="29">
+<li>Create the B2Bi tables in Db2.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>db2 -stvf create_scc_db_b2bidb.sql
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">This will take ~5 minutes</p>
+<p>This command will take approximately 5 minutes to complete.</p>
+</div>
+<details class="example">
+<summary>Example output</summary>
+<p>CREATE DATABASE B2BIDB AUTOMATIC STORAGE YES USING CODESET UTF-8 TERRITORY US COLLATE USING IDENTITY PAGESIZE 4096 DFT_EXTENT_SZ 32</p>
+<p>DB20000I  The CREATE DATABASE command completed successfully.</p>
+<p>CONNECT TO B2BIDB</p>
+<p>Database Connection Information</p>
+<p>Database server        = DB2/LINUXX8664 11.5.5.1
+ SQL authorization ID   = DB2INST1
+ Local database alias   = B2BIDB</p>
+<p>UPDATE DATABASE CONFIG USING STMT_CONC LITERALS</p>
+<p>DB20000I  The UPDATE DATABASE CONFIGURATION command completed successfully.</p>
+<p>...
+<strong>Long output - truncated in this example</strong>
+...</p>
+<p>CREATE USER TEMPORARY TABLESPACE UTEMP4KTS IN DATABASE PARTITION GROUP IBMDEFAULTGROUP PAGESIZE 4 K MANAGED BY AUTOMATIC STORAGE EXTENTSIZE 32 BUFFERPOOL UTEMP4KBP FILE SYSTEM CACHING</p>
+<p>DB20000I  The SQL command completed successfully.</p>
+<p>CONNECT RESET</p>
+<p>DB20000I  The SQL command completed successfully.</p>
+</details>
+<ol start="30">
+<li>Run the final Db2 update script.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>./db2-update.sh
+</code></pre></div>
+<details class="example">
+<summary>Example output</summary>
+<p>Database Connection Information</p>
+<p>Database server        = DB2/LINUXX8664 11.5.5.1
+SQL authorization ID   = DB2INST1
+Local database alias   = B2BIDB</p>
+<p>DB20000I  The SQL command completed successfully.
+DB20000I  The TERMINATE command completed successfully.
+DB20000I  The FORCE APPLICATION command completed successfully.
+DB21024I  This command is asynchronous and may not be effective immediately.</p>
+<p>DB20000I  The DEACTIVATE DATABASE command completed successfully.</p>
+<p>10/18/2022 16:53:39     0   0   SQL1064N  DB2STOP processing was successful.</p>
+<p>SQL1064N  DB2STOP processing was successful.</p>
+<p>10/18/2022 16:53:41     0   0   SQL1063N  DB2START processing was successful.</p>
+<p>SQL1063N  DB2START processing was successful.</p>
+</details>
+<ol start="31">
+<li>Exit the connection to the Db2 container in OpenShift.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>exit
+</code></pre></div>
+<p>Notice the command line prompt has changed back to the prompt for the <strong>ssh</strong> session to the <strong>Bastion</strong> server.</p>
+<h2 id="install-mq-in-the-openshift-cluster">Install MQ in the OpenShift cluster</h2>
+<ol start="32">
+<li>Deploy MQ to OpenShift.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>./deploy_mq.sh
+</code></pre></div>
+<details class="example">
+<summary>Example output</summary>
+<p>Now using project "mq" on server "https://c109-e.us-east.containers.cloud.ibm.com:30720".</p>
+<p>You can add applications to this project with the 'new-app' command. For example, try:</p>
+<p>oc new-app rails-postgresql-example</p>
+<p>to build a new example application in Ruby. Or use kubectl to deploy a simple Kubernetes application:</p>
+<p>kubectl create deployment hello-node --image=k8s.gcr.io/e2e-test-images/agnhost:2.33 -- /agnhost serve-hostname</p>
+<p>serviceaccount/mq created
+clusterrole.rbac.authorization.k8s.io/system:openshift:scc:privileged added: "mq"
+service/mq-data created
+service/mq-web created</p>
+<p>W1018 16:54:39.757566   34060 shim_kubectl.go:58] Using non-groupfied API resources is deprecated and will be removed in a future release, update apiVersion to "route.openshift.io/v1" for your resource</p>
+<p>route.route.openshift.io/mq-web created</p>
+<p>secret/mq-secret created</p>
+<p>statefulset.apps/mq created</p>
+</details>
+<h2 id="update-the-environment-variables-with-ibm-container-entitlement-key-and-e-mail-address">Update the environment variables with IBM container entitlement key and e-mail address</h2>
+<p>The next steps require editing of a file using the <strong>vi</strong> editor. If you are not familiar with the <strong>vi</strong> editor, it is strongly recommend to watch the following video before proceeding. There is no audio for this video.</p>
+<p><div class="video-container"><iframe src="../_videos/EditENV-sh-final.mp4" style="position: relative; width: 100%; height: 22.172vw" frameborder="0" allowfullscreen></iframe></div></p>
+<ol start="33">
+<li>Open the <strong>vi</strong> editor.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>vi  env.sh
+</code></pre></div>
+<ol start="34">
+<li>Open the IBM <strong>Entitlement key</strong> page <a href="https://myibm.ibm.com/products-services/containerlibrary" target="_blank">here</a>.</li>
+</ol>
+<!-- https://www.ibm.com/partnerworld/program/benefits/partner-package -->
+
+<p>Note, re-authentication to ibm.com may be required.</p>
+<ol start="35">
+<li>If an entitlement key does not already exist, click <strong>Add new key</strong>.</li>
+</ol>
+<p><img alt="" src="../_attachments/EntitlementKey4.png" /></p>
+<ol start="36">
+<li>Click the <strong>Copy</strong> button.</li>
+</ol>
+<p><img alt="" src="../_attachments/EntitlementKey5.png" /></p>
+<ol start="37">
+<li>Return to the IBM Cloud Shell window, use the arrow keys to move the cursor between the quotes in the <strong>export APIKEY</strong> line, press <strong>i</strong> to enter input mode, and paste the copied <strong>entitlement key</strong> between the quotes.</li>
+<li>Press the <strong>esc</strong> key to exit input mode.</li>
+<li>Arrow key down and over to between the quotes in the <strong>export EMAIL=""</strong> line, press <strong>i</strong> to enter input mode, and enter a your e-mail address.</li>
+<li>Press the <strong>esc</strong> key to exit input mode.</li>
+<li>Press the <strong>:</strong> key and then the <strong>x</strong> key and enter to save and exit the <strong>vi</strong> editor.</li>
+<li>Verify the env.sh file looks like the example output below.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>cat env.sh
+</code></pre></div>
+<div class="admonition example">
+<p class="admonition-title">Example output</p>
+<p>itzuser@itz-2700039nft-srv4:~/b2bi$ cat env.sh</p>
+<p>#!/usr/bin/bash</p>
+<p>## Locate your APIKEY (Entitlement Key For Container Software)</p>
+<p>## here: https://myibm.ibm.com/products-services/containerlibrary</p>
+<p>## Requires IBM ID and permission.</p>
+<p>export PROJECT_NAME="b2bi"</p>
+<p>export PROJECT_DIR="$HOME/b2bi"</p>
+<p>export DB2_NAME="db2"</p>
+<p>export MQ_NAME="mq"</p>
+<p>export APIKEY="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"</p>
+<p>export EMAIL="andrew@jones-tx.com"</p>
+<p>itzuser@itz-2700039nft-srv4:~/b2bi$</p>
+</div>
+<h2 id="install-b2bi-in-the-openshift-cluster">Install B2Bi in the OpenShift cluster</h2>
+<ol start="43">
+<li>Deploy the B2Bi related containers on OpenShift.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>./deploy_b2bi.sh
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">This will take approximately 70 minutes</p>
+<p>This script will take approximately 70 minutes to complete.</p>
+</div>
+<details class="tip">
+<summary>Optional: monitor events in the OpenShift web console</summary>
+<p>Use the OpenShift web console to monitor the <strong>b2bi</strong> project events and pod creation.
+<img alt="" src="../_attachments/OSEventsB2Bi.png" />
+<img alt="" src="../_attachments/OSPodsB2Bi.png" /></p>
+</details>
+<details class="example">
+<summary>Example output beginning.</summary>
+<p>Now using project "b2bi" on server "https://c103-e.us-south.containers.cloud.ibm.com:31501".</p>
+<p>You can add applications to this project with the 'new-app' command. For example, try:</p>
+<p>oc new-app rails-postgresql-example</p>
+<p>to build a new example application in Ruby. Or use kubectl to deploy a simple Kubernetes application:</p>
+<p>kubectl create deployment hello-node --image=k8s.gcr.io/e2e-test-images/agnhost:2.33 -- /agnhost serve-hostname</p>
+<p>...
+<strong>Long output - truncated in this example</strong>
+...</p>
+<p>ibm-b2bi-prod/charts/ibm-sch/ibm_cloud_pak/pak_extensions/pre-install/namespace-administration/role.yaml</p>
+<p>ibm-b2bi-prod/charts/ibm-sch/ibm_cloud_pak/pak_extensions/pre-install/namespace-administration/rolebinding.yaml</p>
+<p>ibm-b2bi-prod/charts/ibm-sch/ibm_cloud_pak/pak_extensions/pre-install/namespace-administration/serviceaccount.yaml</p>
+<p>ibm-b2bi-prod/charts/ibm-sch/ibm_cloud_pak/pak_extensions/pre-install/namespace-administration/setupNamespace.sh</p>
+</details>
+<details class="example">
+<summary>Example output ending.</summary>
+<p>...
+<strong>Long output - truncated in this example</strong>
+...</p>
+<p>NAME: sterling-fg</p>
+<p>LAST DEPLOYED: Wed Mar 22 18:06:32 2023</p>
+<p>NAMESPACE: b2bi</p>
+<p>STATUS: deployed</p>
+<p>REVISION: 1</p>
+<p>NOTES:</p>
+<p>Please wait while the application is getting deployed.</p>
+<ol>
+<li>Run the below command to check the status of application server replica sets. At least 1 replica must be in 'READY' state. </li>
+</ol>
+<p>kubectl get replicasets -l release=sterling-fg -n b2bi</p>
+<ol start="2">
+<li>Run the below command to check the status of the application 
+server pods for the release.</li>
+</ol>
+<p>kubectl get pods -l release=sterling-fg -n b2bi -o wide</p>
+<p>To view the logs for a pod, run the below command.</p>
+<p>kubectl logs <pod name> -n b2bi</p>
+<ol start="3">
+<li>Access the application by running the following url</li>
+</ol>
+<hr />
+<p>Below app defined PVC name configuration will be deprecated in future release</p>
+</details>
+<p>Do not close the <strong>ssh</strong> session or the terminal window until the command completes. Once the command  successfully completes, the <strong>ssh</strong> session can be closed (type <strong>exit</strong> at the command prompt or simply close the terminal window).</p>
+<h2 id="verify-all-three-b2bi-pods-are-running-in-openshift">Verify all three B2Bi <strong>pods</strong> are running in OpenShift</h2>
+<ol start="44">
+<li>Return to the OpenShift web console window in your browser.</li>
+<li>Click the <strong>Home</strong> menu on the right-hand menu bar, and then click <strong>Projects</strong>.</li>
+</ol>
+<p><img alt="" src="../_attachments/OpenShiftProjects.png" /></p>
+<ol start="46">
+<li>Click the <strong>b2bi</strong> project link.</li>
+<li>Click the <strong>Pods</strong> link under <strong>Inventory</strong>.</li>
+</ol>
+<p><img alt="" src="../_attachments/OpenShiftB2BiInventory.png" /></p>
+<p>There should be 3 <strong>pods</strong> in the <strong>b2bi</strong> project. The <strong>pods</strong> will go through various states while starting up. Do not proceed to the next chapter until all 3 <strong>pods</strong> have a <strong>Status</strong> of <strong>Running</strong> AND the <strong>Ready</strong> column shows <strong>1/1</strong> for each <strong>pod</strong>! Note, it may take several minutes for the <strong>sterling-fg-b2bi-asi-server-0</strong> pod to change the <strong>Ready</strong> state from <strong>0/1</strong> to <strong>1/1</strong>. You may observe this <strong>pod</strong> restarting multiple times.  This is normal, just be patient.</p>
+<p><img alt="" src="../_attachments/OpenShiftB2BiAllPodsReady.png" /></p>
+<p>That concludes the setup of the environment. Proceed to the next part of the demonstration guide to configure B2Bi.</p>
+
+
+
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../Overview/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Demonstration Overview" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Demonstration Overview
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../ConfigurationPart1/" class="md-footer__link md-footer__link--next" aria-label="Next: B2Bi Configuration Part 1" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              B2Bi Configuration Part 1
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2022 IBM
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tracking", "content.code.annotate"], "search": "../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.9c69f0bc.min.js"></script>
+      
+    
+  </body>
+</html>
