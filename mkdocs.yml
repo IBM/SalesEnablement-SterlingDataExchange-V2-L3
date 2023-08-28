@@ -1,0 +1,86 @@
+# Project info
+site_name: IBM Sterling Data Exchange Level 3 V2 Demonstration Guide
+site_description: IBM Sterling Data Exchange Level 3 Demonstration Guide
+site_author: Thomas Limanek (talimane@us.ibm.com)
+copyright: Copyright &copy; 2022 IBM
+
+# Repository
+repo_name:  IBM/SalesEnablement-SterlingDataExchange-V2-L3
+
+#repo_url: https://github.com/IBM/https://github.com/IBM/SalesEnablement-SterlingDataExchange-V2-L3/tree/gh-pages
+#edit_uri: edit/master/docs
+docs_dir: docs
+
+  # - 'Environment Preparation and B2Bi Installation using a VSI': 'DemoPreparation-VSI.md'
+nav:
+  - 'Introduction': 'index.md'
+  - 'Demonstration Overview': 'Overview.md'
+  - 'Environment Preparation and B2Bi Installation using IBM Cloud Shell': 'DemoPreparation-Bastion.md'
+  - 'B2Bi Configuration Part 1': 'ConfigurationPart1.md'
+  - 'B2Bi Configuration Part 2': 'ConfigurationPart2.md'
+  - 'Client Demonstration': 'ClientDemonstration.md'
+  - 'Next Steps': 'NextSteps.md'
+  
+
+theme:
+  name: material
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - content.code.annotate
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+
+plugins:
+    - mkdocs-video
+    - macros
+    - search
+
+markdown_extensions:
+  - sane_lists
+  - pymdownx.details
+  - admonition
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.keys
+  - attr_list
+
+extra:
+  generator: false
+  gitRepo: "https://github.com/IBM/SalesEnablement-SterlingDataExchange-V2-L3"
+  learningplan:
+    name: "IBM Sterling Data Exchange Level 3"
+    l2: "IBM Sterling Data Exchange Level 2"
+    url: "https://yourlearning.ibm.com/activity/PLAN-TBD"
+  offering:
+    name: "IBM Sterling B2B Integrator"
+  guide:
+    name: "IBM Sterling Data Exchange - Level 3 Demonstration Guide"
+    url: "https://ibm.github.io/SalesEnablement-SterlingDataExchange-V2-L3/"
+  tz_environment:
+    name: "Sterling File Gateway/B2B Integrator on OpenShift"
+    environmentURL: "https://techzone.ibm.com/collection/rapid-lab-sfg-b2bi-on-rhocp"
+    reservationURL: "https://techzone.ibm.com/my/reservations"
+    centOSServerAdmin: "root"
+    windowsServerAdminPW: "passw0rd"
+    cloudAccount: "2112072 - ITZ - V2"
+    sshKeyFile: "pem_ibmcloudvsi_download.pem"
+    numberOfWorkerNodes: "3"
+  b2bi:
+    # installScript: "rapid-lab-b2bi-newdb-61051.zip"
+    installScript: "rapid-lab-b2bi-newdb-6122-ocpodf-bastion.zip"
+    # installScriptCloudShell: "rapid-lab-b2bi-newdb-61051-CloudShell.zip"
+    installScriptCloudShell: "rapid-lab-b2bi-newdb-6122-ocpodf-bastion.zip"
+    installPath: "blob/main/tools"
