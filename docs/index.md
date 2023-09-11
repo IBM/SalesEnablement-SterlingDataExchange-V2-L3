@@ -1,4 +1,5 @@
-Welcome to the {{learningplan.name}} demonstration guide! The goal of this demonstration guide is to provide IBM and Business Partner technical sellers with the knowledge and tools to perform hands-on demonstrations of {{offering.name}}.
+Welcome to the {{learningplan.name}} demonstration guide!  {{leaningplan.name}}
+ The goal of this demonstration guide is to provide IBM and Business Partner technical sellers with the knowledge and tools to perform hands-on demonstrations of {{offering.name}}.
 
 !!! danger "READ THIS BEFORE PROCEEDING"
     To complete this activity, users MUST have an **entitlement key** in the IBM Entitled Registry to access IBM container software (e.g. IBM Sterling B2B Integrator). Before proceeding, verify an entitlement exists.
@@ -13,7 +14,7 @@ Welcome to the {{learningplan.name}} demonstration guide! The goal of this demon
 
 In addition to completing all the steps in this demonstration guide, to obtain the associated {{learningplan.name}} badge:
 
-**IBM Technical Sellers** must develop and record a Stand & Deliver presentation. This video is intended to simulate delivery of a “live” demo in front of a client — on camera. IBMers will have flexibility in defining a hypothetical client, the pain points the client has, and the goals they aspire to achieve. The recording will then cover the seller’s hands-on demonstration and pitch to the client the value of the IBM solution using the environment and techniques of this lab. Specific criteria that must be demonstrated as part of the Stand & Deliver recordings is provided within the documentation that accompanies the Level 3 course in Your Learning.
+**IBM Technical Sellers** must develop and record a Stand & Deliver presentation. This video is intended to simulate delivery of a “live” demo in front of a client — on camera. IBMers will have **flexibility **in defining a hypothetical client, the pain points the client has, and the goals they aspire to achieve. The recording will then cover the seller’s hands-on demonstration and pitch to the client the value of the IBM solution using the environment and techniques of this lab. Specific criteria that must be demonstrated as part of the Stand & Deliver recordings is provided within the documentation that accompanies the Level 3 course in Your Learning.
 
 **Business Partners** must pass an accreditation quiz after completing this demonstration guide. The quiz consists of multiple choice questions, with four possible responses (and only one correct answer) for each question. The quiz verifies use of the demonstration environment and not general knowledge of the offering.**Hint: keep the demonstration guide and the associated IBM Technology Zone (TechZone) environment active while completing the quiz. Watch for the "BP quiz question" ![](_attachments/questionICON.png) icon in the demonstration guide.**
 
