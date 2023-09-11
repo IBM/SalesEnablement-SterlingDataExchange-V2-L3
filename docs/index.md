@@ -8,19 +8,9 @@ Welcome to the {{learningplan.name}} demonstration guide!
 
     ![](_attachments/EntitlementNoKey.png)
 
-    **If a valid entitlement exists, a screen similar to the one below should be displayed. The actual key will be created in a later step. lease proceed with the demonstration script.**
+    **If a valid entitlement exists, a screen similar to the one below should be displayed. The actual key will be created in a later step. Please proceed with the demonstration script.**
 
     ![](_attachments/EntitlementKey3.png)
-
-!!! danger "Tom Testing the documentation"
-    To complete this activity, users MUST have an **entitlement key** in the IBM Entitled Registry to access IBM container software (e.g. IBM Sterling B2B Integrator). Before proceeding, verify an entitlement exists.
-
-    To verify entitlement to IBM container software, open the IBM **Entitlement key** page <a href="https://myibm.ibm.com/products-services/containerlibrary" target="_blank">here</a>. Note, authentication to ibm.com will be required. If a screen with a yellow warning as seen in the image below is displayed, you will **NOT** be able to complete this activity. IBM employees will need to open a IBM Cloud support ticket to request access. Business Partners can learn more about their entitlements <a href="https://www.ibm.com/partnerworld/program/benefits/partner-package" target="_blank">here</a>, and will need to speak with their IBM representative to resolve the entitlement issue.
-
-    ![](_attachments/EntitlementNoKey.png)
-
-    **If a valid entitlement exists, a screen similar to the one below should be displayed. The actual key will be created in a later step. lease proceed with the demonstration script.**
-
 
 In addition to completing all the steps in this demonstration guide, to obtain the associated {{learningplan.name}} badge:
 
@@ -93,5 +83,10 @@ The following acronyms are used throughout this demonstration guide:
     - User Interface (UI)
     - Virtual Machine (VM)
     - Yet Another Markup Language (YAML)
+
+    - Virtual Machine (VM)
+    - Yet Another Markup Language (YAML)
+
+
 
 It is now time to proceed to the Demonstration Overview.

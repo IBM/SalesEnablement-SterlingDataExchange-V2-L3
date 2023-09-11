@@ -80,7 +80,7 @@ First, a **SSH Host Identity** needs to be created. The Host Identity Key is a P
 
 14. Click the **Deployment** menu item in left-hand menu bar and then click the **SSH Host Identity Key** option.
 
-![](_attachments/B2BiMainMenuToDeployment-2.png)
+![](_attachments/B2BiMainMenuToDeploymentCallouts.png)
 
 15. Click the **Go!** button in the **Create: New Host Identity Key** box.
 
