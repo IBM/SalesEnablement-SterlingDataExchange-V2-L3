@@ -1,4 +1,4 @@
-Welcome to the {{learningplan.name}} demonstration guide!  {{leaningplan.name}}
+Welcome to the {{learningplan.name}} demonstration guide!  {{learningplan.name}}
  The goal of this demonstration guide is to provide IBM and Business Partner technical sellers with the knowledge and tools to perform hands-on demonstrations of {{offering.name}}.
 
 !!! danger "READ THIS BEFORE PROCEEDING"
