@@ -41,7 +41,7 @@ Leave the default to allow updates if objects exist in the system.   Click **Nex
 
 In the latest {{offering.name}} release, new password policies have been set that require users to change their password the first time they authenticate. 
 
-7. The maps are shown as all selected. Click **Next** 
+7. The trading partner envelopes are shown as all selected. Click **Next** 
 
 ![](_attachments/B2BiLab02-07-All-Envelopes-Selected.png)
 
@@ -66,7 +66,7 @@ In the latest {{offering.name}} release, new password policies have been set tha
 ![](_attachments/B2BiLab02-11-Confirm-Imports.png)
 
 
-1.   Click **Return** 
+12.   Click **Return** 
 
 ![](_attachments/B2BiLab02-12-Return-From-Imports.png)
 
@@ -77,17 +77,15 @@ In the latest {{offering.name}} release, new password policies have been set tha
 
 ## Execute the lab02 demo
 
-1.  Click **Business Processes** and then **Manager**. In the Search box enter **lab02** to search for the process name. 
+13.  Click **Business Processes** and then **Manager**. In the Search box enter **lab02** to search for the process name. 
 
 ![](_attachments/B2BiLab02-19-Enter-BP-Selection.png)
 
 
-Click on the **Execution Manager** 
-
 ??? question "BP quiz question"
     Not sure what question best here ir even if the popp up is functioning.
 
-14. Click the **Deployment** menu item in left-hand menu bar and then click the **SSH Host Identity Key** option.
+14. Click on the **Execution Manager** 
 
 ![](_attachments/B2BiLab02-20-Select-BP-to-Run.png)
 
@@ -96,21 +94,24 @@ Click on the **Execution Manager**
 
 ![](_attachments/B2BiLab02-21-Execute-Business-Process.png)
 
-16.  In the **Local Desktop filename** Select **Choose File**   
+16.  In the **Local Desktop filename** Select **Choose File**  
    
 ![](_attachments/B2BiLab02-22-Select-Input-File.png)
 
 
-17.  On the desktop itself choose the input file **outb810.txt** from the file system.  Generally, documents sent by the B2B Integrator host company to trading partners are considered "outbound" and ANSI X12 invoices are "810"s, hence the outb810 name.  This contents and formatting of this file is critical for the proper functioning of the business process.  The file format is typical of many flat file formatted application files.  The file is processed by two different maps in the Business Process.   The first finds the partner name off an internal supplier number in the application file.   The second translates the contents of the file into into an ANSI X12 EDI format.  
+17.  On the desktop itself choose the input file **outb810.txt** from the file system.  
+ 
+!!! Note "Note"
+
+    Generally, documents sent by the B2B Integrator host company to trading partners are considered "outbound" and ANSI X12 invoices are "810"s, hence the outb810 name.  This contents and formatting of this file is critical for the proper functioning of the business process.  The file format is typical of many flat file formatted application files.  The file is processed by two different maps in the Business Process.   The first finds the partner name off an internal supplier number in the application file.   The second translates the contents of the file into into an ANSI X12 EDI format.  is the end of the setup necessary for the lab.   In a customer demo situation, that should usually get setup ahead of time so that only the following steps are needed to show the demo scenario itself.
 
 ![](_attachments/B2BiLab02-23-Select-Input-File-on-PC.png)
 
-
-1.   Once the file is shown as selected next to **Choose File** click **GO!**
+18.   Once the file is shown as selected next to **Choose File** click **GO!**
 
 ![](_attachments/B2BiLab02-24-Press-Go-to-Execute-BP.png)
 
-19.  Wait until the Business Process complete and all of the Status are shown as *Success**  Click **Close** in the upper right of the screen.
+19.  Wait until the Business Process completes and all of the Status are shown as **Success** Click **Close** in the upper right of the screen.
 
 ![](_attachments/B2BiLab02-25-View-Completed-Processes.png)
 
@@ -118,7 +119,7 @@ Click on the **Execution Manager**
 
 Now that the Business Process has run, the user can view detail of the process.  
 
-20.   Click the **Current Processes** under **Monitor** which is under **Business Process**
+20.   Click **Current Processes** under **Monitor** which is under **Business Process**
 
 ![](_attachments/B2BiLab02-26-Select-Current-Processes.png)
 
@@ -134,7 +135,7 @@ Now that the Business Process has run, the user can view detail of the process.
 
 ![](_attachments/B2BiLab02-29-View-Input-File-In-Process.png)
 
-24.  Select the top process in the **Id** Column.
+24.  Click on the top process in the **Id** Column.
 
 ![](_attachments/B2BiLab02-30-Select-End-of-Process.png)
 
