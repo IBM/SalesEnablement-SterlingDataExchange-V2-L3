@@ -491,7 +491,7 @@
 <p><img alt="" src="../_attachments/B2BiLab02-06-Select-All-Envelopes.png"></p>
 <p>In the latest IBM Sterling B2B Integrator release, new password policies have been set that require users to change their password the first time they authenticate. </p>
 <ol start="7">
-<li>The maps are shown as all selected. Click <strong>Next</strong> </li>
+<li>The trading partner envelopes are shown as all selected. Click <strong>Next</strong> </li>
 </ol>
 <p><img alt="" src="../_attachments/B2BiLab02-07-All-Envelopes-Selected.png"></p>
 <ol start="8">
@@ -510,7 +510,7 @@
 <li>All of the artifacts selected for import are shown.   If any are missing, hit the <strong>Back</strong> button and make the additional selections.    Otherwise, click <strong>Finish</strong></li>
 </ol>
 <p><img alt="" src="../_attachments/B2BiLab02-11-Confirm-Imports.png"></p>
-<ol>
+<ol start="12">
 <li>Click <strong>Return</strong> </li>
 </ol>
 <p><img alt="" src="../_attachments/B2BiLab02-12-Return-From-Imports.png"></p>
@@ -519,17 +519,16 @@
 <p>That is the end of the setup necessary for the lab.   In a customer demo situation, that should usually get setup ahead of time so that only the following steps are needed to show the demo scenario itself.</p>
 </div>
 <h2 id="execute-the-lab02-demo">Execute the lab02 demo</h2>
-<ol>
+<ol start="13">
 <li>Click <strong>Business Processes</strong> and then <strong>Manager</strong>. In the Search box enter <strong>lab02</strong> to search for the process name. </li>
 </ol>
 <p><img alt="" src="../_attachments/B2BiLab02-19-Enter-BP-Selection.png"></p>
-<p>Click on the <strong>Execution Manager</strong> </p>
 <details class="question">
 <summary>BP quiz question</summary>
 <p>Not sure what question best here ir even if the popp up is functioning.</p>
 </details>
 <ol start="14">
-<li>Click the <strong>Deployment</strong> menu item in left-hand menu bar and then click the <strong>SSH Host Identity Key</strong> option.</li>
+<li>Click on the <strong>Execution Manager</strong> </li>
 </ol>
 <p><img alt="" src="../_attachments/B2BiLab02-20-Select-BP-to-Run.png"></p>
 <ol start="15">
@@ -537,25 +536,29 @@
 </ol>
 <p><img alt="" src="../_attachments/B2BiLab02-21-Execute-Business-Process.png"></p>
 <ol start="16">
-<li>In the <strong>Local Desktop filename</strong> Select <strong>Choose File</strong>   </li>
+<li>In the <strong>Local Desktop filename</strong> Select <strong>Choose File</strong>  </li>
 </ol>
 <p><img alt="" src="../_attachments/B2BiLab02-22-Select-Input-File.png"></p>
 <ol start="17">
-<li>On the desktop itself choose the input file <strong>outb810.txt</strong> from the file system.  Generally, documents sent by the B2B Integrator host company to trading partners are considered "outbound" and ANSI X12 invoices are "810"s, hence the outb810 name.  This contents and formatting of this file is critical for the proper functioning of the business process.  The file format is typical of many flat file formatted application files.  The file is processed by two different maps in the Business Process.   The first finds the partner name off an internal supplier number in the application file.   The second translates the contents of the file into into an ANSI X12 EDI format.  </li>
+<li>On the desktop itself choose the input file <strong>outb810.txt</strong> from the file system.  </li>
 </ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Generally, documents sent by the B2B Integrator host company to trading partners are considered "outbound" and ANSI X12 invoices are "810"s, hence the outb810 name.  This contents and formatting of this file is critical for the proper functioning of the business process.  The file format is typical of many flat file formatted application files.  The file is processed by two different maps in the Business Process.   The first finds the partner name off an internal supplier number in the application file.   The second translates the contents of the file into into an ANSI X12 EDI format.  is the end of the setup necessary for the lab.   In a customer demo situation, that should usually get setup ahead of time so that only the following steps are needed to show the demo scenario itself.</p>
+</div>
 <p><img alt="" src="../_attachments/B2BiLab02-23-Select-Input-File-on-PC.png"></p>
-<ol>
+<ol start="18">
 <li>Once the file is shown as selected next to <strong>Choose File</strong> click <strong>GO!</strong></li>
 </ol>
 <p><img alt="" src="../_attachments/B2BiLab02-24-Press-Go-to-Execute-BP.png"></p>
 <ol start="19">
-<li>Wait until the Business Process complete and all of the Status are shown as <em>Success</em><em>  Click </em><em>Close</em>* in the upper right of the screen.</li>
+<li>Wait until the Business Process completes and all of the Status are shown as <strong>Success</strong> Click <strong>Close</strong> in the upper right of the screen.</li>
 </ol>
 <p><img alt="" src="../_attachments/B2BiLab02-25-View-Completed-Processes.png"></p>
 <h2 id="view-the-business-process-results">View the Business Process Results</h2>
 <p>Now that the Business Process has run, the user can view detail of the process.  </p>
 <ol start="20">
-<li>Click the <strong>Current Processes</strong> under <strong>Monitor</strong> which is under <strong>Business Process</strong></li>
+<li>Click <strong>Current Processes</strong> under <strong>Monitor</strong> which is under <strong>Business Process</strong></li>
 </ol>
 <p><img alt="" src="../_attachments/B2BiLab02-26-Select-Current-Processes.png"></p>
 <ol start="21">
@@ -571,7 +574,7 @@
 </ol>
 <p><img alt="" src="../_attachments/B2BiLab02-29-View-Input-File-In-Process.png"></p>
 <ol start="24">
-<li>Select the top process in the <strong>Id</strong> Column.</li>
+<li>Click on the top process in the <strong>Id</strong> Column.</li>
 </ol>
 <p><img alt="" src="../_attachments/B2BiLab02-30-Select-End-of-Process.png"></p>
 <ol start="25">
