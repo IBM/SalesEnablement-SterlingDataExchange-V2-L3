@@ -423,15 +423,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#create-a-ssh-host-identity-key" class="md-nav__link">
-    Create a SSH Host Identity key
+  <a href="#execute-the-lab02-demo" class="md-nav__link">
+    Execute the lab02 demo
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#create-an-sftp-adapter" class="md-nav__link">
-    Create an SFTP adapter
+  <a href="#view-the-business-process-results" class="md-nav__link">
+    View the Business Process Results
   </a>
   
 </li>
@@ -453,165 +453,140 @@
 
   <h1>B2BiLab02</h1>
 
-<div><p>Lab2 takes an application file with two invoices in a proprietary format and splits it into two or three EDI ANSI X12 810 documents.   There is a short import scenario that does not have to be part of the demonstration.   The business process, maps, and envelopes are imported into B2B integrator.  </p>
+<div><p>Lab2 simulates an application file with multiple invoices in a proprietary format and splits it into two or three EDI ANSI X12 810 documents.   There is a short import scenario that does not have to be part of the demonstration.   The business process, maps, and envelopes are imported into B2B integrator.  </p>
 <h2 id="open-the-b2bi-dashboard-and-import-the-lab02-definition">Open the B2Bi dashboard and import the lab02 definition</h2>
 <ol>
-<li>In the B2B Integrator web console, click <strong>Routes</strong> under the <strong>Networking</strong> section in left-hand panel.</li>
+<li>In the B2B Integrator web console, click <strong>Import/Export</strong> under the <strong>Resource Manager</strong> under <strong>Deployment</strong> in the left-hand panel.</li>
 </ol>
 <p><img alt="" src="../_attachments/B2BiStartImport.png"></p>
 <ol start="2">
-<li>Select Import XML   Click the <strong>All Projects</strong> pull-down menu and click the <strong>b2bi</strong> project.</li>
+<li>Click <strong>Choose File</strong> in the <strong>Import Resources</strong> page.</li>
 </ol>
 <p><img alt="" src="../_attachments/B2BiLab02-01-Select-Import-XML.png"></p>
 <details class="question">
 <summary>BP quiz question</summary>
-<p>Several BP quiz questions will come from the <strong>OpenShift web console</strong>. When taking the BP quiz make sure the ITZ environment is still active and keep this demonstration script open.</p>
+<p>Several BP quiz questions will come from this area <strong>B2Bi Import</strong>. When taking the BP quiz make sure tyou have noted the number of maps imported.</p>
 </details>
 <ol start="3">
-<li>Notice all the routes that are currently defined in the b2bi Project, there are 15 of them</li>
+<li>Select the <strong>Lab02_All_Import.xml</strong>  This may look different depending upon what platform you are importing the xml from.</li>
 </ol>
 <p><img alt="" src="../_attachments/B2BiLab02-02-Select-Import-on-PC.png"></p>
 <ol start="4">
-<li>To start the setup of the SFTP adapter, launch the IBM Sterling B2Bi dashboard by clicking on the route for the <strong>sterling-fg-b2bi-asi-internal-route-dashboard</strong> route in the <strong>Location</strong> column. Do not click the Route name, rather click the Route link in the <strong>Location</strong> column of the table.</li>
+<li>Enter <strong>password</strong> into the Passphrase dialog box and click <strong>Next</strong></li>
 </ol>
 <p><img alt="" src="../_attachments/B2BiLab02-03-Enter-password-on-Import.png"></p>
-<ol>
-<li>If a security risk is received in the browser, accept it. In a production environment certificates would be configured for these web pages.</li>
+<ol start="5">
+<li>No changes to Resource Tags so click <strong>Next</strong> </li>
 </ol>
 <p><img alt="" src="../_attachments/B2BiLab02-04-Skip-Import-Tag.png"></p>
-<p>Hello there....</p>
+<p>Leave the default to allow updates if objects exist in the system.   Click <strong>Next</strong></p>
 <p><img alt="" src="../_attachments/B2BiLab02-05-Leave-Update-Selected.png"></p>
-<p>Note: the images above are from Firefox running on MacOS. They will look different depending on browser and operating system.</p>
 <div class="admonition hint">
 <p class="admonition-title">Hint</p>
-<p>As this is a new install, in this demonstration the default user ids and passwords will be used. To keep things simple in this demonstration, all passwords will be set to <strong>password</strong>. Not secure, but this will be a short lived demonstration environment.</p>
+<p>Note sure what to hint about here....if anything.....</p>
 </div>
-<ol>
-<li>Enter <strong>admin</strong> in the <strong>User ID</strong> field and <strong>password</strong> in the <strong>Password</strong> field, and then click <strong>Sign In</strong>.</li>
+<ol start="6">
+<li>Use the <strong>double down arrow</strong> to select all of the TP (Trading Partner) Envelopes</li>
 </ol>
 <p><img alt="" src="../_attachments/B2BiLab02-06-Select-All-Envelopes.png"></p>
 <p>In the latest IBM Sterling B2B Integrator release, new password policies have been set that require users to change their password the first time they authenticate. </p>
-<ol>
-<li>Enter <strong>password</strong> in the <strong>Old Password</strong> field, and then enter <strong>passw0rd!</strong> in both the <strong>New Password</strong> and <strong>Retype Password</strong> fields and click <strong>Sign In</strong>. </li>
+<ol start="7">
+<li>The maps are shown as all selected. Click <strong>Next</strong> </li>
 </ol>
 <p><img alt="" src="../_attachments/B2BiLab02-07-All-Envelopes-Selected.png"></p>
-<p>For this demonstration environment, change the password policies to simplify the demonstration flow. </p>
 <ol start="8">
-<li>Click <strong>Accounts</strong> in left-hand menu and then click <strong>Password Policy</strong>.</li>
+<li>Use the <strong>double down arrow</strong> to select all of the BP (Business Process) Definitions.  Then click <strong>Next</strong></li>
 </ol>
 <p><img alt="" src="../_attachments/B2BiLab02-08-Select-All-Business-Process.png"></p>
 <ol start="9">
-<li>Enter <strong>default</strong> in the <strong>Password Policy Name</strong> text entry field and click the <strong>Go!</strong> button in the <strong>Search</strong> section.</li>
+<li>Use the <strong>double down arrow</strong> to select all of the Maps.  </li>
 </ol>
 <p><img alt="" src="../_attachments/B2BiLab02-09-Select-All-Maps.png"></p>
 <ol start="10">
-<li>Click the <strong>edit</strong> icon for the <strong>Default User Policy</strong>.</li>
+<li>The maps are shown as all selected to be imported.  Click <strong>Next</strong></li>
 </ol>
 <p><img alt="" src="../_attachments/B2BiLab02-10-All-Maps-Selected.png"></p>
-<ol>
-<li>Uncheck the <strong>Password required to contain special characters</strong> and <strong>Required password change on next login attempt</strong> check boxes and then click <strong>Save</strong>.</li>
+<ol start="11">
+<li>All of the artifacts selected for import are shown.   If any are missing, hit the <strong>Back</strong> button and make the additional selections.    Otherwise, click <strong>Finish</strong></li>
 </ol>
 <p><img alt="" src="../_attachments/B2BiLab02-11-Confirm-Imports.png"></p>
 <ol>
-<li>Click <strong>Finish</strong> on the confirmation screen.</li>
+<li>Click <strong>Return</strong> </li>
 </ol>
 <p><img alt="" src="../_attachments/B2BiLab02-12-Return-From-Imports.png"></p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p>In most cases, clients will typically strengthen the default password policy to match their corporate standards for passwords. Again, they are being reduced here to simplify the demonstration flow.</p>
+<p>That is the end of the setup necessary for the lab.   In a customer demo situation, that should usually get setup ahead of time so that only the following steps are needed to show the demo scenario itself.</p>
 </div>
-<ol start="13">
-<li>Click <strong>Return</strong> on the completion screen.</li>
+<h2 id="execute-the-lab02-demo">Execute the lab02 demo</h2>
+<ol>
+<li>Click <strong>Business Processes</strong> and then <strong>Manager</strong>. In the Search box enter <strong>lab02</strong> to search for the process name. </li>
 </ol>
 <p><img alt="" src="../_attachments/B2BiLab02-19-Enter-BP-Selection.png"></p>
-<h2 id="create-a-ssh-host-identity-key">Create a SSH Host Identity key</h2>
-<p>First, a <strong>SSH Host Identity</strong> needs to be created. The Host Identity Key is a Private/Public key pair used to identify the Application SFTP Server to remote clients.  Note, for this demonstration, default values will be used where possible, but production deployments may use other values depending on client requirements.</p>
+<p>Click on the <strong>Execution Manager</strong> </p>
 <details class="question">
 <summary>BP quiz question</summary>
-<p>Several BP quiz questions will come from the <strong>B2Bi dashboard</strong>. When taking the BP quiz make sure the ITZ environment is still active and keep this demonstration script open.</p>
+<p>Not sure what question best here ir even if the popp up is functioning.</p>
 </details>
 <ol start="14">
 <li>Click the <strong>Deployment</strong> menu item in left-hand menu bar and then click the <strong>SSH Host Identity Key</strong> option.</li>
 </ol>
 <p><img alt="" src="../_attachments/B2BiLab02-20-Select-BP-to-Run.png"></p>
 <ol start="15">
-<li>Click the <strong>Go!</strong> button in the <strong>Create: New Host Identity Key</strong> box.</li>
+<li>Click <strong>Execute</strong> to run the business process. </li>
 </ol>
 <p><img alt="" src="../_attachments/B2BiLab02-21-Execute-Business-Process.png"></p>
 <ol start="16">
-<li>Enter <strong>demo</strong> in the <strong>Host Name:</strong> field of the "New Host Identity Key" form and then click the <strong>Next</strong> button.</li>
+<li>In the <strong>Local Desktop filename</strong> Select <strong>Choose File</strong>   </li>
 </ol>
 <p><img alt="" src="../_attachments/B2BiLab02-22-Select-Input-File.png"></p>
 <ol start="17">
-<li>Click <strong>Finish</strong>.</li>
+<li>On the desktop itself choose the input file <strong>outb810.txt</strong> from the file system.  Generally, documents sent by the B2B Integrator host company to trading partners are considered "outbound" and ANSI X12 invoices are "810"s, hence the outb810 name.  This contents and formatting of this file is critical for the proper functioning of the business process.  The file format is typical of many flat file formatted application files.  The file is processed by two different maps in the Business Process.   The first finds the partner name off an internal supplier number in the application file.   The second translates the contents of the file into into an ANSI X12 EDI format.  </li>
 </ol>
 <p><img alt="" src="../_attachments/B2BiLab02-23-Select-Input-File-on-PC.png"></p>
 <ol>
-<li>Click <strong>Close</strong> on the pop-up dialog.</li>
+<li>Once the file is shown as selected next to <strong>Choose File</strong> click <strong>GO!</strong></li>
 </ol>
 <p><img alt="" src="../_attachments/B2BiLab02-24-Press-Go-to-Execute-BP.png"></p>
-<ol>
-<li>Wait until the completed message is received and the click the <strong>Return</strong> button.</li>
+<ol start="19">
+<li>Wait until the Business Process complete and all of the Status are shown as <em>Success</em><em>  Click </em><em>Close</em>* in the upper right of the screen.</li>
 </ol>
 <p><img alt="" src="../_attachments/B2BiLab02-25-View-Completed-Processes.png"></p>
-<h2 id="create-an-sftp-adapter">Create an SFTP adapter</h2>
-<p>Next, an SFTP adapter must be created which will utilize the OpenShift service port for B2Bi.</p>
+<h2 id="view-the-business-process-results">View the Business Process Results</h2>
+<p>Now that the Business Process has run, the user can view detail of the process.  </p>
 <ol start="20">
-<li>Click the <strong>Services</strong> menu item under <strong>Deployment</strong> in the left-hand menu bar.</li>
+<li>Click the <strong>Current Processes</strong> under <strong>Monitor</strong> which is under <strong>Business Process</strong></li>
 </ol>
 <p><img alt="" src="../_attachments/B2BiLab02-26-Select-Current-Processes.png"></p>
 <ol start="21">
-<li>Click the <strong>Configuration</strong> menu item under <strong>Services</strong>.</li>
+<li>Click the <strong>ID</strong> next to the <strong>Lab02_Process_Positional</strong> step</li>
 </ol>
 <p><img alt="" src="../_attachments/B2BiLab02-27-Select-Start-of-Process.png"></p>
 <ol start="22">
-<li>Enter <strong>sftp</strong> in the <strong>Service Name</strong> field and click the <strong>Go!</strong> button in the <strong>Search</strong> box.</li>
+<li>Inside the  <strong>Lab02_Process_Positional</strong> click on <strong>info</strong> in the first line under the <strong>Document</strong> column</li>
 </ol>
 <p><img alt="" src="../_attachments/B2BiLab02-28-Select-Input-File-in-Process.png"></p>
 <ol start="23">
-<li>Locate the <strong>SFTP Server Adapter</strong> entry in the table and click the <strong>edit</strong> button.</li>
+<li>The Input application file is shown.  This is the format coming out of an Accounts Receivable module most likely in an ERP system.  Close out of this screen.</li>
 </ol>
 <p><img alt="" src="../_attachments/B2BiLab02-29-View-Input-File-In-Process.png"></p>
 <ol start="24">
-<li>Review the default settings and click <strong>Next</strong>.</li>
+<li>Select the top process in the <strong>Id</strong> Column.</li>
 </ol>
 <p><img alt="" src="../_attachments/B2BiLab02-30-Select-End-of-Process.png"></p>
 <ol start="25">
-<li>Review the settings on the <strong>SFTP Server Adapter: Configuration</strong> form.</li>
+<li>View the final output document by clicking on <strong>info</strong> in the last row under the <strong>Document</strong> column. </li>
 </ol>
 <p><img alt="" src="../_attachments/B2BiLab02-31-Select-Final-Output.png"></p>
-<p>The default <strong>SFTP Server Listen Port</strong> must be changed to the B2Bi service port configured in OpenShift.</p>
 <ol start="26">
-<li>Switch back to the OpenShift web console browser window or tab and click <strong>Services</strong> under the <strong>Networking</strong> in the left-hand menu bar.</li>
+<li>The output ANSI X12 document is shown.   </li>
 </ol>
 <p><img alt="" src="../_attachments/B2BiLab02-32-View-Final-Output-as-EDI.png"></p>
 <details class="question">
 <summary>BP quiz question</summary>
-<p>There is a quiz question related to other B2Bi services. You may want to take note of the other service names or take a screen capture.</p>
+<p>There is a quiz question somewhere around here....</p>
 </details>
-<ol start="27">
-<li>Find and click the <strong>sterling-fg-b2bi-asi-backend-svc</strong> link.</li>
-</ol>
-<p><img alt="" src="../_attachments/OSServicesASI.png"></p>
-<ol start="28">
-<li>Locate and copy the <strong>Node Port</strong> number for <strong>adapters-1</strong> in the <strong>Service port mapping</strong> table.</li>
-</ol>
-<p><img alt="" src="../_attachments/OSServicesASIOverview-NodePort.png"></p>
-<ol start="29">
-<li>
-<p>Record the <strong>Node Port</strong> number, it will be used several times during this demonstration.</p>
-</li>
-<li>
-<p>Switch back to the <strong>B2Bi Dashboard</strong> browser window or tab.</p>
-</li>
-</ol>
-<details class="question">
-<summary>BP quiz question</summary>
-<p>There is a quiz question related to configuring the SFTP adapter. Before clicking <strong>Next</strong> in the following step, look at the alternate <strong>Compression</strong> type available for the SFTP adapter. You may want to record that value.</p>
-</details>
-<ol start="31">
-<li>Blah di blab <strong>Bold Blah</strong> More blah  </li>
-</ol></div>
+<p>This concludes lab02. </p></div>
 
 
 
