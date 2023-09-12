@@ -13,10 +13,6 @@
       
       
       
-        <link rel="prev" href="../ConfigurationPart1/">
-      
-      
-        <link rel="next" href="../ClientDemonstration/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -24,7 +20,7 @@
     
     
       
-        <title>B2Bi Configuration Part 2 - IBM Sterling Data Exchange Level 3 V2 Demonstration Guide</title>
+        <title>B2BiLab02 - IBM Sterling Data Exchange Level 3 V2 Demonstration Guide</title>
       
     
     
@@ -79,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#create-a-partner-community" class="md-skip">
+        <a href="#open-the-b2bi-dashboard-and-import-the-lab02-definition" class="md-skip">
           Skip to content
         </a>
       
@@ -115,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              B2Bi Configuration Part 2
+              B2BiLab02
             
           </span>
         </div>
@@ -323,27 +319,9 @@
       
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    B2Bi Configuration Part 2
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../ConfigurationPart2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -352,52 +330,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#create-a-partner-community" class="md-nav__link">
-    Create a partner community
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#add-partners-to-the-partner-community" class="md-nav__link">
-    Add partners to the partner community
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#create-a-routing-template" class="md-nav__link">
-    Create a routing template
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#create-routing-channels" class="md-nav__link">
-    Create routing channels
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -427,7 +359,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../B2BiLab02" class="md-nav__link">
+      <a href="." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -484,29 +416,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#create-a-partner-community" class="md-nav__link">
-    Create a partner community
+  <a href="#open-the-b2bi-dashboard-and-import-the-lab02-definition" class="md-nav__link">
+    Open the B2Bi dashboard and import the lab02 definition
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#add-partners-to-the-partner-community" class="md-nav__link">
-    Add partners to the partner community
+  <a href="#create-a-ssh-host-identity-key" class="md-nav__link">
+    Create a SSH Host Identity key
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#create-a-routing-template" class="md-nav__link">
-    Create a routing template
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#create-routing-channels" class="md-nav__link">
-    Create routing channels
+  <a href="#create-an-sftp-adapter" class="md-nav__link">
+    Create an SFTP adapter
   </a>
   
 </li>
@@ -526,225 +451,208 @@
                   
 
 
-  <h1>B2Bi Configuration Part 2</h1>
+  <h1>B2BiLab02</h1>
 
-<div><p>In this chapter, learn how to create a B2Bi partner community, add partners to the community, create a routing template, and create routing channels.</p>
-<h2 id="create-a-partner-community">Create a partner community</h2>
+<div><p>Lab2 takes an application file with two invoices in a proprietary format and splits it into two or three EDI ANSI X12 810 documents.   There is a short import scenario that does not have to be part of the demonstration.   The business process, maps, and envelopes are imported into B2B integrator.  </p>
+<h2 id="open-the-b2bi-dashboard-and-import-the-lab02-definition">Open the B2Bi dashboard and import the lab02 definition</h2>
 <ol>
-<li>Return to the OpenShift web console and click on the route link to the IBM Sterling File Gateway user interface (UI): <strong>sterling-fg-b2bi-asi-internal-route-filegateway</strong>.</li>
+<li>In the B2B Integrator web console, click <strong>Routes</strong> under the <strong>Networking</strong> section in left-hand panel.</li>
 </ol>
-<p><img alt="" src="../_attachments/OSRoutesFileGateway.png"></p>
+<p><img alt="" src="../_attachments/B2BiStartImport.png"></p>
 <ol start="2">
-<li>Enter <strong>fg_sysadmin</strong> in the User ID field, <strong>password</strong> in the Password field, and then click the <strong>Sign In</strong> button.</li>
+<li>Click the <strong>All Projects</strong> pull-down menu and click the <strong>b2bi</strong> project.</li>
 </ol>
-<p><img alt="" src="../_attachments/FG_login.png"></p>
+<p><img alt="" src="../_attachments/OSRoutesMenu.png"></p>
+<details class="question">
+<summary>BP quiz question</summary>
+<p>Several BP quiz questions will come from the <strong>OpenShift web console</strong>. When taking the BP quiz make sure the ITZ environment is still active and keep this demonstration script open.</p>
+</details>
 <ol start="3">
-<li>Click the <strong>Participants</strong> pull-down menu item on top menu bar.</li>
+<li>Notice all the routes that are currently defined in the b2bi Project, there are 15 of them</li>
 </ol>
-<p><img alt="" src="../_attachments/FG_Participants.png"></p>
+<p><img alt="" src="../_attachments/OSB2BiAllRoutes.png"></p>
 <ol start="4">
-<li>Click <strong>Communities</strong> in the <strong>Participants</strong> menu.</li>
+<li>To start the setup of the SFTP adapter, launch the IBM Sterling B2Bi dashboard by clicking on the route for the <strong>sterling-fg-b2bi-asi-internal-route-dashboard</strong> route in the <strong>Location</strong> column. Do not click the Route name, rather click the Route link in the <strong>Location</strong> column of the table.</li>
 </ol>
-<p><img alt="" src="../_attachments/FG_CommunitiesMenu.png"></p>
+<p><img alt="" src="../_attachments/OSB2BiDashboardRoute.png"></p>
 <ol start="5">
-<li>In the <strong>Communities</strong> pop-up window, click the <strong>add</strong> link.</li>
+<li>If a security risk is received in the browser, accept it. In a production environment certificates would be configured for these web pages.</li>
 </ol>
-<p><img alt="" src="../_attachments/FG_CommunitiesAddLink.png"></p>
+<p><img alt="" src="../_attachments/FFSecurityRisk1.png">
+<img alt="" src="../_attachments/FFSecurityRisk2.png"></p>
+<p>Note: the images above are from Firefox running on MacOS. They will look different depending on browser and operating system.</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>As this is a new install, in this demonstration the default user ids and passwords will be used. To keep things simple in this demonstration, all passwords will be set to <strong>password</strong>. Not secure, but this will be a short lived demonstration environment.</p>
+</div>
 <ol start="6">
-<li>Enter <strong>sftp_community</strong> in the <strong>Community Name</strong> entry field and click <strong>Next</strong>.</li>
+<li>Enter <strong>admin</strong> in the <strong>User ID</strong> field and <strong>password</strong> in the <strong>Password</strong> field, and then click <strong>Sign In</strong>.</li>
 </ol>
-<p><img alt="" src="../_attachments/FG_CommunitiesName-2.png"></p>
+<p><img alt="" src="../_attachments/B2BiAdminLogin.png"></p>
+<p>In the latest IBM Sterling B2B Integrator release, new password policies have been set that require users to change their password the first time they authenticate. </p>
 <ol start="7">
-<li>Select both the <strong>Partner Initiates Protocol Connections to Mailbox</strong> and the <strong>Partner Listens for Protocol Connections</strong>.</li>
+<li>Enter <strong>password</strong> in the <strong>Old Password</strong> field, and then enter <strong>passw0rd!</strong> in both the <strong>New Password</strong> and <strong>Retype Password</strong> fields and click <strong>Sign In</strong>. </li>
 </ol>
-<p><img alt="" src="../_attachments/FG_CommunitiesProtocol-1-2.png"></p>
+<p><img alt="" src="../_attachments/B2BiAdminChangePassword.png"></p>
+<p>For this demonstration environment, change the password policies to simplify the demonstration flow. </p>
 <ol start="8">
-<li>Select the <strong>SSH/SFTP</strong> checkbox and click <strong>Next</strong>.</li>
+<li>Click <strong>Accounts</strong> in left-hand menu and then click <strong>Password Policy</strong>.</li>
 </ol>
-<p><img alt="" src="../_attachments/FG_CommunitiesProtocol-2-2.png"></p>
+<p><img alt="" src="../_attachments/B2BiMainMenu-Accounts.png"></p>
 <ol start="9">
-<li>Click <strong>Next</strong> on the <strong>Add Community: Notifications</strong> form.</li>
+<li>Enter <strong>default</strong> in the <strong>Password Policy Name</strong> text entry field and click the <strong>Go!</strong> button in the <strong>Search</strong> section.</li>
 </ol>
-<p><img alt="" src="../_attachments/FG_CommunitiesNotifications.png"></p>
+<p><img alt="" src="../_attachments/B2BiMainMenu-AccountsSearch.png"></p>
 <ol start="10">
-<li>Click <strong>Finish</strong> to confirm the creation of the new community.</li>
+<li>Click the <strong>edit</strong> icon for the <strong>Default User Policy</strong>.</li>
 </ol>
-<p><img alt="" src="../_attachments/FG_CommunitiesFinish-2.png"></p>
+<p><img alt="" src="../_attachments/B2BiMainMenu-DefaultPolicy.png"></p>
 <ol start="11">
-<li>Click <strong>Return</strong> on the community confirmation screen.</li>
+<li>Uncheck the <strong>Password required to contain special characters</strong> and <strong>Required password change on next login attempt</strong> check boxes and then click <strong>Save</strong>.</li>
 </ol>
-<p><img alt="" src="../_attachments/FG_CommunitiesComplete.png"></p>
-<h2 id="add-partners-to-the-partner-community">Add partners to the partner community</h2>
-<p>Next, add 2 partners to the newly created <strong>sftp_community</strong>.</p>
+<p><img alt="" src="../_attachments/B2BiMainMenu-DefaultPolicyChange.png"></p>
 <ol start="12">
-<li>Click the <strong>edit</strong> link for the <strong>sftp_community</strong> on the <strong>Communities</strong> pop-up window.</li>
+<li>Click <strong>Finish</strong> on the confirmation screen.</li>
 </ol>
-<p><img alt="" src="../_attachments/FG_CommunitiesEdit.png"></p>
+<p><img alt="" src="../_attachments/B2BiMainMenu-DefaultPolicyFinish.png"></p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>In most cases, clients will typically strengthen the default password policy to match their corporate standards for passwords. Again, they are being reduced here to simplify the demonstration flow.</p>
+</div>
 <ol start="13">
-<li>Under <strong>Partner</strong>, click the <strong>Add</strong> link.</li>
+<li>Click <strong>Return</strong> on the completion screen.</li>
 </ol>
-<p><img alt="" src="../_attachments/FG_CommunitiesDetails-2.png"></p>
+<p><img alt="" src="../_attachments/B2BiMainMenu-DefaultPolicyComplete.png"></p>
+<h2 id="create-a-ssh-host-identity-key">Create a SSH Host Identity key</h2>
+<p>First, a <strong>SSH Host Identity</strong> needs to be created. The Host Identity Key is a Private/Public key pair used to identify the Application SFTP Server to remote clients.  Note, for this demonstration, default values will be used where possible, but production deployments may use other values depending on client requirements.</p>
+<details class="question">
+<summary>BP quiz question</summary>
+<p>Several BP quiz questions will come from the <strong>B2Bi dashboard</strong>. When taking the BP quiz make sure the ITZ environment is still active and keep this demonstration script open.</p>
+</details>
 <ol start="14">
-<li>Enter <strong>partner1</strong> in the <strong>Partner Name</strong> field, 10 digits in the <strong>Phone</strong> field, <strong>partner1@localhost.com</strong> in the <strong>Email Address</strong> field, and then click <strong>Next</strong>.</li>
+<li>Click the <strong>Deployment</strong> menu item in left-hand menu bar and then click the <strong>SSH Host Identity Key</strong> option.</li>
 </ol>
-<p><img alt="" src="../_attachments/FG_CommunitiesPartner1.png"></p>
+<p><img alt="" src="../_attachments/B2BiMainMenuToDeploymentCallouts.png"></p>
 <ol start="15">
-<li>Enter <strong>partner1</strong> in the <strong>User Name</strong> field, <strong>password</strong> in the <strong>Password</strong> field, <strong>password</strong> in the <strong>Confirm Password</strong> field, <strong>Partner</strong> in the <strong>Given Name</strong> field, <strong>One</strong> in <strong>Surname</strong> field, and then click <strong>Next</strong>.</li>
+<li>Click the <strong>Go!</strong> button in the <strong>Create: New Host Identity Key</strong> box.</li>
 </ol>
-<p><img alt="" src="../_attachments/FG_CommunitiesPartner1Password.png"></p>
+<p><img alt="" src="../_attachments/B2BiHIK-CreatePage.png"></p>
 <ol start="16">
-<li>Click <strong>partner1 is a Producer of Data</strong> and then click <strong>Next</strong>.</li>
+<li>Enter <strong>demo</strong> in the <strong>Host Name:</strong> field of the "New Host Identity Key" form and then click the <strong>Next</strong> button.</li>
 </ol>
-<p><img alt="" src="../_attachments/FG_CommunitiesPartner1Role.png"></p>
+<p><img alt="" src="../_attachments/B2BiHIK-HostName-2.png"></p>
 <ol start="17">
-<li>Review the default settings on the <strong>Initiate Connections Settings</strong> screen and then click <strong>Next</strong>.</li>
+<li>Click <strong>Finish</strong>.</li>
 </ol>
-<p><img alt="" src="../_attachments/FG_CommunitiesPartner1ICS.png"></p>
+<p><img alt="" src="../_attachments/B2BiHIK-Finish-2.png"></p>
 <ol start="18">
-<li>Review the default settings on the <strong>PGP Settings</strong> screen and then click <strong>Next</strong>.</li>
+<li>Click <strong>Close</strong> on the pop-up dialog.</li>
 </ol>
-<p><img alt="" src="../_attachments/FG_CommunitiesPartner1PGP.png"></p>
+<p><img alt="" src="../_attachments/B2BiHIK-PopUp.png"></p>
 <ol start="19">
-<li>Review the settings for <strong>partner1</strong> and click <strong>Finish</strong>.</li>
+<li>Wait until the completed message is received and the click the <strong>Return</strong> button.</li>
 </ol>
-<p><img alt="" src="../_attachments/FG_CommunitiesPartner1Confirm.png"></p>
+<p><img alt="" src="../_attachments/B2BiHIKCreatedCompleted.png"></p>
+<h2 id="create-an-sftp-adapter">Create an SFTP adapter</h2>
+<p>Next, an SFTP adapter must be created which will utilize the OpenShift service port for B2Bi.</p>
 <ol start="20">
-<li>Click <strong>Return</strong> on the <strong>Added Partner Successful</strong> screen.</li>
+<li>Click the <strong>Services</strong> menu item under <strong>Deployment</strong> in the left-hand menu bar.</li>
 </ol>
-<p><img alt="" src="../_attachments/FG_CommunitiesPartner1Success.png"></p>
+<p><img alt="" src="../_attachments/B2BiMainMenuDeploymentToServices.png"></p>
 <ol start="21">
-<li>Repeat the Steps 13 through 20 to create a second partner named <strong>partner2</strong> using the same settings.</li>
+<li>Click the <strong>Configuration</strong> menu item under <strong>Services</strong>.</li>
 </ol>
-<p><img alt="" src="../_attachments/FG_CommunitiesPartner2.png"></p>
+<p><img alt="" src="../_attachments/B2BiMainMenuServicesToConfiguration.png"></p>
 <ol start="22">
-<li>Click <strong>Return</strong> on the <strong>Edit Community: sftp_community</strong> screen after creating both partners.</li>
+<li>Enter <strong>sftp</strong> in the <strong>Service Name</strong> field and click the <strong>Go!</strong> button in the <strong>Search</strong> box.</li>
 </ol>
-<p><img alt="" src="../_attachments/FG_CommunitiesReturn-2.png"></p>
+<p><img alt="" src="../_attachments/B2BiServicesConfiguratonForm.png"></p>
 <ol start="23">
-<li>Close the <strong>Communities</strong> pop-up window.</li>
+<li>Locate the <strong>SFTP Server Adapter</strong> entry in the table and click the <strong>edit</strong> button.</li>
 </ol>
-<p><img alt="" src="../_attachments/FS_CommunitiesClose.png"></p>
+<p><img alt="" src="../_attachments/B2BiServicesConfigurationSearchResults-2.png"></p>
 <ol start="24">
-<li>Click <strong>Partners</strong> under the <strong>Participants</strong> menu.</li>
+<li>Review the default settings and click <strong>Next</strong>.</li>
 </ol>
-<p><img alt="" src="../_attachments/FG_ParticipantsPartnersMenu.png"></p>
+<p><img alt="" src="../_attachments/B2BiSFTPAdapterName1.png"></p>
 <ol start="25">
-<li>Click the <strong>Refresh</strong> button if <strong>partner1</strong> and <strong>partner2</strong> do not appear in the <strong>Partners</strong> table.</li>
+<li>Review the settings on the <strong>SFTP Server Adapter: Configuration</strong> form.</li>
 </ol>
-<p><img alt="" src="../_attachments/FG_PartnersTable.png"></p>
-<h2 id="create-a-routing-template">Create a routing template</h2>
+<p><img alt="" src="../_attachments/B2BiSFTPDefaultSettings1-2.png"></p>
+<p>The default <strong>SFTP Server Listen Port</strong> must be changed to the B2Bi service port configured in OpenShift.</p>
 <ol start="26">
-<li>Click <strong>Templates</strong> under the <strong>Routes</strong> menu.</li>
+<li>Switch back to the OpenShift web console browser window or tab and click <strong>Services</strong> under the <strong>Networking</strong> in the left-hand menu bar.</li>
 </ol>
-<p><img alt="" src="../_attachments/FG_RoutesMenuTemplates.png"></p>
+<p><img alt="" src="../_attachments/OpenShiftRoutesPageToServices.png"></p>
+<details class="question">
+<summary>BP quiz question</summary>
+<p>There is a quiz question related to other B2Bi services. You may want to take note of the other service names or take a screen capture.</p>
+</details>
 <ol start="27">
-<li>Click the <strong>Create</strong> button at the bottom of the <strong>Routing Channel Templates</strong> page.</li>
+<li>Find and click the <strong>sterling-fg-b2bi-asi-backend-svc</strong> link.</li>
 </ol>
-<p><img alt="" src="../_attachments/FG_Templates.png"></p>
+<p><img alt="" src="../_attachments/OSServicesASI.png"></p>
 <ol start="28">
-<li>Enter <strong>Passthrough</strong> in the <strong>Template Name</strong> field and then click <strong>Next&gt;&gt;</strong>.</li>
+<li>Locate and copy the <strong>Node Port</strong> number for <strong>adapters-1</strong> in the <strong>Service port mapping</strong> table.</li>
 </ol>
-<p><img alt="" src="../_attachments/FG_TemplateCreateName.png"></p>
+<p><img alt="" src="../_attachments/OSServicesASIOverview-NodePort.png"></p>
 <ol start="29">
-<li>Review the <strong>Special Characters</strong> settings and then click <strong>Next&gt;&gt;</strong>.</li>
+<li>
+<p>Record the <strong>Node Port</strong> number, it will be used several times during this demonstration.</p>
+</li>
+<li>
+<p>Switch back to the <strong>B2Bi Dashboard</strong> browser window or tab.</p>
+</li>
 </ol>
-<p><img alt="" src="../_attachments/FG_TemplateCreateSpecialChars.png"></p>
-<ol start="30">
-<li>Add <strong>All Partners</strong> to both the <strong>Producer Groups</strong> and <strong>Consumer Groups</strong> tables.</li>
-</ol>
-<p><img alt="" src="../_attachments/FG_TemplateCreateGroups1.png"></p>
+<details class="question">
+<summary>BP quiz question</summary>
+<p>There is a quiz question related to configuring the SFTP adapter. Before clicking <strong>Next</strong> in the following step, look at the alternate <strong>Compression</strong> type available for the SFTP adapter. You may want to record that value.</p>
+</details>
 <ol start="31">
-<li>Click <strong>Next&gt;&gt;</strong> after adding <strong>All Partners</strong> to both groups.</li>
+<li>Enter or copy the recorded <strong>Service Port</strong> number into the <strong>SFTP Server Listen Port</strong> entry field and click <strong>Next</strong>.</li>
 </ol>
-<p><img alt="" src="../_attachments/FG_TemplateCreateGroups2.png"></p>
+<p><img alt="" src="../_attachments/B2BiSFTPDefaultSettings2-2.png"></p>
 <ol start="32">
-<li>Review the <strong>Provisioning Facts</strong> page and then click <strong>Next&gt;&gt;</strong>.</li>
+<li>Review the default settings on the <strong>SFTP Server Adapter: Configuration: Document Storage</strong> page and click <strong>Next</strong>.</li>
 </ol>
-<p><img alt="" src="../_attachments/FG_TemplateCreateProvisioningFacts.png"></p>
+<p><img alt="" src="../_attachments/B2BiSFTPStroage.png"></p>
 <ol start="33">
-<li>Review the <strong>File Operation</strong> page and then click <strong>Next&gt;&gt;</strong>.</li>
+<li>Review the default settings on the <strong>SFTP Server Adapter: Add Policies</strong> page and click <strong>Next</strong>.</li>
 </ol>
-<p><img alt="" src="../_attachments/FG_TemplateCreateFileOperation.png"></p>
+<p><img alt="" src="../_attachments/B2BiSFPPolicies.png"></p>
 <ol start="34">
-<li>Click the <strong>Add</strong> button on the <strong>Producer</strong> page.</li>
+<li>Review the default settings on the <strong>SFTP Server Adapter: Configuration</strong> page and click <strong>Next</strong>.</li>
 </ol>
-<p><img alt="" src="../_attachments/FG_TemplateCreateProducerAdd.png"></p>
+<p><img alt="" src="../_attachments/B2BiSFTPConfigPage.png"></p>
 <ol start="35">
-<li>Click the <strong>Producer File Type</strong> pull-down menu and select <strong>Unknown</strong>.</li>
+<li>Review the default settings on the <strong>SFTP Server Adapter: Extractability</strong> page and click <strong>Next</strong>.</li>
 </ol>
-<p><img alt="" src="../_attachments/FG_TemplateCreateProducerUnknownMenuSelect.png"></p>
+<p><img alt="" src="../_attachments/B2BiSFTPExtractability.png"></p>
 <ol start="36">
-<li>Enter <strong>.+</strong> in the <strong>File name pattern as regular expression</strong> field and then click <strong>Save</strong>.</li>
+<li>Review the <strong>SFTP Server Adapter: Confirmation</strong> page and click <strong>Finish</strong>.</li>
 </ol>
-<p><img alt="" src="../_attachments/FG_TemplateCreateProducerUnknownPattern.png"></p>
-<p>Setting the file pattern to the regular expression <strong>.+</strong> allows for file names of one or more characters.</p>
+<p><img alt="" src="../_attachments/B2BiSFTPFinish.png"></p>
 <ol start="37">
-<li>Click <strong>Next&gt;&gt;</strong> on the <strong>Producer</strong> page.</li>
+<li>Click <strong>Return</strong> after the new SFTP adapter has been created.</li>
 </ol>
-<p><img alt="" src="../_attachments/FG_TemplateCreateProducerNext.png"></p>
+<p><img alt="" src="../_attachments/B2BiSFTPConfirmation.png"></p>
 <ol start="38">
-<li>Click the <strong>Add</strong> button on the <strong>Consumer</strong> page.</li>
+<li>Click the <strong>checkbox</strong> next to the <strong>SFTP Server Adapter</strong> to start the adapter.</li>
 </ol>
-<p><img alt="" src="../_attachments/FG_TemplateCreateConsumerAdd.png"></p>
+<p><img alt="" src="../_attachments/B2BiSFTPStartAdapter-2.png"></p>
 <ol start="39">
-<li>Click the <strong>Add</strong> button on the <strong>New Delivery Channel</strong> pop-up window.</li>
+<li>Click the <img alt="" src="../_attachments/BangIcon.png"> icon next to the <strong>SFTP Server Adapter</strong>.</li>
 </ol>
-<p><img alt="" src="../_attachments/FG_TemplateCreateConsumerNewDeliveryChannel.png"></p>
+<p><img alt="" src="../_attachments/B2BiSFTPAdapterEnabled-2.png"></p>
 <ol start="40">
-<li>Click <strong>Unknown</strong> in the <strong>Consumer File Type</strong> pull-down menu.</li>
+<li>Verify the <strong>SFTP Server Adapter</strong> is <strong>Running</strong> and then click the <strong>Close</strong> button.</li>
 </ol>
-<p><img alt="" src="../_attachments/FG_TemplateCreateConsumerNewDeliveryChannelFileTypeMenu.png"></p>
+<p><img alt="" src="../_attachments/B2BiSFTPAdapterStatus-2.png"></p>
 <ol start="41">
-<li>Enter <strong>${ProducerFileName}</strong> in the <strong>File name format</strong>* field.</li>
+<li>Click the <strong>Logout</strong> link to log out of the <strong>B2Bi dashboard</strong>.</li>
 </ol>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>${ProducerFileName}
-</code></pre></div>
-<ol start="42">
-<li>Review the help information regarding file name formats by hovering over the <strong>File name format</strong> entry field and then click <strong>Save</strong>.</li>
-</ol>
-<p><img alt="" src="../_attachments/FG_TemplateCreateConsumerNewDeliveryChannelFileTypeFormat.png"></p>
-<ol start="43">
-<li>Click <strong>Save</strong> on the <strong>New Delivery Channel</strong> pop-up window.</li>
-</ol>
-<p><img alt="" src="../_attachments/FG_TemplateCreateConsumerNewDeliveryChannelSave.png"></p>
-<ol start="44">
-<li>Click <strong>Save</strong> on the <strong>Consumer</strong> page.</li>
-</ol>
-<p><img alt="" src="../_attachments/FG_TemplateCreateConsumerSave.png"></p>
-<ol start="45">
-<li>Click <strong>OK</strong> on the <strong>Routing Channel Template successfully created.</strong> pop-up message.</li>
-</ol>
-<p><img alt="" src="../_attachments/FS_TemplateCreated.png"></p>
-<ol start="46">
-<li>Review the settings for the new <strong>Passthrough</strong> routing channel template.</li>
-</ol>
-<p><img alt="" src="../_attachments/FS_TemplateSummary.png"></p>
-<h2 id="create-routing-channels">Create routing channels</h2>
-<ol start="47">
-<li>Click the <strong>Channels</strong> option under the <strong>Routes</strong> menu.</li>
-</ol>
-<p><img alt="" src="../_attachments/FG_RoutesChannelsMenu.png"></p>
-<ol start="48">
-<li>Click the <strong>Create</strong> button at bottom right to create a new <strong>Channel</strong>.</li>
-</ol>
-<p><img alt="" src="../_attachments/FG_ChannelCreate.png"></p>
-<ol start="49">
-<li>Select <strong>Passthrough</strong> for the <strong>Routing Channel Template</strong>, <strong>partner1</strong> for the <strong>Producer</strong>, and <strong>partner2</strong> for the <strong>Consumer</strong>, and then click <strong>Save</strong> to create the new channel.</li>
-</ol>
-<p><img alt="" src="../_attachments/FG-ChannelCreateP1toP2.png"></p>
-<ol start="50">
-<li>Click <strong>OK</strong> on the <strong>Success</strong> pop-up window.</li>
-</ol>
-<p><img alt="" src="../_attachments/FG_ChannelCreateP1toP2Success.png"></p>
-<ol start="51">
-<li>Repeat the steps 48 through 50 to create a channel from partner2 to partner1.</li>
-</ol>
-<p><img alt="" src="../_attachments/FG-ChannelCreateP2toP1.png"></p>
-<ol start="52">
-<li>Click <strong>Sign Out</strong>.</li>
-</ol>
-<p><img alt="" src="../_attachments/FG-SignOut.png"></p>
-<p>In the next chapter, the fun begins as the partners start to securely exchange files.</p></div>
+<p><img alt="" src="../_attachments/B2BiLogout-2.png"></p>
+<p>Now that the SFTP adapter is running, it time to move to the next step in the configuration of B2Bi.</p></div>
 
 
 
