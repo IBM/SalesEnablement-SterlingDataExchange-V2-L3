@@ -21,7 +21,7 @@ nav:
   - 'B2Bi Configuration Part 2': 'ConfigurationPart2.md'
   - 'Client Demonstration': 'ClientDemonstration.md'
   - 'Lab 02 Outbound Invoice': 'B2BiLab02.md'
-  - 'lab 03 Inbound EDIFACT documents': 'B2BiLab03.md'
+  - 'lab 03 Inbound EDIFACT': 'B2BiLab03.md'
   - 'Next Steps': 'NextSteps.md'
 
 theme:
