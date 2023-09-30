@@ -93,45 +93,47 @@ In the latest {{offering.name}} release, new password policies have been set tha
     That is the end of the setup necessary for the lab.   In a customer demo situation, that should usually get setup ahead of time so that only the following steps are needed to show the demo scenario itself.
 
 
-## Execute the lab03 demo ---  NEED TO UPDATE WITH JAMES
+## Execute the Lab 03 demo
 
-13.  Click **Business Processes** and then **Manager**. In the Search box enter **lab02** to search for the process name. 
+1.   The demo instructions in the first lab in this course document how to setup Filezilla for a secure SFTP transfer into a B2B Integrator mailbox. If that lab has been completed, then the following additional steps are all that is required.  If that lab has not been completed, go back to do the Filezilla setup steps, then pickup here.  
 
-![](_attachments/B2BiLab02-19-Enter-BP-Selection.png)
+The Protocol of SFTP and the Host and Port are the same as what was set up in the first lab demo instructions.   Ensure that the User is **partner1** and the Password is **password**.  Finally, click on **Connect**.   
+
+![](_attachments/B2BiLab03-20-Edit-Filezilla.png)
 
 
 ??? question "BP quiz question"
-    Not sure what question best here ir even if the popp up is functioning.
+    Not sure what question best here or even if the pop up is functioning.
 
-14. Click on the **Execution Manager** 
+1.  Click on the **Execution Manager** 
 
-![](_attachments/B2BiLab02-20-Select-BP-to-Run.png)
+![](_attachments/B2BiLab03-21-Filezilla-Connect.png)
 
 
-15.  Click **Execute** to run the business process. 
+1.   Click **Execute** to run the business process. 
 
-![](_attachments/B2BiLab02-21-Execute-Business-Process.png)
+![](_attachments/B2BiLab03-22-Filezilla-Select-File.png)
 
-16.  In the **Local Desktop filename** Select **Choose File**  
+1.   In the **Local Desktop filename** Select **Choose File**  
    
-![](_attachments/B2BiLab02-22-Select-Input-File.png)
+![](_attachments/B2BiLab03-23-Filezilla-Open-Lab-03-Folder.png)
 
 
-17.  On the desktop itself choose the input file **outb810.txt** from the file system.  
+1.   On the desktop itself choose the input file **outb810.txt** from the file system.  
  
 !!! Note "Note"
 
     Generally, documents sent by the B2B Integrator host company to trading partners are considered "outbound" and ANSI X12 invoices are "810"s, hence the outb810 name.  This contents and formatting of this file is critical for the proper functioning of the business process.  The file format is typical of many flat file formatted application files.  The file is processed by two different maps in the Business Process.   The first finds the partner name off an internal supplier number in the application file.   The second translates the contents of the file into into an ANSI X12 EDI format.  is the end of the setup necessary for the lab.   In a customer demo situation, that should usually get setup ahead of time so that only the following steps are needed to show the demo scenario itself.
 
-![](_attachments/B2BiLab02-23-Select-Input-File-on-PC.png)
+![](_attachments/B2BiLab03-24-Filezilla-Inspect-File.png)
 
-18.   Once the file is shown as selected next to **Choose File** click **GO!**
+1.    Once the file is shown as selected next to **Choose File** click **GO!**
 
-![](_attachments/B2BiLab02-24-Press-Go-to-Execute-BP.png)
+![](_attachments/B2BiLab03-25-Filezilla-Drag-File-To-Folder.png)
 
-19.  Wait until the Business Process completes and all of the Status are shown as **Success** Click **Close** in the upper right of the screen.
+1.   Wait until the Business Process completes and all of the Status are shown as **Success** Click **Close** in the upper right of the screen.
 
-![](_attachments/B2BiLab02-25-View-Completed-Processes.png)
+![](_attachments/B2BiLab03-26-Filezilla-File-Was-Uploaded.png)
 
 ## View the Business Process Results
 
@@ -139,36 +141,36 @@ Now that the Business Process has run, the user can view detail of the process.
 
 20.   Click **Current Processes** under **Monitor** which is under **Business Process**
 
-![](_attachments/B2BiLab02-26-Select-Current-Processes.png)
+![](_attachments/B2BiLab03-30-B2Bi-Current-Process.png)
 
-21. Click the **ID** next to the **Lab02_Process_Positional** step
+1.  Click the **ID** next to the **Lab02_Process_Positional** step
     
-![](_attachments/B2BiLab02-27-Select-Start-of-Process.png)
+![](_attachments/B2BiLab03-31-B2Bi-Select-Bootstrap.png)
 
-22.   Inside the  **Lab02_Process_Positional** click on **info** in the first line under the **Document** column
+1.    Inside the  **Lab02_Process_Positional** click on **info** in the first line under the **Document** column
 
-![](_attachments/B2BiLab02-28-Select-Input-File-in-Process.png)
+![](_attachments/B2BiLab03-32-B2Bi-Show-Bootstrap.png)
 
-23.  The Input application file is shown.  This is the format coming out of an Accounts Receivable module most likely in an ERP system.  Close out of this screen.
+1.   The Input application file is shown.  This is the format coming out of an Accounts Receivable module most likely in an ERP system.  Close out of this screen.
 
-![](_attachments/B2BiLab02-29-View-Input-File-In-Process.png)
+![](_attachments/B2BiLab03-33-B2Bi-Show-Bootstrap-Metadata.png)
 
-24.  Click on the top process in the **Id** Column.
-
-![](_attachments/B2BiLab02-30-Select-End-of-Process.png)
 
 25.  View the final output document by clicking on **info** in the last row under the **Document** column. 
 
-![](_attachments/B2BiLab02-31-Select-Final-Output.png)
+![](_attachments/B2BiLab03-34-B2Bi-Select-File-Extraction.png
 
+1.    The output ANSI X12 document is shown.   
 
-26.   The output ANSI X12 document is shown.   
+![](_attachments/B2BiLab03-35-B2Bi-Select-Translated-File.png)
 
-![](_attachments/B2BiLab02-32-View-Final-Output-as-EDI.png)
+1.   Click on the top process in the **Id** Column.
+
+![](_attachments/B2BiLab03-36-B2Bi-Show-Translated-File.png)
 
 ??? question "BP quiz question"
     There is a quiz question somewhere around here....
 
 
-This concludes lab02. 
+This concludes lab03. 
 
