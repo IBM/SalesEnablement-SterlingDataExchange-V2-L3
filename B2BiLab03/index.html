@@ -412,8 +412,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#execute-the-lab03-demo-need-to-update-with-james" class="md-nav__link">
-    Execute the lab03 demo ---  NEED TO UPDATE WITH JAMES
+  <a href="#execute-the-lab-03-demo" class="md-nav__link">
+    Execute the Lab 03 demo
   </a>
   
 </li>
@@ -484,8 +484,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#execute-the-lab03-demo-need-to-update-with-james" class="md-nav__link">
-    Execute the lab03 demo ---  NEED TO UPDATE WITH JAMES
+  <a href="#execute-the-lab-03-demo" class="md-nav__link">
+    Execute the Lab 03 demo
   </a>
   
 </li>
@@ -598,78 +598,79 @@
 <p class="admonition-title">Important</p>
 <p>That is the end of the setup necessary for the lab.   In a customer demo situation, that should usually get setup ahead of time so that only the following steps are needed to show the demo scenario itself.</p>
 </div>
-<h2 id="execute-the-lab03-demo-need-to-update-with-james">Execute the lab03 demo ---  NEED TO UPDATE WITH JAMES</h2>
-<ol start="13">
-<li>Click <strong>Business Processes</strong> and then <strong>Manager</strong>. In the Search box enter <strong>lab02</strong> to search for the process name. </li>
+<h2 id="execute-the-lab-03-demo">Execute the Lab 03 demo</h2>
+<ol>
+<li>The demo instructions in the first lab in this course document how to setup Filezilla for a secure SFTP transfer into a B2B Integrator mailbox. If that lab has been completed, then the following additional steps are all that is required.  If that lab has not been completed, go back to do the Filezilla setup steps, then pickup here.  </li>
 </ol>
-<p><img alt="" src="../_attachments/B2BiLab02-19-Enter-BP-Selection.png"></p>
+<p>The Protocol of SFTP and the Host and Port are the same as what was set up in the first lab demo instructions.   Ensure that the User is <strong>partner1</strong> and the Password is <strong>password</strong>.  Finally, click on <strong>Connect</strong>.   </p>
+<p><img alt="" src="../_attachments/B2BiLab03-20-Edit-Filezilla.png"></p>
 <details class="question">
 <summary>BP quiz question</summary>
-<p>Not sure what question best here ir even if the popp up is functioning.</p>
+<p>Not sure what question best here or even if the pop up is functioning.</p>
 </details>
-<ol start="14">
+<ol>
 <li>Click on the <strong>Execution Manager</strong> </li>
 </ol>
-<p><img alt="" src="../_attachments/B2BiLab02-20-Select-BP-to-Run.png"></p>
-<ol start="15">
+<p><img alt="" src="../_attachments/B2BiLab03-21-Filezilla-Connect.png"></p>
+<ol>
 <li>Click <strong>Execute</strong> to run the business process. </li>
 </ol>
-<p><img alt="" src="../_attachments/B2BiLab02-21-Execute-Business-Process.png"></p>
-<ol start="16">
+<p><img alt="" src="../_attachments/B2BiLab03-22-Filezilla-Select-File.png"></p>
+<ol>
 <li>In the <strong>Local Desktop filename</strong> Select <strong>Choose File</strong>  </li>
 </ol>
-<p><img alt="" src="../_attachments/B2BiLab02-22-Select-Input-File.png"></p>
-<ol start="17">
+<p><img alt="" src="../_attachments/B2BiLab03-23-Filezilla-Open-Lab-03-Folder.png"></p>
+<ol>
 <li>On the desktop itself choose the input file <strong>outb810.txt</strong> from the file system.  </li>
 </ol>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Generally, documents sent by the B2B Integrator host company to trading partners are considered "outbound" and ANSI X12 invoices are "810"s, hence the outb810 name.  This contents and formatting of this file is critical for the proper functioning of the business process.  The file format is typical of many flat file formatted application files.  The file is processed by two different maps in the Business Process.   The first finds the partner name off an internal supplier number in the application file.   The second translates the contents of the file into into an ANSI X12 EDI format.  is the end of the setup necessary for the lab.   In a customer demo situation, that should usually get setup ahead of time so that only the following steps are needed to show the demo scenario itself.</p>
 </div>
-<p><img alt="" src="../_attachments/B2BiLab02-23-Select-Input-File-on-PC.png"></p>
-<ol start="18">
+<p><img alt="" src="../_attachments/B2BiLab03-24-Filezilla-Inspect-File.png"></p>
+<ol>
 <li>Once the file is shown as selected next to <strong>Choose File</strong> click <strong>GO!</strong></li>
 </ol>
-<p><img alt="" src="../_attachments/B2BiLab02-24-Press-Go-to-Execute-BP.png"></p>
-<ol start="19">
+<p><img alt="" src="../_attachments/B2BiLab03-25-Filezilla-Drag-File-To-Folder.png"></p>
+<ol>
 <li>Wait until the Business Process completes and all of the Status are shown as <strong>Success</strong> Click <strong>Close</strong> in the upper right of the screen.</li>
 </ol>
-<p><img alt="" src="../_attachments/B2BiLab02-25-View-Completed-Processes.png"></p>
+<p><img alt="" src="../_attachments/B2BiLab03-26-Filezilla-File-Was-Uploaded.png"></p>
 <h2 id="view-the-business-process-results">View the Business Process Results</h2>
 <p>Now that the Business Process has run, the user can view detail of the process.  </p>
 <ol start="20">
 <li>Click <strong>Current Processes</strong> under <strong>Monitor</strong> which is under <strong>Business Process</strong></li>
 </ol>
-<p><img alt="" src="../_attachments/B2BiLab02-26-Select-Current-Processes.png"></p>
-<ol start="21">
+<p><img alt="" src="../_attachments/B2BiLab03-30-B2Bi-Current-Process.png"></p>
+<ol>
 <li>Click the <strong>ID</strong> next to the <strong>Lab02_Process_Positional</strong> step</li>
 </ol>
-<p><img alt="" src="../_attachments/B2BiLab02-27-Select-Start-of-Process.png"></p>
-<ol start="22">
-<li>Inside the  <strong>Lab02_Process_Positional</strong> click on <strong>info</strong> in the first line under the <strong>Document</strong> column</li>
+<p><img alt="" src="../_attachments/B2BiLab03-31-B2Bi-Select-Bootstrap.png"></p>
+<ol>
+<li>Inside the  <strong>Lab03_Process_Positional</strong> click on <strong>info</strong> in the first line under the <strong>Document</strong> column</li>
 </ol>
-<p><img alt="" src="../_attachments/B2BiLab02-28-Select-Input-File-in-Process.png"></p>
-<ol start="23">
+<p><img alt="" src="../_attachments/B2BiLab03-32-B2Bi-Show-Bootstrap.png"></p>
+<ol>
 <li>The Input application file is shown.  This is the format coming out of an Accounts Receivable module most likely in an ERP system.  Close out of this screen.</li>
 </ol>
-<p><img alt="" src="../_attachments/B2BiLab02-29-View-Input-File-In-Process.png"></p>
-<ol start="24">
-<li>Click on the top process in the <strong>Id</strong> Column.</li>
-</ol>
-<p><img alt="" src="../_attachments/B2BiLab02-30-Select-End-of-Process.png"></p>
+<p><img alt="" src="../_attachments/B2BiLab03-33-B2Bi-Show-Bootstrap-Metadata.png"></p>
 <ol start="25">
 <li>View the final output document by clicking on <strong>info</strong> in the last row under the <strong>Document</strong> column. </li>
 </ol>
-<p><img alt="" src="../_attachments/B2BiLab02-31-Select-Final-Output.png"></p>
-<ol start="26">
+<p>![](_attachments/B2BiLab03-34-B2Bi-Select-File-Extraction.png</p>
+<ol>
 <li>The output ANSI X12 document is shown.   </li>
 </ol>
-<p><img alt="" src="../_attachments/B2BiLab02-32-View-Final-Output-as-EDI.png"></p>
+<p><img alt="" src="../_attachments/B2BiLab03-35-B2Bi-Select-Translated-File.png"></p>
+<ol>
+<li>Click on the top process in the <strong>Id</strong> Column.</li>
+</ol>
+<p><img alt="" src="../_attachments/B2BiLab03-36-B2Bi-Show-Translated-File.png"></p>
 <details class="question">
 <summary>BP quiz question</summary>
 <p>There is a quiz question somewhere around here....</p>
 </details>
-<p>This concludes lab02. </p></div>
+<p>This concludes lab03. </p></div>
 
 
 
