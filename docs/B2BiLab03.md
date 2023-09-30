@@ -147,7 +147,7 @@ Now that the Business Process has run, the user can view detail of the process.
     
 ![](_attachments/B2BiLab03-31-B2Bi-Select-Bootstrap.png)
 
-1.    Inside the  **Lab02_Process_Positional** click on **info** in the first line under the **Document** column
+1.    Inside the  **Lab03_Process_Positional** click on **info** in the first line under the **Document** column
 
 ![](_attachments/B2BiLab03-32-B2Bi-Show-Bootstrap.png)
 
