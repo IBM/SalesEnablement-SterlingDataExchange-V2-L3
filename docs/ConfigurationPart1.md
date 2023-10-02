@@ -190,9 +190,11 @@ The default **SFTP Server Listen Port** must be changed to the B2Bi service port
 
 ![](_attachments/B2BiSFTPAdapterEnabled-2.png)
 
-40. Verify the **SFTP Server Adapter** is **Running** and then click the **Close** button.
+40. Verify the **SFTP Server Adapter** is **Running** and then click the **Close** button.  Once the Services Configuration is refreshed, the running SFTP Server Adapter will show as **Enabled**. 
 
 ![](_attachments/B2BiSFTPAdapterStatus-2.png)
+
+![](_attachments/B2BiSFTPAdapterStatus-3.png)
 
 41. Click the **Logout** link to log out of the **B2Bi dashboard**.
 
