@@ -12,7 +12,7 @@ The following steps must be performed before delivering the demonstration. These
 
 ## Access the OpenShift web console and verify the OpenShift cluster's health
 
-1. From the <a href="http:https://techzone.ibm.com/my/reservations" target="_blank">ITZ My Reservations page</a>, click the tile for your OpenShift cluster reservation (must be in the **Ready** state).
+1. From the <a href="https://techzone.ibm.com/my/reservations" target="_blank">ITZ My Reservations page</a>, click the tile for your OpenShift cluster reservation (must be in the **Ready** state).
 
 ![](_attachments/ITZReservationDetailsPage.png)
 
