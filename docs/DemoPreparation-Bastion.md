@@ -4,7 +4,7 @@ At this point, all users should have completed the steps in the {{learningplan.n
 
 !!! warning 
 
-    Note, some screen captures below will show the name of the ITZ environment as **OpenShift Cluster (VMware on IBM Cloud) - IPI**. This demonstration script now uses the ITZ environment **OpenShift Cluster (VMware on IBM Cloud) - UPI**. 
+    Note, some screen captures below will show the name of the ITZ environment as **OpenShift Cluster (VMware on IBM Cloud) - UPI**. This demonstration script now uses the ITZ environment **OpenShift Cluster (VMware on IBM Cloud) - UPI**. 
 
 ![](_attachments/TZReady-2.png)
 
