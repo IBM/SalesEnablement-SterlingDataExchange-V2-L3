@@ -15,6 +15,9 @@ As an introduction, watch this brief video of the steps to be performed.
 ![type:video](_videos/SterlingDataExchange-ClientDemoWalkthrough-final.mp4)
 
 
+![type:video](_videos/SterlingDataExchange-ClientDemoWalkthrough-final.mp4)
+
+
 ![type:video](_videos/SterlingDataExchange-ClientDemoWalkthrough-final copy.mp4)
 
 
@@ -26,6 +29,9 @@ CHange Test  1 2 3  To configure FileZilla for **partner2** both the File Gatewa
 1. Return to the OpenShift web console and click on the **sterling-fg-b2bi-asi-internal-route** route on the **Routes** page.
 
 ![](_attachments/OS_InternalRoute1.png)
+
+
+![type:video](_videos/SterlingDataExchange-ClientDemoWalkthrough-final.mp4)
 
 2. Select the **Host** field, right click, and click **Copy**.
 
