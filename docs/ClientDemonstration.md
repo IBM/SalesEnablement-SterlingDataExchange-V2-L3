@@ -18,9 +18,10 @@ As an introduction, watch this brief video of the steps to be performed.
 ![type:video](_videos/SterlingDataExchange-ClientDemoWalkthrough-final copy.mp4)
 
 
+
 ## Configure FileZilla for partner2
 
-To configure FileZilla for **partner2** both the File Gateway route address and port number will be needed.
+CHange Test  1 2 3  To configure FileZilla for **partner2** both the File Gateway route address and port number will be needed.
 
 1. Return to the OpenShift web console and click on the **sterling-fg-b2bi-asi-internal-route** route on the **Routes** page.
 
