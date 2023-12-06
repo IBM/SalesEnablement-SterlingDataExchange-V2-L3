@@ -1,4 +1,4 @@
-Demo 2 simulates an application file with multiple invoices in a proprietary format and splits it into two or three EDI ANSI X12 810 documents.   There is a short import scenario that does not have to be part of the demonstration.   The business process, maps, and envelopes are imported into B2B integrator.  
+Example 2 simulates an application file with multiple invoices in a proprietary format and splits it into two or three EDI ANSI X12 810 documents.   There is a short import scenario that does not have to be part of the demonstration.   The business process, maps, and envelopes are imported into B2B integrator.  
 
 ## Open the B2Bi dashboard and import the lab02 definition
 
