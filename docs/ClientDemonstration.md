@@ -14,6 +14,10 @@ As an introduction, watch this brief video of the steps to be performed.
 
 ![type:video](_videos/SterlingDataExchange-ClientDemoWalkthrough-final.mp4)
 
+
+![type:video](_videos/SterlingDataExchange-ClientDemoWalkthrough-final copy.mp4)
+
+
 ## Configure FileZilla for partner2
 
 To configure FileZilla for **partner2** both the File Gateway route address and port number will be needed.
