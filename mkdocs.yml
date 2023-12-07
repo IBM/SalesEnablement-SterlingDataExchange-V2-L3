@@ -14,13 +14,13 @@ docs_dir: docs
   # - 'Environment Preparation and B2Bi Installation using a VSI': 'DemoPreparation-VSI.md'
 nav:
   - 'Introduction': 'index.md'
-  - 'Demonstration Overview': 'Overview.md'
+  - 'Level 3 course Overview': 'Overview.md'
   - 'Environment Preparation and B2Bi Installation using IBM Cloud Shell': 'DemoPreparation-Bastion.md'
   - 'B2Bi Configuration Part 1': 'ConfigurationPart1.md'
-  - 'B2Bi Configuration Part 2': 'ConfigurationPart2.md'
-  - 'Client Demonstration': 'ClientDemonstration.md'
-  - 'B2Bi Demo 02 Outbound Invoice': 'B2BiDemo02.md'
-  - 'Lab 03 Inbound EDIFACT': 'B2BiLab03.md'
+  - 'Demo 1 - Setup - Setup B2Bi Configuration Part 2': 'ConfigurationPart2.md'
+  - 'Demo 1 - FileGateway - Basic Partner to Partner SFTP': 'ClientDemonstration.md'
+  - 'Demo 2 - B2Bi Outbound ANSI X12 Invoice': 'B2BiDemo02.md'
+  - 'Demo 3 - B2Bi Inbound EDIFACT ORDERS': 'B2BiLab03.md'
   - 'Next Steps': 'NextSteps.md'
 
 theme:

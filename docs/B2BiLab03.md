@@ -93,7 +93,7 @@ The import does not have to be part of the demonstration.   The business process
     That is the end of the setup necessary for the lab.   In a customer demo situation, the above steps could  be executed ahead of time so that only the following steps are needed to show the demo scenario itself.
 
 
-## Execute the Lab 03 demo
+## Execute the Demo 3
 
 
 !!! important "Important"
