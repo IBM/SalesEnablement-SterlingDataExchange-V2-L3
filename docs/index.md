@@ -90,4 +90,3 @@ The following acronyms are used throughout this demonstration guide:
 
 
 It is now time to proceed to the Demonstration Overview. 
-![](_attachments/B2BiPodsRunning.png)
