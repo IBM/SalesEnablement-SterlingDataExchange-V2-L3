@@ -1,4 +1,4 @@
-Lab3 simulates an EDIFACT EDI interchange being received by B2B Integrator and processed into an application file.
+Lab 4 demonstrates a zipped file being sent into FileGateway, being unzipped, then the contents being routed in an appropriate mailbox for each file type.  
 
 The import does not have to be part of the demonstration.   The business process, maps,  envelopes etc. are imported into B2B integrator.  
 
@@ -29,62 +29,15 @@ The import does not have to be part of the demonstration.   The business process
 
 ![](_attachments/B2BiLab03-05-Enter-Import-password.png)
 
-6. No changes to Resource Tags so click **Next** 
-
-![](_attachments/B2BiLab03-06-Skip-Create-Resource-Tag.png)
-
-7. Leave the default to allow updates if objects already exist in the system.   Click **Next**
 
 
-![](_attachments/B2BiLab03-06-Accept-Update-Objects-Default.png)
 
-!!! hint
-    Note sure what to hint about here....if anything.....
-
-8. Use the **double down arrow** to select all of the TP (Trading Partner) Envelopes to be imported.  Note: There is actually no need to click on the individual resources being imported, if you use the double down arrow.  
-
-![](_attachments/B2BiLab03-07-Import-TP-Envelopes.png)
-
-
-9. The trading partner envelopes are shown as all selected. Click **Next** 
-
-![](_attachments/B2BiLab03-08-TP-Envelopes-Selected.png)
-
-
-10. Use the **double down arrow** to select all of the Maps.  Then click **Next**
-
-![](_attachments/B2BiLab03-09-Import-Maps.png)
-
-
-11. Use the **double down arrow** to select all of the Users.  Then click **Next**.  Note: The selected resources won't be shown moved into the "To Be Imported" box form this point in this documentation.
-
-![](_attachments/B2BiLab03-10-Import-Users.png)
-
-
-12. Use the **double down arrow** to select all of the Permissions.  Then click **Next**
-
-![](_attachments/B2BiLab03-11-Import-Permissions.png)
-
-
-13. Use the **double down arrow** to select all of the Mailbox Virtual Root.  Then click **Next**
-
-![](_attachments/B2BiLab03-12-Import-Mailbox-Virtual-Root.png)
-
-14. Leave the default of **Select All**  Then click **Next**
-
-![](_attachments/B2BiLab03-13-Import-Mailbox-Metadata.png)
-
-15. Use the **double down arrow** to select all of the Mailbox Routing Rules.  
-   
-![](_attachments/B2BiLab03-14-Import-Mailbox-Routing-Rule.png)
-
-
-16.    All of the artifacts selected for import are shown on the Confirm panel.   If any are missing, hit the **Back** button and make the additional selections, otherwise, click **Finish**.  Note:  If "Import all Artifacts" was selected earlier, the configuration process will be the same from here in this documentation. 
+2.     All of the artifacts selected for import are shown on the Confirm panel.   If any are missing, hit the **Back** button and make the additional selections, otherwise, click **Finish**.  Note:  If "Import all Artifacts" was selected earlier, the configuration process will be the same from here in this documentation. 
 
 ![](_attachments/B2BiLab03-15-Confirm-Import.png)
 
 
-17.    Click **Return** 
+3.    Click **Return** 
 
 ![](_attachments/B2BiLab02-12-Return-From-Imports.png)
 
@@ -93,7 +46,7 @@ The import does not have to be part of the demonstration.   The business process
     That is the end of the setup necessary for the lab.   In a customer demo situation, the above steps could  be executed ahead of time so that only the following steps are needed to show the demo scenario itself.
 
 
-## Execute the Demo 3
+## Execute the Demo 4
 
 
 !!! important "Important"
@@ -182,5 +135,5 @@ Now that the Business Process has run, the user can view detail of the process. 
     There is a quiz question somewhere around here....
 
 
-This concludes lab03. 
+This concludes lab04. 
 
