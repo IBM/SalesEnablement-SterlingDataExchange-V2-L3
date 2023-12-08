@@ -1,5 +1,11 @@
 Example 2 simulates an application file with multiple invoices in a proprietary format and splits it into two or three EDI ANSI X12 810 documents.   There is a short import scenario that does not have to be part of the demonstration.   The business process, maps, and envelopes are imported into B2B integrator.  
 
+Before proceeding, take 2 minutes to listen to Thomas Limanek, B2B subject matter expert, explain the lab. 
+
+![type:video](./_videos/Level3Demo02.mp4)
+
+Text after the video.  Wasn't that special.
+
 ## Open the B2Bi dashboard and import the lab02 definition
 
 1. In the B2B Integrator web console, click **Import/Export** under the **Resource Manager** under **Deployment** in the left-hand panel.
