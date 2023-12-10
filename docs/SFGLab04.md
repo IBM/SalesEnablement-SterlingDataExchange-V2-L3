@@ -4,7 +4,7 @@ The import does not have to be part of the demonstration.   The business process
 
 Before proceeding, take 3 minutes to listen to Thomas Limanek, B2B subject matter expert, explain the lab. 
 
-![type:video](./_videos/Level3Demo02.mp4)
+![type:video](./_videos/Level3Demo04.mp4)
 
 Text after the video.  
 
