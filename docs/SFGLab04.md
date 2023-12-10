@@ -1,6 +1,14 @@
-Lab 4 demonstrates a zipped file being sent into FileGateway, being unzipped, then the contents being routed in an appropriate mailbox for each file type.  
+Demo 4 demonstrates a zipped file being sent into FileGateway, being unzipped, then the contents being routed to an appropriate mailbox for each file type.  
 
 The import does not have to be part of the demonstration.   The business process, maps,  envelopes etc. are imported into B2B integrator.  
+
+Before proceeding, take 3 minutes to listen to Thomas Limanek, B2B subject matter expert, explain the lab. 
+
+![type:video](./_videos/Level3Demo02.mp4)
+
+Text after the video.  
+
+REPLACE THE SCREENSHOTS TO SHOW SFG!!  
 
 ## Open the B2Bi dashboard and import the lab03 definition
 
@@ -30,8 +38,6 @@ The import does not have to be part of the demonstration.   The business process
 ![](_attachments/B2BiLab03-05-Enter-Import-password.png)
 
 
-
-
 2.     All of the artifacts selected for import are shown on the Confirm panel.   If any are missing, hit the **Back** button and make the additional selections, otherwise, click **Finish**.  Note:  If "Import all Artifacts" was selected earlier, the configuration process will be the same from here in this documentation. 
 
 ![](_attachments/B2BiLab03-15-Confirm-Import.png)
@@ -48,6 +54,7 @@ The import does not have to be part of the demonstration.   The business process
 
 ## Execute the Demo 4
 
+CHANGE TO LAB 4 screenshots
 
 !!! important "Important"
 The demo instructions in the first lab in this course document how to setup Filezilla for a secure SFTP transfer into a B2B Integrator mailbox. If that lab has been completed, then the following additional steps are all that is required.  If that lab has not been completed, go back to do the Filezilla setup steps, then pickup here.  

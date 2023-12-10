@@ -1,6 +1,12 @@
-Lab3 simulates an EDIFACT EDI interchange being received by B2B Integrator and processed into an application file.
+Demo 3 simulates an EDIFACT EDI interchange being received by B2B Integrator and processed into an application file.
 
-The import does not have to be part of the demonstration.   The business process, maps,  envelopes etc. are imported into B2B integrator.  
+The import does not have to be part of the demonstration.   The business process, maps, envelopes etc. are imported into B2B integrator.  
+
+Before proceeding, take 2 minutes to listen to Thomas Limanek, B2B subject matter expert, explain the lab. 
+
+![type:video](./_videos/Level3Demo02.mp4)
+
+Text after the video.  
 
 ## Open the B2Bi dashboard and import the lab03 definition
 
