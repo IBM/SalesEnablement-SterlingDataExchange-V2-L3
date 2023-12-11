@@ -31,8 +31,6 @@ theme:
     - navigation.tracking
     - content.code.annotate
     - content.code.copy
-  theme:
-  features:
     - navigation.footer
   palette:
     - media: "(prefers-color-scheme: light)"
