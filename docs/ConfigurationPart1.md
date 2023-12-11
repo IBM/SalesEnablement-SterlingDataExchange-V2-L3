@@ -198,11 +198,11 @@ The default **SFTP Server Listen Port** must be changed to the B2Bi service port
 
 41.  right click on the links, and click **Save link as** to the local Downloads directory.
 
-  - <a href="https://raw.githubusercontent.com/IBM/SalesEnablement-SterlingDataExchange-V2-L3/main/tools/B2BiLevel3ImportAndData.zip" target="_blank">B2BiDataAndImports.zip</a>
+  - <a href="https://raw.githubusercontent.com/IBM/SalesEnablement-SterlingDataExchange-V2-L3/main/tools/B2BiLevel3ImportsAndData.zip" target="_blank">B2BiDataAndImports.zip</a>
 
   - <a href="https://raw.githubusercontent.com/IBM/SalesEnablement-SterlingDataExchange-L3/main/tools/SampleInvoice2.xml" target="_blank">Orig SampleInvoice2.xml</a>
 
-  - <a href="https://raw.githubusercontent.com/IBM/SalesEnablement-SterlingDataExchange-L3/main/tools/SampleInvoice2.xml" target="_blank">New SampleInvoice2.xml</a>
+  - <a href="https://raw.githubusercontent.com/IBM/SalesEnablement-SterlingDataExchange-V2-L3/main/tools/SampleInvoice2.xml" target="_blank">New SampleInvoice2.xml</a>
 
 42. Click the **Logout** link to log out of the **B2Bi dashboard**.
 
