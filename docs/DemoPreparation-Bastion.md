@@ -36,7 +36,7 @@ Before proceeding, verify that all {{tz_environment.numberOfWorkerNodes}} worker
 
 ![](_attachments/OpenShiftThreeWorkerNodes.png)
 
-!!! danger "Are less than {{tz_environment.numberOfWorkerNodes}} worker nodes available and  **Ready****?"
+!!! warning "Are less than {{tz_environment.numberOfWorkerNodes}} worker nodes available and  **Ready****?"
     
     If there are less than {{tz_environment.numberOfWorkerNodes}} worker nodes in the **Ready** state, it is
     very likely you will encounter issues during the installation of {{offering.name}}. It is highly recommended to delete the current ITZ reservation and create a new one following the earlier instructions. Alternatively, you can open a ticket with the ITZ support team using the <a href="" target="_blank">#itz-techzone-support</a> slack channel and see if the support team can fix the broken node(s).
