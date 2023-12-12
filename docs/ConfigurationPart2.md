@@ -225,21 +225,35 @@ ${ProducerFileName}
 
 ## Optional: Shortcut method
 
+The above steps are done in Sterling FileGateway and are useful to show how partners, a community, routing channel templates, and routing channels are created.   Once the learner is comfortable with that process, this shortcut method will create the same artifacts in a single import.   The import process must be executed inside B2B Integrator and not FileGateway.   
+
+After the import is executed, the learner may want to log into Sterling FileGateway and inspect the various artifacts by reviewing the above steps in a view mode. 
+
+The Zip file contains import/export XML files for setup shortcuts for all of the demos, as well as the input data files for each of the demos. 
+
 1. If you are not still logged in to B2Bi, launch the IBM Sterling B2Bi dashboard by clicking on the route for the **sterling-fg-b2bi-asi-internal-route-dashboard** route in the **Location** column. Do not click the Route name, rather click the Route link in the **Location** column of the table.  
 
 ![](_attachments/OSB2BiDashboardRoute.png)
 
-2. If not already done, download the Imports and Data Zip File, and then Unzip on your desktop. Right click on the links, and click **Save link as** to the local Downloads directory.
+1. If not already done, download the **B2Bi Imports and Data** Zip File by right click on the links, and click **Save link as** to a local directory.  
 
   - <a href="https://raw.githubusercontent.com/IBM/SalesEnablement-SterlingDataExchange-V2-L3/main/tools/B2BiLevel3ImportsAndData.zip" target="_blank">B2BiDataAndImports.zip</a>
 
-3. Go to Configuration, Import......
-   ![](_attachments/B2BiLab01-01-StartImport.png)
+3. UnZip the file into a directory.  Should look similar to this.  
+
+![](_attachments/B2BiLab01-02-DirectoryOfImports.png)
  
-4. Open the Demo1 Directory, and 
-
-5. Import it.   Click through....get to here....OK!  
+1. Back on B2B Integrator, Go to **Deployment**, **Resource Manager**, **Import/Export**
    
+![](_attachments/B2BiLab01-01-StartImport.png)
+ 
+1. Select **Go** on the Import
+   
+![](_attachments/B2BiLab01-04-GoImport.png)
 
+1. Open the Demo1 Directory, and Select file  **ExportPassthroughLab01**   
+   
+![](_attachments/B2BiLab01-03-ImportFile.png)
 
+5. 
 In the next chapter, the fun begins as the partners start to securely exchange files.
