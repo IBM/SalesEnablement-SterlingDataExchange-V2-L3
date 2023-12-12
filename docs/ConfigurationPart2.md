@@ -225,53 +225,53 @@ ${ProducerFileName}
 
 ## Optional: Shortcut method
 
-The above steps are done in Sterling FileGateway and are useful to show how partners, a community, routing channel templates, and routing channels are created.   Once the learner is comfortable with that process, this shortcut method will create the same artifacts in a single import.   The import process must be executed inside B2B Integrator and not FileGateway.   
+The above steps are done in Sterling FileGateway and are useful to show how partners, a community, routing channel templates, and routing channels are created.   Once the learner is comfortable with that process, the shortcut method described below willshow how to create the same artifacts in a single import.   The import process is executed inside B2B Integrator and not FileGateway.   
 
 After the import is executed, the learner may want to log into Sterling FileGateway and inspect the various artifacts by reviewing the above steps in a view mode. 
 
-The Zip file contains import/export XML files for setup shortcuts for all of the demos, as well as the input data files for each of the demos. 
+A Zip file is provided that contains import/export XML files for setup shortcuts for all of the demos, as well as the input data files for each of the demos. 
 
 1. If you are not still logged in to B2Bi, launch the IBM Sterling B2Bi dashboard by clicking on the route for the **sterling-fg-b2bi-asi-internal-route-dashboard** route in the **Location** column. Do not click the Route name, rather click the Route link in the **Location** column of the table.  
 
 ![](_attachments/OSB2BiDashboardRoute.png)
 
-1. If not already done, download the **B2Bi Imports and Data** Zip File by right click on the links, and click **Save link as** to a local directory.  
+2. If not already done, download the **B2Bi Imports and Data** Zip File by right click on the links, and click **Save link as** to a local directory.  
 
   - <a href="https://raw.githubusercontent.com/IBM/SalesEnablement-SterlingDataExchange-V2-L3/main/tools/B2BiLevel3ImportsAndData.zip" target="_blank">B2BiDataAndImports.zip</a>
 
-2. UnZip the file into a directory.  Should look similar to this.  
+3. UnZip the file into a directory.  Should look similar to this.  
 
 ![](_attachments/B2BiLab01-02-DirectoryOfImports.png)
  
-3. Back on B2B Integrator, Go to **Deployment**, **Resource Manager**, **Import/Export**
+4. Back on B2B Integrator, Go to **Deployment**, **Resource Manager**, **Import/Export**
    
 ![](_attachments/B2BiLab01-01-StartImport.png)
  
-4. Select **Go** on the Import Resources panel
+5. Select **Go** on the Import Resources panel
    
 ![](_attachments/B2BiLab01-04-GoImport.png)
 
-5. On the File Name line click on **Choose File** 
+6. On the File Name line click on **Choose File** 
    
 ![](_attachments/B2BiLab01-04B-GetImportFile.png)
 
-5. Open the Demo1 Directory, and Select file  **ExportPassthroughLab01**   
+7. Open the Demo1 Directory, and Select file  **ExportPassthroughLab01**   
    
 ![](_attachments/B2BiLab01-03-ImportFile.png)
 
-6. View that the Passthrough Import file has been selected, enter **password** in the password box, and check **Import All Resources** then click **Next** 
+8. View that the Passthrough Import file has been selected, enter **password** in the password box, and check **Import All Resources** then click **Next** 
    
 ![](_attachments/B2BiLab01-05-ImportPasswordandAll.png) 
 
-7. Keep the same default and click **Next**
+9. Keep the same default and click **Next**
    
 ![](_attachments/B2BiLab01-06-ClickThroughTags.png) 
 
-8. Allow updates to any existing resources by clicking **Next**
+10. Allow updates to any existing resources by clicking **Next**
    
 ![](_attachments/B2BiLab01-07-UpdateResources.png) 
 
-9. All of the resources to be Imported are shown.   Most will look familiar like Partner1, Partner2, sftp_community, and Passthrough which are shown being explicitly entered into Sterling FileGateway in the detailed steps above.   Other resources such as the Permissions or TP Packagings will look less familiar, since they are background resources automatically setup in FileGateway.  Click on **Finish** to complete the Import.  
+11. All of the resources to be Imported are shown.   Most will look familiar like Partner1, Partner2, sftp_community, and Passthrough which are shown being explicitly entered into Sterling FileGateway in the detailed steps above.   Other resources such as the Permissions or TP Packagings will look less familiar, since they are background resources automatically setup in FileGateway.  Click on **Finish** to complete the Import.  
    
 ![](_attachments/B2BiLab01-08-PassthroughImportReview.png) 
 
