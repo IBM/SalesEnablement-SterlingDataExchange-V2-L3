@@ -239,21 +239,39 @@ The Zip file contains import/export XML files for setup shortcuts for all of the
 
   - <a href="https://raw.githubusercontent.com/IBM/SalesEnablement-SterlingDataExchange-V2-L3/main/tools/B2BiLevel3ImportsAndData.zip" target="_blank">B2BiDataAndImports.zip</a>
 
-3. UnZip the file into a directory.  Should look similar to this.  
+2. UnZip the file into a directory.  Should look similar to this.  
 
 ![](_attachments/B2BiLab01-02-DirectoryOfImports.png)
  
-1. Back on B2B Integrator, Go to **Deployment**, **Resource Manager**, **Import/Export**
+3. Back on B2B Integrator, Go to **Deployment**, **Resource Manager**, **Import/Export**
    
 ![](_attachments/B2BiLab01-01-StartImport.png)
  
-1. Select **Go** on the Import
+4. Select **Go** on the Import
    
 ![](_attachments/B2BiLab01-04-GoImport.png)
 
-1. Open the Demo1 Directory, and Select file  **ExportPassthroughLab01**   
+5. Open the Demo1 Directory, and Select file  **ExportPassthroughLab01**   
    
 ![](_attachments/B2BiLab01-03-ImportFile.png)
 
-5. 
+6. View that the Passthrough Import file has been selected, enter **password** in the password box, and check **Import All Resources** then click **Next** 
+   
+![](_attachments/B2BiLab01-05-ImportPasswordandAll.png) 
+
+7. Keep the same default and click **Next**
+   
+![](_attachments/B2BiLab01-06-ClickThroughTags.png) 
+
+8. Allow updates to any existing resources by clicking **Next**
+   
+![](_attachments/B2BiLab01-07-UpdateResources.png) 
+
+9. All of the resources to be Imported are shown.   Most will look familiar like Partner1, Partner2, sftp_community, and Passthrough which are shown being explicitly entered into Sterling FileGateway in the detailed steps above.   Other resources such as the Permissions or TP Packagings will look less familiar, since they are background resources automatically setup in FileGateway.  Click on **Finish** to complete the Import.  
+   
+![](_attachments/B2BiLab01-B2BiLab01-08-PassthroughImportReview.png) 
+
+At the conclusion of the Import process, you may find it interesting to validate that everything is setup properly, by going back to the top of this chapter and following along the steps in a view only mode. That will mean logging into Sterling FileGateway and then clicking into the various screens but not updating anything. 
+
+
 In the next chapter, the fun begins as the partners start to securely exchange files.
