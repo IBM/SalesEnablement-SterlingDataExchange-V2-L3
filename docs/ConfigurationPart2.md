@@ -234,6 +234,7 @@ ${ProducerFileName}
   - <a href="https://raw.githubusercontent.com/IBM/SalesEnablement-SterlingDataExchange-V2-L3/main/tools/B2BiLevel3ImportsAndData.zip" target="_blank">B2BiDataAndImports.zip</a>
 
 3. Go to Configuration, Import......
+   ![](_attachments/B2BiLab01-01-StartImport.png)
  
 4. Open the Demo1 Directory, and 
 
