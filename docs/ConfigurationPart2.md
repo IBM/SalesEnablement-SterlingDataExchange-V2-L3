@@ -247,9 +247,13 @@ The Zip file contains import/export XML files for setup shortcuts for all of the
    
 ![](_attachments/B2BiLab01-01-StartImport.png)
  
-4. Select **Go** on the Import
+4. Select **Go** on the Import Resources panel
    
 ![](_attachments/B2BiLab01-04-GoImport.png)
+
+5. On the File Name line click on **Choose File** 
+   
+![](_attachments/B2BiLab01-04B-GetImportFile.png)
 
 5. Open the Demo1 Directory, and Select file  **ExportPassthroughLab01**   
    
