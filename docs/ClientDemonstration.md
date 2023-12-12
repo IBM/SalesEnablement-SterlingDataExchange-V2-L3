@@ -82,9 +82,9 @@ Note, the example below was captured using Firefox on MacOS. Others browser menu
 
 14. Create or download the 2 sample files that will be transferred between partner1 and partner2. Since the templates created earlier allow for any file names to be transferred it does not matter what files are used.  It is suggested to use small files so the transfers happen quickly.  Feel free to download these two sample invoice files. In most browsers, select the link names below, right click on the links, and click **Save link as** to the local Downloads directory.
 
-  - <a href="https://raw.githubusercontent.com/IBM/SalesEnablement-SterlingDataExchange-L3/main/tools/SampleInvoice1.xml" target="_blank">SampleInvoice1.xml</a>
+  - <a href="https://raw.githubusercontent.com/IBM/SalesEnablement-SterlingDataExchange-V2-L3/main/tools/SampleInvoice1.xml" target="_blank">SampleInvoice1.xml</a>
 
-  - <a href="https://raw.githubusercontent.com/IBM/SalesEnablement-SterlingDataExchange-L3/main/tools/SampleInvoice2.xml" target="_blank">SampleInvoice2.xml</a>
+  - <a href="https://raw.githubusercontent.com/IBM/SalesEnablement-SterlingDataExchange-V2-L3/main/tools/SampleInvoice2.xml" target="_blank">SampleInvoice2.xml</a>
 
 ## Transfer a file from partner1 to partner2 using the IBM Sterling My File Gateway 2.0
 
