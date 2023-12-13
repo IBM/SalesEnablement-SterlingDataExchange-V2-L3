@@ -431,8 +431,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#view-the-partner-community" class="md-nav__link">
-    View the partner community
+  <a href="#view-sfg-configuration" class="md-nav__link">
+    View SFG configuration
   </a>
   
 </li>
@@ -517,8 +517,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#view-the-partner-community" class="md-nav__link">
-    View the partner community
+  <a href="#view-sfg-configuration" class="md-nav__link">
+    View SFG configuration
   </a>
   
 </li>
@@ -587,8 +587,8 @@
 <li>Open the Demo4 Directory, and under the Import folder Select file  <strong>SFG-Lab4-Export.xml</strong>   </li>
 </ol>
 <p><img alt="" src="../_attachments/B2BiLab04-04C-SelectSpecificFile.png"></p>
-<ol start="8">
-<li>View that the Passthrough Import file has been selected, enter <strong>password</strong> in the password box, and check <strong>Import All Resources</strong> then click <strong>Next</strong> </li>
+<ol>
+<li>See that the SFG-Lab4-Export Import file has been selected, enter <strong>password</strong> in the password box, and check <strong>Import All Resources</strong> then click <strong>Next</strong> </li>
 </ol>
 <p><img alt="" src="../_attachments/B2BiLab04-05-ImportPasswordandAll.png"> </p>
 <ol>
@@ -600,12 +600,16 @@
 </ol>
 <p><img alt="" src="../_attachments/B2BiLab01-07-UpdateResources.png"> </p>
 <ol start="11">
-<li>All of the resources to be Imported are shown.   Most will look familiar like Partner1, Partner2, sftp_community, and Passthrough which are shown being explicitly entered into Sterling FileGateway in the detailed steps above.   Other resources such as the Permissions or TP Packagings will look less familiar, since they are background resources automatically setup in FileGateway.  Click on <strong>Finish</strong> to complete the Import.  </li>
+<li>All of the resources to be Imported are shown.   In this import the Community is <strong>Demo_SFG_Community</strong>, the partners are <strong>DemoAgents</strong> and <strong>Demo_TransactionSystem</strong>, the routing channel template is <strong>Demo_UNZip</strong> and the routing channel is defined with <strong>Demo_Unzip:Demo_Agents::Demo_TransactionSystem:Demo_Agents/Zip</strong> (The routing channel points to the Demo_Unzip routing channel template with producer Demo_Agents).   Most will look familiar like Partner1, Partner2, sftp_community, and Passthrough which are shown being explicitly entered into Sterling FileGateway in the detailed steps above.   Other resources such as the Permissions or TP Packagings will look less familiar, since they are background resources automatically setup in FileGateway.  Click on <strong>Finish</strong> to complete the Import.  </li>
 </ol>
+<details class="question">
+<summary>BP quiz question</summary>
+<p>A BP quiz question will come from this review screen. When taking the BP quiz make sure you have noted the exact text on the Groups line.  </p>
+</details>
 <p><img alt="" src="../_attachments/B2BiLab04-08-SFGLab04ExportReview.png"> </p>
-<p>At the conclusion of the Import process, you may find it interesting to validate that everything is setup properly, by going back to the top of this chapter and following along the steps in a view only mode. That will mean logging into Sterling FileGateway and then clicking into the various screens but not updating anything. </p>
-<p>Logout of B2B Integrator...</p>
-<h2 id="view-the-partner-community">View the partner community</h2>
+<p>Below you will review the results of the Import process in a view mode.  You will logout of B2B Integrator and view the various pages in Sterling FileGateway. </p>
+<p><strong>Logout of B2B Integrator</strong></p>
+<h2 id="view-sfg-configuration">View SFG configuration</h2>
 <p>Login to SFG</p>
 <ol>
 <li>Return to the OpenShift web console and click on the route link to the IBM Sterling File Gateway user interface (UI): <strong>sterling-fg-b2bi-asi-internal-route-filegateway</strong>.</li>
@@ -629,11 +633,7 @@
 <li>Click <strong>GO</strong> to the right of Import Resources</li>
 </ol>
 <p><img alt="" src="../_attachments/B2BiLab03-02-Select-Go-To-Import.png"></p>
-<details class="question">
-<summary>BP quiz question</summary>
-<p>Several BP quiz questions will come from this area <strong>B2Bi Import</strong>. When taking the BP quiz make sure tyou have noted the number of maps imported.</p>
-</details>
-<ol start="3">
+<ol>
 <li>Click <strong>Choose File</strong> in the <strong>Import Resources</strong> page</li>
 </ol>
 <p><img alt="" src="../_attachments/B2BiLab03-03-Click-Choose-File.png"></p>
