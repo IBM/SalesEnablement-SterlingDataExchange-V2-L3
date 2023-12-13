@@ -9,48 +9,48 @@ Before proceeding, take 3 minutes to listen to Thomas Limanek, B2B subject matte
  
 ## Import the FileGateway process
 
-In the Demo 1 setuo, the detailed steps to create partners, community, routing channel template, and routing channel in SFG were shown.  In demos 2 and 3, the the import process was shown in detail, where each of the separate artifact groups was selected.    In Demo 4, you will only be shown the fast version of doing the import for all resources.   You should have already downloaded the  <a href="https://raw.githubusercontent.com/IBM/SalesEnablement-SterlingDataExchange-V2-L3/main/tools/B2BiLevel3ImportsAndData.zip" target="_blank">B2BiDataAndImports.zip</a> If not, refer to the Demo 1 in the Optional Shortcut section for details.  
+In the Demo 1 setup, the detailed steps inside Sterling FileGateway to create partners, community, routing channel template, and routing channel were shown.  In demos 2 and 3, the import process was shown in detail, where each of the separate artifact groups was selected.    In Demo 4, you will only be shown the fast version of doing the import for all resources.   You should have already downloaded the  <a href="https://raw.githubusercontent.com/IBM/SalesEnablement-SterlingDataExchange-V2-L3/main/tools/B2BiLevel3ImportsAndData.zip" target="_blank">B2BiDataAndImports.zip</a>. If not, refer to Demo 1 in the Optional Shortcut section for details.  
 
 1. If you are not currently logged in to B2Bi, launch the IBM Sterling B2Bi dashboard by clicking on the route for the **sterling-fg-b2bi-asi-internal-route-dashboard** route in the **Location** column. Do not click the Route name, rather click the Route link in the **Location** column of the table.  
 
 ![](_attachments/OSB2BiDashboardRoute.png)
  
-1. Once logged in, click through **Deployment**, **Resource Manager**, **Import/Export**
+2. Once logged in, click through **Deployment**, **Resource Manager**, **Import/Export**
    
 ![](_attachments/B2BiLab01-01-StartImport.png)
  
-2. Select **Go** on the Import Resources panel
+3. Select **Go** on the Import Resources panel
    
 ![](_attachments/B2BiLab01-04-GoImport.png)
 
-3. On the File Name line click on **Choose File** 
+4. On the File Name line click on **Choose File** 
    
 ![](_attachments/B2BiLab01-04B-GetImportFile.png)
 
-1. Open the Demo4 Directory, and under the Import folder Select file  **SFG-Lab4-Export.xml**   
+5. Open the Demo4 Directory on your desktop where the **B2BiLevel3ImportsAndData** zip file was expanded.  Under the **Import** folder Select file  **SFG-Lab4-Export.xml**   
    
 ![](_attachments/B2BiLab04-04C-SelectSpecificFile.png)
 
-1. See that the SFG-Lab4-Export Import file has been selected, enter **password** in the password box, and check **Import All Resources** then click **Next** 
+6. See that the **SFG-Lab4-Export** Import file has been selected, enter **password** in the password box, and check **Import All Resources** then click **Next** 
    
 ![](_attachments/B2BiLab04-05-ImportPasswordandAll.png) 
 
-1. Keep the same default and click **Next**
+7. Keep the ***Create Resource** defaults and click **Next**
    
 ![](_attachments/B2BiLab01-06-ClickThroughTags.png) 
 
-10. Allow updates to any existing resources by clicking **Next**
+8. Allow updates to any existing resources by leaving **Yes** selected and clicking **Next**
    
 ![](_attachments/B2BiLab01-07-UpdateResources.png) 
 
-11. All of the resources to be Imported are shown.   In this import the Community is **Demo_SFG_Community**, the partners are **DemoAgents** and **Demo_TransactionSystem**, the routing channel template is **Demo_UNZip** and the routing channel is defined with **Demo_Unzip:Demo_Agents::Demo_TransactionSystem:Demo_Agents/Zip** (The routing channel points to the Demo_Unzip routing channel template with producer Demo_Agents).   Most will look familiar like Partner1, Partner2, sftp_community, and Passthrough which are shown being explicitly entered into Sterling FileGateway in the detailed steps above.   Other resources such as the Permissions or TP Packagings will look less familiar, since they are background resources automatically setup in FileGateway.  Click on **Finish** to complete the Import.  
+1. All of the resources to be Imported are shown.   In this import the Community is **Demo_SFG_Community**, the partners are **DemoAgents** and **Demo_TransactionSystem**, the routing channel template is **Demo_UNZip** and the routing channel is defined with **Demo_Unzip:Demo_Agents::Demo_TransactionSystem:Demo_Agents/Zip** (The routing channel points to the Demo_Unzip routing channel template with producer Demo_Agents, consumer Demo_Tranaction_System, and initiating directoty of /Demo_Agents/Zip).    Click on **Finish** to complete the Import.  
    
 ??? question "BP quiz question"
     A BP quiz question will come from this review screen. Be sure to note the exact text on the Groups line.  
 
 ![](_attachments/B2BiLab04-08-SFGLab04ExportReview.png) 
 
-Below you will review the results of the Import process in a view mode.  You will logout of B2B Integrator and view the various pages in Sterling FileGateway. 
+In the next section you will review the results of the Import process in a view mode.  You will logout of B2B Integrator and view the various pages in Sterling FileGateway. 
 
 **Logout of B2B Integrator**
 
@@ -66,30 +66,30 @@ Login to SFG
 
 ![](_attachments/FG_login.png)
 
-Once logged in to SFG, 
+Once logged in to SFG follow these steps. 
 
-3. Click the **Participants** pull-down menu item on top menu bar and **Partners**} and see that **Demo_Agents** and **Demo_TransactionSystem** have been added.
+3. Click the **Participants** pull-down menu item on top menu bar and **Partners** and see that **Demo_Agents** and **Demo_TransactionSystem** have been added.  Note: Other partners may or may not already exist depending on the order you execute the labs. 
 
 ![](_attachments/B2BiLab04-10-SFGPartnerReview.png)
 
-4. Click on partner **Demo_Agents** to see the detail.  Then exit out. 
+4. Click on partner **Demo_Agents** to see the detail.  Then click on **Return** to exit out. 
 
 ![](_attachments/B2BiLab04-10B-SFGPartnerDetail.png)
 
 
-5. Click on the **Participants** pull-down menu item on top menu bar and **Communities**.
+5. On the **Participants** pull-down click on **Communities**.
 
 ![](_attachments/B2BiLab04-10-SFGCommunitySelect.png)
 
-6. View that **Demo_SFG_Community** was created and then click on **Edit** to see details. 
+6. View that **Demo_SFG_Community** was created and then click on **edit** on that line to see details. 
 
 ![](_attachments/B2BiLab04-12-SFGCommunityReview.png)
 
-7. Click on **Edit** next to **Demo_SFG_Communities** 
+7. View the **Community Information** then click on **View** in the **Partner** section. 
 
 ![](_attachments/B2BiLab04-13-SFGCommunityEdit.png)
 
-8. Click on **View** in the **Partners** section.    Then Return and exit.   
+8. See that **Demo_Agents** and **Demo_TransactionSystem** are in the **Partner List** section.  Then click on **Return** to exit.   
 
 ![](_attachments/B2BiLab04-13-SFGCommunityPartners.png)
 
@@ -98,12 +98,7 @@ Once logged in to SFG,
 
 ![](_attachments/B2BiLab04-14-SFGRoutingChannelTemplate.png)
 
-
-10. View the Routing Channel Template setup by clicking **Routes** then **Templates**.   In here you can see how the zip file is expected via the regular expression from the producer, and how the various files are mailboxed after the unzipping.  
-
-![](_attachments/B2BiLab04-14-SFGRoutingChannelTemplate.png)
-
-11. Clicking **Routes** then **Channels** you can see that the **DemoUnzip** Routing CHannel Template is used in one direction, with **Demo_Agents** as the Producer and **Demo_TranactionSystem** as the consumer.    
+10.   Clicking **Routes** then **Channels** you can see that the **DemoUnzip** Routing Channel Template is used in the Routing Channel.  It has one direction, with **Demo_Agents** as the Producer and **Demo_TransactionSystem** as the consumer with **Demo_Agents/Zip** as the Producer Mailbox Path
 
 ![](_attachments/B2BiLab04-15-SFGRoutingChannel.png)
 
