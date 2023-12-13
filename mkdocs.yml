@@ -20,7 +20,7 @@ nav:
   - 'Demo 1 - Setup - Setup B2Bi Configuration Part 2': 'ConfigurationPart2.md'
   - 'Demo 1 - FileGateway - Basic Partner to Partner SFTP': 'ClientDemonstration.md'
   - 'Demo 2 - B2Bi Outbound ANSI X12 Invoice': 'B2BiDemo02.md'
-  - 'Demo 3 - B2Bi Inbound EDIFACT ORDERS': 'B2BiLab03.md'
+  - 'Demo 3 - B2Bi Inbound EDIFACT ORDERS': 'B2BiDemo03.md'
   - 'Demo 4 - FileGateway Unzip and Route': 'SFGLab04.md'
   - 'Next Steps': 'NextSteps.md'
 
