@@ -31,7 +31,7 @@ In the Demo 1 setuo, the detailed steps to create partners, community, routing c
    
 ![](_attachments/B2BiLab04-04C-SelectSpecificFile.png)
 
-8. View that the Passthrough Import file has been selected, enter **password** in the password box, and check **Import All Resources** then click **Next** 
+1. See that the SFG-Lab4-Export Import file has been selected, enter **password** in the password box, and check **Import All Resources** then click **Next** 
    
 ![](_attachments/B2BiLab04-05-ImportPasswordandAll.png) 
 
@@ -43,15 +43,18 @@ In the Demo 1 setuo, the detailed steps to create partners, community, routing c
    
 ![](_attachments/B2BiLab01-07-UpdateResources.png) 
 
-11. All of the resources to be Imported are shown.   Most will look familiar like Partner1, Partner2, sftp_community, and Passthrough which are shown being explicitly entered into Sterling FileGateway in the detailed steps above.   Other resources such as the Permissions or TP Packagings will look less familiar, since they are background resources automatically setup in FileGateway.  Click on **Finish** to complete the Import.  
+11. All of the resources to be Imported are shown.   In this import the Community is **Demo_SFG_Community**, the partners are **DemoAgents** and **Demo_TransactionSystem**, the routing channel template is **Demo_UNZip** and the routing channel is defined with **Demo_Unzip:Demo_Agents::Demo_TransactionSystem:Demo_Agents/Zip** (The routing channel points to the Demo_Unzip routing channel template with producer Demo_Agents).   Most will look familiar like Partner1, Partner2, sftp_community, and Passthrough which are shown being explicitly entered into Sterling FileGateway in the detailed steps above.   Other resources such as the Permissions or TP Packagings will look less familiar, since they are background resources automatically setup in FileGateway.  Click on **Finish** to complete the Import.  
    
+??? question "BP quiz question"
+    A BP quiz question will come from this review screen. When taking the BP quiz make sure you have noted the exact text on the Groups line.  
+
 ![](_attachments/B2BiLab04-08-SFGLab04ExportReview.png) 
 
-At the conclusion of the Import process, you may find it interesting to validate that everything is setup properly, by going back to the top of this chapter and following along the steps in a view only mode. That will mean logging into Sterling FileGateway and then clicking into the various screens but not updating anything. 
+Below you will review the results of the Import process in a view mode.  You will logout of B2B Integrator and view the various pages in Sterling FileGateway. 
 
-Logout of B2B Integrator...
+**Logout of B2B Integrator**
 
-## View the partner community
+## View SFG configuration
 
 Login to SFG
 
@@ -80,10 +83,7 @@ Once logged in to SFG,
    
 ![](_attachments/B2BiLab03-02-Select-Go-To-Import.png)
 
-??? question "BP quiz question"
-    Several BP quiz questions will come from this area **B2Bi Import**. When taking the BP quiz make sure tyou have noted the number of maps imported.
-
-3. Click **Choose File** in the **Import Resources** page
+1. Click **Choose File** in the **Import Resources** page
 
 ![](_attachments/B2BiLab03-03-Click-Choose-File.png)
 
