@@ -89,21 +89,21 @@ Once logged in to SFG,
 
 ![](_attachments/B2BiLab04-13-SFGCommunityEdit.png)
 
-7. Click on **View** in the **Partners** section.    Then Return and exit.   
+8. Click on **View** in the **Partners** section.    Then Return and exit.   
 
 ![](_attachments/B2BiLab04-13-SFGCommunityPartners.png)
 
 
-1. View the Routing Channel Template setup by clicking **Routes** then **Templates**.   In here you can see how the zip file is expected via the regular expression from the producer, and how the various files are mailboxed after the unzipping.  
+9. View the Routing Channel Template setup by clicking **Routes** then **Templates**.   In here you can see how the zip file is expected via the regular expression from the producer, and how the various files are mailboxed after the unzipping.  
 
 ![](_attachments/B2BiLab04-14-SFGRoutingChannelTemplate.png)
 
 
-1. View the Routing Channel Template setup by clicking **Routes** then **Templates**.   In here you can see how the zip file is expected via the regular expression from the producer, and how the various files are mailboxed after the unzipping.  
+10. View the Routing Channel Template setup by clicking **Routes** then **Templates**.   In here you can see how the zip file is expected via the regular expression from the producer, and how the various files are mailboxed after the unzipping.  
 
 ![](_attachments/B2BiLab04-14-SFGRoutingChannelTemplate.png)
 
-1. Clicking **Routes** then **Channels** you can see that the **DemoUnzip** Routing CHannel Template is used in one direction, with **Demo_Agents** as the Producer and **Demo_TranactionSystem** as the consumer.    
+11. Clicking **Routes** then **Channels** you can see that the **DemoUnzip** Routing CHannel Template is used in one direction, with **Demo_Agents** as the Producer and **Demo_TranactionSystem** as the consumer.    
 
 ![](_attachments/B2BiLab04-15-SFGRoutingChannel.png)
 
