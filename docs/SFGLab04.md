@@ -1,21 +1,21 @@
 Demo 4 demonstrates a zipped file being sent into FileGateway, being unzipped, then the contents being routed to an appropriate mailbox for each file type.  
 
-The import does not have to be part of the demonstration.   The business process, maps,  envelopes etc. are imported into B2B integrator.  
+The import does not have to be part of the demonstration.   The business process, maps,  envelopes etc. are imported via B2B integrator, but since the process was created in Sterling FileGateway, the partners, community, routing channel templates, and routing channel are best viewed there.  
 
 Before proceeding, take 3 minutes to listen to Thomas Limanek, B2B subject matter expert, explain the lab. 
 
 ![type:video](./_videos/Level3Demo04.mp4)
 
  
-## Optional: Shortcut method
+## Import the FileGateway process
 
-In the first demo setuo, the detailed steps to create the partners, community, routing channel template, and routing channel in SFG were shown.  In the second and third demos, the process of doing the import was shown where each of the separate artifact groups was selected.    In this fourth demo, you will only be shown the fastest version of doing the import for all resources.   You should have already downloaded the  <a href="https://raw.githubusercontent.com/IBM/SalesEnablement-SterlingDataExchange-V2-L3/main/tools/B2BiLevel3ImportsAndData.zip" target="_blank">B2BiDataAndImports.zip</a> If not, refer to the first demo in the Optional Shortcut section for details.  
+In the Demo 1 setuo, the detailed steps to create partners, community, routing channel template, and routing channel in SFG were shown.  In demos 2 and 3, the the import process was shown in detail, where each of the separate artifact groups was selected.    In Demo 4, you will only be shown the fast version of doing the import for all resources.   You should have already downloaded the  <a href="https://raw.githubusercontent.com/IBM/SalesEnablement-SterlingDataExchange-V2-L3/main/tools/B2BiLevel3ImportsAndData.zip" target="_blank">B2BiDataAndImports.zip</a> If not, refer to the Demo 1 in the Optional Shortcut section for details.  
 
-1. If you are not  logged in to B2Bi, launch the IBM Sterling B2Bi dashboard by clicking on the route for the **sterling-fg-b2bi-asi-internal-route-dashboard** route in the **Location** column. Do not click the Route name, rather click the Route link in the **Location** column of the table.  
+1. If you are not currently logged in to B2Bi, launch the IBM Sterling B2Bi dashboard by clicking on the route for the **sterling-fg-b2bi-asi-internal-route-dashboard** route in the **Location** column. Do not click the Route name, rather click the Route link in the **Location** column of the table.  
 
 ![](_attachments/OSB2BiDashboardRoute.png)
  
-1. Go to **Deployment**, **Resource Manager**, **Import/Export**
+1. Once logged in, click through **Deployment**, **Resource Manager**, **Import/Export**
    
 ![](_attachments/B2BiLab01-01-StartImport.png)
  
@@ -29,7 +29,7 @@ In the first demo setuo, the detailed steps to create the partners, community, r
 
 1. Open the Demo4 Directory, and under the Import folder Select file  **SFG-Lab4-Export.xml**   
    
-![](_attachments/B2BiLab01-04B-GetImportFile.png)
+![](_attachments/B2BiLab04-04C-SelectSpecificFile.png)
 
 8. View that the Passthrough Import file has been selected, enter **password** in the password box, and check **Import All Resources** then click **Next** 
    
@@ -66,8 +66,6 @@ Login to SFG
 Once logged in to SFG, 
 
 3. Click the **Participants** pull-down menu item on top menu bar and see that **Agents** and **Transaction System** have been added.
-
-Resume editing here.....
 
 ![](_attachments/FG_Participants.png)
 

@@ -79,7 +79,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#open-the-b2bi-dashboard-and-import-the-lab03-definition" class="md-skip">
+        <a href="#optional-shortcut-method" class="md-skip">
           Skip to content
         </a>
       
@@ -424,6 +424,20 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#optional-shortcut-method" class="md-nav__link">
+    Optional: Shortcut method
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#view-the-partner-community" class="md-nav__link">
+    View the partner community
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#open-the-b2bi-dashboard-and-import-the-lab03-definition" class="md-nav__link">
     Open the B2Bi dashboard and import the lab03 definition
   </a>
@@ -496,6 +510,20 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#optional-shortcut-method" class="md-nav__link">
+    Optional: Shortcut method
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#view-the-partner-community" class="md-nav__link">
+    View the partner community
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#open-the-b2bi-dashboard-and-import-the-lab03-definition" class="md-nav__link">
     Open the B2Bi dashboard and import the lab03 definition
   </a>
@@ -537,8 +565,62 @@
 <p>The import does not have to be part of the demonstration.   The business process, maps,  envelopes etc. are imported into B2B integrator.  </p>
 <p>Before proceeding, take 3 minutes to listen to Thomas Limanek, B2B subject matter expert, explain the lab. </p>
 <p><div class="video-container"><iframe src="../_videos/Level3Demo04.mp4" style="position:relative;width:100%;height:22.172vw" frameborder="0" allowfullscreen alt="type:video"></iframe></div></p>
-<p>Text after the video.  </p>
-<p>REPLACE THE SCREENSHOTS TO SHOW SFG!!  </p>
+<h2 id="optional-shortcut-method">Optional: Shortcut method</h2>
+<p>In the first demo setuo, the detailed steps to create the partners, community, routing channel template, and routing channel in SFG were shown.  In the second and third demos, the process of doing the import was shown where each of the separate artifact groups was selected.    In this fourth demo, you will only be shown the fastest version of doing the import for all resources.   You should have already downloaded the  <a href="https://raw.githubusercontent.com/IBM/SalesEnablement-SterlingDataExchange-V2-L3/main/tools/B2BiLevel3ImportsAndData.zip" target="_blank">B2BiDataAndImports.zip</a> If not, refer to the first demo in the Optional Shortcut section for details.  </p>
+<ol>
+<li>If you are not  logged in to B2Bi, launch the IBM Sterling B2Bi dashboard by clicking on the route for the <strong>sterling-fg-b2bi-asi-internal-route-dashboard</strong> route in the <strong>Location</strong> column. Do not click the Route name, rather click the Route link in the <strong>Location</strong> column of the table.  </li>
+</ol>
+<p><img alt="" src="../_attachments/OSB2BiDashboardRoute.png"></p>
+<ol>
+<li>Go to <strong>Deployment</strong>, <strong>Resource Manager</strong>, <strong>Import/Export</strong></li>
+</ol>
+<p><img alt="" src="../_attachments/B2BiLab01-01-StartImport.png"></p>
+<ol start="2">
+<li>Select <strong>Go</strong> on the Import Resources panel</li>
+</ol>
+<p><img alt="" src="../_attachments/B2BiLab01-04-GoImport.png"></p>
+<ol start="3">
+<li>On the File Name line click on <strong>Choose File</strong> </li>
+</ol>
+<p><img alt="" src="../_attachments/B2BiLab01-04B-GetImportFile.png"></p>
+<ol>
+<li>Open the Demo4 Directory, and under the Import folder Select file  <strong>SFG-Lab4-Export.xml</strong>   </li>
+</ol>
+<p><img alt="" src="../_attachments/B2BiLab01-04B-GetImportFile.png"></p>
+<ol start="8">
+<li>View that the Passthrough Import file has been selected, enter <strong>password</strong> in the password box, and check <strong>Import All Resources</strong> then click <strong>Next</strong> </li>
+</ol>
+<p><img alt="" src="../_attachments/B2BiLab04-05-ImportPasswordandAll.png"> </p>
+<ol>
+<li>Keep the same default and click <strong>Next</strong></li>
+</ol>
+<p><img alt="" src="../_attachments/B2BiLab01-06-ClickThroughTags.png"> </p>
+<ol start="10">
+<li>Allow updates to any existing resources by clicking <strong>Next</strong></li>
+</ol>
+<p><img alt="" src="../_attachments/B2BiLab01-07-UpdateResources.png"> </p>
+<ol start="11">
+<li>All of the resources to be Imported are shown.   Most will look familiar like Partner1, Partner2, sftp_community, and Passthrough which are shown being explicitly entered into Sterling FileGateway in the detailed steps above.   Other resources such as the Permissions or TP Packagings will look less familiar, since they are background resources automatically setup in FileGateway.  Click on <strong>Finish</strong> to complete the Import.  </li>
+</ol>
+<p><img alt="" src="../_attachments/B2BiLab04-08-SFGLab04ExportReview.png"> </p>
+<p>At the conclusion of the Import process, you may find it interesting to validate that everything is setup properly, by going back to the top of this chapter and following along the steps in a view only mode. That will mean logging into Sterling FileGateway and then clicking into the various screens but not updating anything. </p>
+<p>Logout of B2B Integrator...</p>
+<h2 id="view-the-partner-community">View the partner community</h2>
+<p>Login to SFG</p>
+<ol>
+<li>Return to the OpenShift web console and click on the route link to the IBM Sterling File Gateway user interface (UI): <strong>sterling-fg-b2bi-asi-internal-route-filegateway</strong>.</li>
+</ol>
+<p><img alt="" src="../_attachments/OSRoutesFileGateway.png"></p>
+<ol start="2">
+<li>Enter <strong>fg_sysadmin</strong> in the User ID field, <strong>password</strong> in the Password field, and then click the <strong>Sign In</strong> button.</li>
+</ol>
+<p><img alt="" src="../_attachments/FG_login.png"></p>
+<p>Once logged in to SFG, </p>
+<ol start="3">
+<li>Click the <strong>Participants</strong> pull-down menu item on top menu bar and see that <strong>Agents</strong> and <strong>Transaction System</strong> have been added.</li>
+</ol>
+<p>Resume editing here.....</p>
+<p><img alt="" src="../_attachments/FG_Participants.png"></p>
 <h2 id="open-the-b2bi-dashboard-and-import-the-lab03-definition">Open the B2Bi dashboard and import the lab03 definition</h2>
 <ol>
 <li>In the B2B Integrator web console, open <strong>Deployment</strong> then <strong>Resource Manager</strong> then <strong>Import/Export</strong> in the left-hand panel.</li>
