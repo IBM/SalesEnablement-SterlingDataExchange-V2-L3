@@ -6,9 +6,71 @@ Before proceeding, take 3 minutes to listen to Thomas Limanek, B2B subject matte
 
 ![type:video](./_videos/Level3Demo04.mp4)
 
-Text after the video.  
+ 
+## Optional: Shortcut method
 
-REPLACE THE SCREENSHOTS TO SHOW SFG!!  
+In the first demo setuo, the detailed steps to create the partners, community, routing channel template, and routing channel in SFG were shown.  In the second and third demos, the process of doing the import was shown where each of the separate artifact groups was selected.    In this fourth demo, you will only be shown the fastest version of doing the import for all resources.   You should have already downloaded the  <a href="https://raw.githubusercontent.com/IBM/SalesEnablement-SterlingDataExchange-V2-L3/main/tools/B2BiLevel3ImportsAndData.zip" target="_blank">B2BiDataAndImports.zip</a> If not, refer to the first demo in the Optional Shortcut section for details.  
+
+1. If you are not  logged in to B2Bi, launch the IBM Sterling B2Bi dashboard by clicking on the route for the **sterling-fg-b2bi-asi-internal-route-dashboard** route in the **Location** column. Do not click the Route name, rather click the Route link in the **Location** column of the table.  
+
+![](_attachments/OSB2BiDashboardRoute.png)
+ 
+1. Go to **Deployment**, **Resource Manager**, **Import/Export**
+   
+![](_attachments/B2BiLab01-01-StartImport.png)
+ 
+2. Select **Go** on the Import Resources panel
+   
+![](_attachments/B2BiLab01-04-GoImport.png)
+
+3. On the File Name line click on **Choose File** 
+   
+![](_attachments/B2BiLab01-04B-GetImportFile.png)
+
+1. Open the Demo4 Directory, and under the Import folder Select file  **SFG-Lab4-Export.xml**   
+   
+![](_attachments/B2BiLab01-04B-GetImportFile.png)
+
+8. View that the Passthrough Import file has been selected, enter **password** in the password box, and check **Import All Resources** then click **Next** 
+   
+![](_attachments/B2BiLab04-05-ImportPasswordandAll.png) 
+
+1. Keep the same default and click **Next**
+   
+![](_attachments/B2BiLab01-06-ClickThroughTags.png) 
+
+10. Allow updates to any existing resources by clicking **Next**
+   
+![](_attachments/B2BiLab01-07-UpdateResources.png) 
+
+11. All of the resources to be Imported are shown.   Most will look familiar like Partner1, Partner2, sftp_community, and Passthrough which are shown being explicitly entered into Sterling FileGateway in the detailed steps above.   Other resources such as the Permissions or TP Packagings will look less familiar, since they are background resources automatically setup in FileGateway.  Click on **Finish** to complete the Import.  
+   
+![](_attachments/B2BiLab04-08-SFGLab04ExportReview.png) 
+
+At the conclusion of the Import process, you may find it interesting to validate that everything is setup properly, by going back to the top of this chapter and following along the steps in a view only mode. That will mean logging into Sterling FileGateway and then clicking into the various screens but not updating anything. 
+
+Logout of B2B Integrator...
+
+## View the partner community
+
+Login to SFG
+
+1. Return to the OpenShift web console and click on the route link to the IBM Sterling File Gateway user interface (UI): **sterling-fg-b2bi-asi-internal-route-filegateway**.
+
+![](_attachments/OSRoutesFileGateway.png)
+
+2. Enter **fg_sysadmin** in the User ID field, **password** in the Password field, and then click the **Sign In** button.
+
+![](_attachments/FG_login.png)
+
+Once logged in to SFG, 
+
+3. Click the **Participants** pull-down menu item on top menu bar and see that **Agents** and **Transaction System** have been added.
+
+Resume editing here.....
+
+![](_attachments/FG_Participants.png)
+
 
 ## Open the B2Bi dashboard and import the lab03 definition
 
