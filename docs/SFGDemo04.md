@@ -43,7 +43,7 @@ In the Demo 1 setup, the detailed steps inside Sterling FileGateway to create pa
    
 ![](_attachments/B2BiLab01-07-UpdateResources.png) 
 
-1. All of the resources to be Imported are shown.   In this import the Community is **Demo_SFG_Community**, the partners are **DemoAgents** and **Demo_TransactionSystem**, the routing channel template is **Demo_UNZip** and the routing channel is defined with **Demo_Unzip:Demo_Agents::Demo_TransactionSystem:Demo_Agents/Zip** (The routing channel points to the Demo_Unzip routing channel template with producer Demo_Agents, consumer Demo_Tranaction_System, and initiating directoty of /Demo_Agents/Zip).    Click on **Finish** to complete the Import.  
+9. All of the resources to be Imported are shown.   In this import the Community is **Demo_SFG_Community**, the partners are **DemoAgents** and **Demo_TransactionSystem**, the routing channel template is **Demo_UNZip** and the routing channel is defined with **Demo_Unzip:Demo_Agents::Demo_TransactionSystem:Demo_Agents/Zip** (The routing channel points to the Demo_Unzip routing channel template with producer Demo_Agents, consumer Demo_Tranaction_System, and initiating directoty of /Demo_Agents/Zip).    Click on **Finish** to complete the Import.  
    
 ??? question "BP quiz question"
     A BP quiz question will come from this review screen. Be sure to note the exact text on the Groups line.  
@@ -56,7 +56,7 @@ In the next section you will review the results of the Import process in a view 
 
 ## View SFG configuration
 
-Login to SFG
+Login to Sterling FileGateway (SFG)
 
 1. Return to the OpenShift web console and click on the route link to the IBM Sterling File Gateway user interface (UI): **sterling-fg-b2bi-asi-internal-route-filegateway**.
 

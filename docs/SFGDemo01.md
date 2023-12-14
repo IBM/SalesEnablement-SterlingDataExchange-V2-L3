@@ -154,3 +154,5 @@ For additional demonstrations, consider the following:
 - Transfer a file from **partner2** to **partner1**.
 - Verify the file transfers using the **IBM Sterling File Gateway** application.
 - Transfer a file using the older version of **IBM Sterling My File Gateway** using the **sterling-fg-b2bi-asi-internal-route-myfilegateway** route found in the OpenShift web console.
+
+This concludes Demo 1
