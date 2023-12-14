@@ -655,26 +655,16 @@
 <li>Click the down arrow at the right of <strong>Local Site</strong> and navigate to where the sample input file is for this lab.   It is named "TestData.zip".  </li>
 </ol>
 <p>The file name is not important but the specific contents are very important.  The initial process expects a zip file, and then business process will unzip the input and place it in the appropriate Consumer Mailboxes. </p>
-<p><img alt="" src="../_attachments/B2BiLab03-22-Filezilla-Select-File.png"></p>
+<p><img alt="" src="../_attachments/B2BiLab04-22-SelectLocalFile.png"></p>
+<ol start="4">
+<li>
 <ol>
-<li>Click pen the <strong>zip</strong> directory in the remote site</li>
+<li>Click open the <strong>zip</strong> directory in the remote site.   2. Drag the <strong>TestData.zip</strong> file into the opened zip directory.   3. The file will be deleted automatically after being pulled into the business process.  </li>
 </ol>
-<p><img alt="" src="../_attachments/B2BiLab03-23-Filezilla-Open-Lab-03-Folder.png"></p>
-<ol start="5">
-<li>On the desktop itself choose the input file <strong>TestData.zip</strong> from the file system.  </li>
+</li>
 </ol>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Generally, there may be something to note here later....placeholder kept.  </p>
-</div>
-<ol start="6">
-<li>Drag the input file over into the zip directory on the remote site</li>
-</ol>
-<p><img alt="" src="../_attachments/B2BiLab03-25-Filezilla-Drag-File-To-Folder.png"></p>
-<ol start="7">
-<li>The input file will be automatically picked up by the B2B Integrator process.  The file will get picked up and then deleted. </li>
-</ol>
-<p><img alt="" src="../_attachments/B2BiLab03-26-Filezilla-File-Was-Uploaded.png"></p>
+<p><img alt="" src="../_attachments/B2BiLab04-23-OpenZipDirAndDragFile.png"></p>
+<p>The file has been transmitted by the Agent partner, into their zip folder for processing. In real world situations, the SFTP send to that mailbox / directory would occur in a lights out, automated fashion.   </p>
 <h2 id="view-the-business-process-results">View the Business Process Results</h2>
 <p>Now that the Business Process has run, the user can view detail of the process.  In B2B Integrator, the process takes several steps to determine the type of file / data standard being sent, the document type, the receiver, and then finally what translation map to run given the receiving partner and document type.  </p>
 <ol>
