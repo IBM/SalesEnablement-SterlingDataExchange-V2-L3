@@ -122,28 +122,15 @@ Once logged in to SFG follow these steps.
 
 The file name is not important but the specific contents are very important.  The initial process expects a zip file, and then business process will unzip the input and place it in the appropriate Consumer Mailboxes. 
 
-![](_attachments/B2BiLab03-22-Filezilla-Select-File.png)
+![](_attachments/B2BiLab04-22-SelectLocalFile.png)
 
 
-1.   Click pen the **zip** directory in the remote site
+4.   1. Click open the **zip** directory in the remote site.   2. Drag the **TestData.zip** file into the opened zip directory.   3. The file will be deleted automatically after being pulled into the business process.  
    
 ![](_attachments/B2BiLab03-23-Filezilla-Open-Lab-03-Folder.png)
 
 
-5.   On the desktop itself choose the input file **TestData.zip** from the file system.  
- 
-!!! Note "Note"
 
-    Generally, there may be something to note here later....placeholder kept.  
-
-
-6.    Drag the input file over into the zip directory on the remote site
-
-![](_attachments/B2BiLab03-25-Filezilla-Drag-File-To-Folder.png)
-
-7.   The input file will be automatically picked up by the B2B Integrator process.  The file will get picked up and then deleted. 
-
-![](_attachments/B2BiLab03-26-Filezilla-File-Was-Uploaded.png)
 
 ## View the Business Process Results
 
