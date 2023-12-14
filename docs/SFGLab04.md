@@ -127,9 +127,9 @@ The file name is not important but the specific contents are very important.  Th
 
 4.   1. Click open the **zip** directory in the remote site.   2. Drag the **TestData.zip** file into the opened zip directory.   3. The file will be deleted automatically after being pulled into the business process.  
    
-![](_attachments/B2BiLab03-23-Filezilla-Open-Lab-03-Folder.png)
+![](_attachments/B2BiLab04-23-OpenZipDirAndDragFile.png)
 
-
+The file has been transmitted by the Agent partner, into their zip folder for processing. In real world situations, the SFTP send to that mailbox / directory would occur in a lights out, automated fashion.   
 
 
 ## View the Business Process Results
