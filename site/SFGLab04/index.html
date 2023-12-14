@@ -663,41 +663,50 @@
 <p>The file has been transmitted by the Agent partner, into their zip folder for processing. In real world situations, the SFTP send to that mailbox / directory would occur in a lights out, automated fashion.   </p>
 <h2 id="view-the-business-process-results">View the Business Process Results</h2>
 <p>Now that the Business Process has run, the user can view detail of the process.  </p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>If not still logged into Sterling FileGateway, login using the instructions in the <strong>View SFG Configuration</strong> Section </p>
+</div>
 <ol>
-<li>To follow the process, click <strong>Current Processes</strong> under <strong>Monitor</strong> which is under <strong>Business Process</strong></li>
+<li>In Sterling FileGateway, click on <strong>Find</strong> in the <strong>Search Criteria</strong> tab.   The recent activity will be at the top. </li>
 </ol>
-<p><img alt="" src="../_attachments/B2BiLab03-30-B2Bi-Current-Process.png"></p>
+<p><img alt="" src="../_attachments/B2BiLab04-31-FindProcessonSFG.png"></p>
 <ol start="2">
-<li>Three Business Processes will be run for this input process.   "EDIInboundBootstrap" determines the type of data standard for each transaction (in this case just one) in the input file.   B2Bi determines that this is an EDIFACT EDI transaction, and executes a specific process called "EDIFACTDeenvelopeUnified" on the transaction.   After deenveloping, the document type and receiving trading partner is known.  The translation occurs based on this information.   Click on the numeric <strong>ID</strong> field associated with the EDIInboundBootstrap.  </li>
+<li>Inside the <strong>Arrived Files</strong> tab, click on the most recently Arrived File.</li>
 </ol>
-<p><img alt="" src="../_attachments/B2BiLab03-31-B2Bi-Select-Bootstrap.png"></p>
+<p><img alt="" src="../_attachments/B2BiLab04-32-SelectProcessOnSFG.png"></p>
 <ol start="3">
-<li>Inside the Business Process Detail panel, click on <strong>info</strong> in the Document column to see the input file processed by B2B Integrator. </li>
+<li>Note the detail on the right side under <strong>Arrived File Events</strong>.   Information is shown on the Producer (Sender) along with how the zip file is being handled when split into the ".pdf" and ".edi".   Click on <strong>Routes</strong> tab to drill in further.  </li>
 </ol>
-<p><img alt="" src="../_attachments/B2BiLab03-32-B2Bi-Show-Bootstrap.png"></p>
+<p><img alt="" src="../_attachments/B2BiLab04-33-ArrivedFileEventsThenRoute.png"></p>
 <ol start="4">
-<li>Metadata about the Primary Document is shown, along with the input interchange being processed.    Click the <strong>red circle</strong> or <strong>CLOSE</strong> to exit </li>
+<li>Information per split out file is shown on the right hand side for the ".edi" file. The Consumer <strong>Demo_TransactionSystem</strong> is shown along with the details of the delivery.   Clicking the rows following will show similar information for the ".pdf" and the ".txt" files.  </li>
 </ol>
-<p><img alt="" src="../_attachments/B2BiLab03-33-B2Bi-Show-Bootstrap-Metadata.png"></p>
+<p><img alt="" src="../_attachments/B2BiLab04-34-ShowEDIFileRouted.png"></p>
 <ol start="5">
-<li>Back on the Monitor page the Business Processes are shown again.         Click on the numeric <strong>ID</strong> field associated with the EDIInboundFileSystemExtraction.   </li>
+<li>Switch to FileZilla and connect to B2B Integrator / SFG as <strong>Demo_Transaction</strong> partner.   Password is <strong>password</strong> and the URL will remain the same as above when you connected as <strong>Demo_Agents</strong>.    Click <strong>Connect</strong>.  </li>
 </ol>
-<p><img alt="" src="../_attachments/B2BiLab03-34-B2Bi-Select-File-Extraction.png"></p>
-<ol>
+<p>??? Tip Utilizing Filezilla's Site Manager option is very helpful for keeping straight who you are logging in as, and what the correct ID and password should be. Remember that the Host will change each time B2B Integrator / SFG is provisioned on Techzone.  </p>
+<p><img alt="" src="../_attachments/B2BiLab04-35-FilezillaAsDemoTransactionSystem.png"></p>
+<ol start="6">
 <li>
-<p>To see the final output of the process, Click on <strong>Info</strong> in the last row under Document column.<br>
-<img alt="" src="../_attachments/B2BiLab03-35-B2Bi-Select-Translated-File.png"></p>
+<p>Click on <strong>Inbox</strong> in the right panel.<br>
+<img alt="" src="../_attachments/B2BiLab04-35-FilezillaOpenInbox.png"></p>
 </li>
 <li>
-<p>The "application file" is shown.   This file contains the translated information from the iput EDI file, but in a format that is processable directly by a load program, for an Order Entry module of an ERP system.  Click on <strong>CLOSE</strong> to exit.   </p>
+<p>You can see that the input zip file, resulted in three directories being created. Click on <strong>PDF</strong> in the right panel.<br>
+<img alt="" src="../_attachments/B2BiLab04-36-FilezillaOpenIPDFFolder.png"></p>
+</li>
+<li>
+<p>In the PDF folder the results of the latest and a previous zip file submission are shown. The format of the filenames is configurable via the regular expressions in the setup in FileGateway. 
+<img alt="" src="../_attachments/B2BiLab04-37-FilezillaViewPDFFolder.png"></p>
 </li>
 </ol>
-<p><img alt="" src="../_attachments/B2BiLab03-36-B2Bi-Show-Translated-File.png"></p>
-<details class="question">
-<summary>BP quiz question</summary>
-<p>There is a quiz question somewhere around here....</p>
-</details>
-<p>This concludes lab04. </p></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+</div>
+<p>The business process will work for any zip file that has a similar structure. If the directory (like txt or pdf) does not exist, it will be created with the filetype of the unzipped file.  You can also delete one of the Inbox subfolders, then run the same zip file through again, and see that the subfolder will be recreated and the unzipped file placed inside it</p>
+<p>This concludes Demo 4. </p></div>
 
 
 

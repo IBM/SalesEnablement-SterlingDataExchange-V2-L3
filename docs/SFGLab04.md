@@ -157,7 +157,8 @@ Now that the Business Process has run, the user can view detail of the process.
 
 5.  Switch to FileZilla and connect to B2B Integrator / SFG as **Demo_Transaction** partner.   Password is **password** and the URL will remain the same as above when you connected as **Demo_Agents**.    Click **Connect**.  
 
-??? Tip Utilizing Filezilla's Site Manager option is very helpful for keeping straight who you are logging in as, and what the correct ID and password should be. Remember that the Host will change each time B2B Integrator / SFG is provisioned on Techzone.  
+??? Tip 
+    Utilizing Filezilla's Site Manager option is very helpful for keeping straight who you are logging in as, and what the correct ID and password should be. Remember that the Host will change each time B2B Integrator / SFG is provisioned on Techzone.  
 
 ![](_attachments/B2BiLab04-35-FilezillaAsDemoTransactionSystem.png)
 
@@ -171,7 +172,7 @@ Now that the Business Process has run, the user can view detail of the process.
 ![](_attachments/B2BiLab04-37-FilezillaViewPDFFolder.png)
 
 !!! note
-The business process will work for any zip file that has a similar structure. If the directory (like txt or pdf) does not exist, it will be created with the filetype of the unzipped file.  You can also delete one of the Inbox subfolders, then run the same zip file through again, and see that the subfolder will be recreated and the unzipped file placed inside it
+    The business process will work for any zip file that has a similar structure. If the directory (like txt or pdf) does not exist, it will be created with the filetype of the unzipped file.  You can also delete one of the Inbox subfolders, then run the same zip file through again, and see that the subfolder will be recreated and the unzipped file placed inside it
 
 This concludes Demo 4. 
 
