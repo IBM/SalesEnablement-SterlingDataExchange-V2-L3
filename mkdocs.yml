@@ -16,12 +16,12 @@ nav:
   - 'Using this course': 'index.md'
   - 'Level 3 Course Overview': 'Overview.md'
   - 'Environment Preparation and B2Bi Installation using IBM Cloud Shell': 'DemoPreparation-Bastion.md'
-  - 'B2Bi Base Configuration': 'ConfigurationPart1.md'
-  - 'Demo 1 - Setup - Setup B2Bi Configuration Part 2': 'ConfigurationPart2.md'
-  - 'Demo 1 - FileGateway - Basic Partner to Partner SFTP': 'ClientDemonstration.md'
+  - 'B2Bi Base Configuration': 'BaseConfiguration.md'
+  - 'Demo 1 - Setup for Demo 1': 'SFGDemo01Setup.md'
+  - 'Demo 1 - FileGateway - Basic Partner to Partner SFTP': 'SFGDemo01.md'
   - 'Demo 2 - B2Bi Outbound ANSI X12 Invoice': 'B2BiDemo02.md'
   - 'Demo 3 - B2Bi Inbound EDIFACT ORDERS': 'B2BiDemo03.md'
-  - 'Demo 4 - FileGateway Unzip and Route': 'SFGLab04.md'
+  - 'Demo 4 - FileGateway Unzip and Route': 'SFGDemo04.md'
   - 'Next Steps': 'NextSteps.md'
 
 theme:
