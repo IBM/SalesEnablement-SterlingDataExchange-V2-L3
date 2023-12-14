@@ -96,7 +96,7 @@ Before proceeding, listen to a short explanation of the demo.
 
 
 !!! important "Important"
-The demo instructions in the first lab in this course document how to setup Filezilla for a secure SFTP transfer into a B2B Integrator mailbox. If that lab has been completed, then the following additional steps are all that is required.  If that lab has not been completed, go back to do the Filezilla setup steps, then pickup here.  
+    The demo instructions in the first lab in this course document how to setup Filezilla for a secure SFTP transfer into a B2B Integrator mailbox. If that lab has been completed, then the following additional steps are all that is required.  If that lab has not been completed, go back to do the Filezilla setup steps, then pickup here.  
 
 1. The SFTP Protocol, the Host and Port are the same as what was set up in the first lab demo instructions.   For this lab ensure that the User is **partner1** and the Password is **password**.  Finally, click on **Connect**.   
 
@@ -109,7 +109,8 @@ The demo instructions in the first lab in this course document how to setup File
 
 3.   Click the down arrow at the right of **Local Site** and navigate to where the sample input file is for this lab.  It should be in **B2BiLevel3ImportsAndData/Demo3/Data**. May look slightly different than the screenshot.  It is named **Orders_inbound_testdata.txt**.  
 
-The file name is not important but the specific contents are very important.  The initial process expects an EDI file, and then the translation maps will be expecting a specific usage of the EDIFACT ORDERS document for this partner.  The details of how B2B Integrator is setup to handle incoming EDI documents is fairly complex due to historical batching of many different partner, document type and even EDI standard that might be dropped into the "mailbox" / lab03 directory.  
+!!! note 
+    The input file name is not important but the specific contents are very important.  The initial process expects an EDI file, and then the translation maps will be expecting a specific usage of the EDIFACT ORDERS document for this partner.  The details of how B2B Integrator is setup to handle incoming EDI documents is fairly complex due to historical batching of many different partner, document type and even EDI standard that might be dropped into the "mailbox" / lab03 directory.  
 
 ![](_attachments/B2BiLab03-22-Filezilla-Select-Fileb.png)
 
@@ -159,10 +160,6 @@ Now that the Business Process has run, the user can view detail of the process. 
 7.   The "application file" is shown.   This file contains the translated information from the iput EDI file, but in a format that is processable directly by a load program, for an Order Entry module of an ERP system.  Click on **CLOSE** to exit.   
 
 ![](_attachments/B2BiLab03-36-B2Bi-Show-Translated-File.png)
-
-??? question "BP quiz question"
-    There is a quiz question somewhere around here....
-
 
 This concludes Demo 3
 

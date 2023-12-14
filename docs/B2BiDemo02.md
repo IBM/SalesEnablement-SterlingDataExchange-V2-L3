@@ -15,14 +15,14 @@ Before proceeding, take 2 minutes to listen to an explanation of the setup and d
 
 ![](_attachments/B2BiLab02-01-Select-Import-XML.png)
 
-1. Select the **Lab02_All_Import.xml** in the **Demo2/AllConfig** sub folder of the B2BiLevel3ImportsAndData directory you downloaded  earlier. Based on historic purposes, the Import in the "Imports" folder for Demo 2 is only partial.    
+3. Select the **Lab02_All_Import.xml** in the **Demo2/AllConfig** sub folder of the B2BiLevel3ImportsAndData directory you downloaded  earlier. Based on historic purposes, the Import in the "Imports" folder for Demo 2 is only partial.    
 
 !!! Note
     If you have not downloaded the B2BiLevel3ImportsAndData zip file and expanded, see the explanation in the Optional: Shortcut Method section of Demo 1 Setup chapter.  
 
 ![](_attachments/B2BiLab02-02-Select-Import-on-PCb.png)
 
-1. Enter **password** into the Passphrase dialog box and click **Next**
+4. Enter **password** into the Passphrase dialog box and click **Next**
 
 ![](_attachments/B2BiLab02-03-Enter-password-on-Import.png)
 

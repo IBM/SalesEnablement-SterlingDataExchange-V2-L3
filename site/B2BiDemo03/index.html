@@ -534,10 +534,9 @@
   <h1>Demo 3 - B2Bi Inbound EDIFACT ORDERS</h1>
 
 <div><p>Demo 3 simulates an EDIFACT EDI interchange being received by B2B Integrator and processed into an application file.</p>
-<p>The import does not have to be part of the demonstration.   The business process, maps, envelopes etc. are imported into B2B integrator.  </p>
-<p>Before proceeding, take 2 minutes to listen to Thomas Limanek, B2B subject matter expert, explain the lab. </p>
+<p>The import does not have to be part of the demonstration. The business process, maps, envelopes etc. are imported into B2B integrator.  </p>
+<p>Before proceeding, listen to a short explanation of the demo. </p>
 <p><div class="video-container"><iframe src="../_videos/Level3Demo03.mp4" style="position:relative;width:100%;height:22.172vw" frameborder="0" allowfullscreen alt="type:video"></iframe></div></p>
-<p>Text after the video.  </p>
 <h2 id="open-the-b2bi-dashboard-and-import-the-lab03-definition">Open the B2Bi dashboard and import the lab03 definition</h2>
 <ol>
 <li>In the B2B Integrator web console, open <strong>Deployment</strong> then <strong>Resource Manager</strong> then <strong>Import/Export</strong> in the left-hand panel.</li>
@@ -547,18 +546,18 @@
 <li>Click <strong>GO</strong> to the right of Import Resources</li>
 </ol>
 <p><img alt="" src="../_attachments/B2BiLab03-02-Select-Go-To-Import.png"></p>
-<details class="question">
-<summary>BP quiz question</summary>
-<p>Several BP quiz questions will come from this area <strong>B2Bi Import</strong>. When taking the BP quiz make sure tyou have noted the number of maps imported.</p>
-</details>
 <ol start="3">
 <li>Click <strong>Choose File</strong> in the <strong>Import Resources</strong> page</li>
 </ol>
 <p><img alt="" src="../_attachments/B2BiLab03-03-Click-Choose-File.png"></p>
 <ol start="4">
-<li>Select the <strong>Lab03_Import.xml</strong>  This may look different depending upon what platform you are importing the xml from.</li>
+<li>Select the <strong>Lab03_Export.xml</strong> from inside the <strong>Demo3/Import</strong> sub folder of the B2BiLevel3ImportsAndData directory you downloaded  earlier. </li>
 </ol>
-<p><img alt="" src="../_attachments/B2BiLab03-04-Select-File-From-Desktop.png"></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you have not downloaded the B2BiLevel3ImportsAndData zip file and expanded, see the explanation in the Optional: Shortcut Method section of Demo 1 Setup chapter.  </p>
+</div>
+<p><img alt="" src="../_attachments/B2BiLab03-04-Select-File-From-Desktopb.png"></p>
 <ol start="5">
 <li>Enter <strong>password</strong> into the Passphrase dialog box and click <strong>Next</strong></li>
 </ol>
@@ -572,10 +571,6 @@
 <li>Leave the default to allow updates if objects already exist in the system.   Click <strong>Next</strong></li>
 </ol>
 <p><img alt="" src="../_attachments/B2BiLab03-06-Accept-Update-Objects-Default.png"></p>
-<div class="admonition hint">
-<p class="admonition-title">Hint</p>
-<p>Note sure what to hint about here....if anything.....</p>
-</div>
 <ol start="8">
 <li>Use the <strong>double down arrow</strong> to select all of the TP (Trading Partner) Envelopes to be imported.  Note: There is actually no need to click on the individual resources being imported, if you use the double down arrow.  </li>
 </ol>
@@ -625,42 +620,33 @@
 <p class="admonition-title">Important</p>
 </div>
 <p>The demo instructions in the first lab in this course document how to setup Filezilla for a secure SFTP transfer into a B2B Integrator mailbox. If that lab has been completed, then the following additional steps are all that is required.  If that lab has not been completed, go back to do the Filezilla setup steps, then pickup here.  </p>
-<p>The SFTP Protocol, the Host and Port are the same as what was set up in the first lab demo instructions.   For this lab ensure that the User is <strong>partner1</strong> and the Password is <strong>password</strong>.  Finally, click on <strong>Connect</strong>.   </p>
-<p><img alt="" src="../_attachments/B2BiLab03-20-Edit-Filezilla.png"></p>
-<details class="question">
-<summary>BP quiz question</summary>
-<p>Not sure what question best here or even if the pop up is functioning.</p>
-</details>
 <ol>
-<li>In the top panel on Filezilla, check that a connection was made.  If there is a problem with the connection, it can be from the partner name or password being incorrect, the Host URL and port being incorrect,  or the SFTP adapter in B2B Integrator not being enabled properly.   As stated above, the setup steps in lab 1 must have been completed for lab 3 to work properly.  In the lower right panel, the Lab03 directory must be available.  It was created on the import of resources above.   The B2B integrator File Adapter looks into that "lab03" directory and runs any time a new file is added to it.   </li>
+<li>The SFTP Protocol, the Host and Port are the same as what was set up in the first lab demo instructions.   For this lab ensure that the User is <strong>partner1</strong> and the Password is <strong>password</strong>.  Finally, click on <strong>Connect</strong>.   </li>
+</ol>
+<p><img alt="" src="../_attachments/B2BiLab03-20-Edit-Filezilla.png"></p>
+<ol start="2">
+<li>In the top panel on Filezilla, check that a connection was made.  If there is a problem with the connection, it can be from the partner name or password being incorrect, the Host URL and port being incorrect,  or the SFTP adapter in B2B Integrator not being enabled properly.   As stated above, the setup steps in lab 1 must have been completed for Demo 3 to work properly.  In the lower right panel, the <strong>Lab03</strong> directory must be available.  It was created on the import of resources above.   The B2B integrator File Adapter looks into that "lab03" directory and runs any time a new file is added to it.   </li>
 </ol>
 <p><img alt="" src="../_attachments/B2BiLab03-21-Filezilla-Connect.png"></p>
-<ol start="2">
-<li>Click the down arrow at the right of <strong>Local Site</strong> and navigate to where the sample input file is for this lab.   It is named "Orders_inbound_testdata.txt".  </li>
-</ol>
-<p>The file name is not important but the specific contents are very important.  The initial process expects an EDI file, and then the translation maps will be expecting a specific usage of the EDIFACT ORDERS document for this partner.  The details of how B2B Integrator is setup to handle incoming EDI documents is fairly complex due to historical batching of many different partner, document type and even EDI standard that might be dropped into the "mailbox" / lab02 directory.  </p>
-<p><img alt="" src="../_attachments/B2BiLab03-22-Filezilla-Select-File.png"></p>
 <ol start="3">
+<li>Click the down arrow at the right of <strong>Local Site</strong> and navigate to where the sample input file is for this lab.  It should be in <strong>B2BiLevel3ImportsAndData/Demo3/Data</strong>. May look slightly different than the screenshot.  It is named <strong>Orders_inbound_testdata.txt</strong>.  </li>
+</ol>
+<p>The file name is not important but the specific contents are very important.  The initial process expects an EDI file, and then the translation maps will be expecting a specific usage of the EDIFACT ORDERS document for this partner.  The details of how B2B Integrator is setup to handle incoming EDI documents is fairly complex due to historical batching of many different partner, document type and even EDI standard that might be dropped into the "mailbox" / lab03 directory.  </p>
+<p><img alt="" src="../_attachments/B2BiLab03-22-Filezilla-Select-Fileb.png"></p>
+<ol start="4">
 <li>Before moving the file over to partner1's mailbox directory, <strong>right click</strong> on the file and choose to view it.   The top line of the file contains the sender and receiver identification, in this case 12345678:00 for the sender, and STERLINGSPORTS:00 for the receiver.  This "Envelope" structure is well known by EDI parsing software, so the receiver identifier is all that is needed to find the receiving party's preferred method of getting the data.   Close this view.  </li>
 </ol>
 <p><img alt="" src="../_attachments/B2BiLab03-24-Filezilla-Inspect-File.png"></p>
-<ol start="4">
+<ol start="5">
 <li>Open the <strong>lab03</strong> directory in the remote site</li>
 </ol>
 <p><img alt="" src="../_attachments/B2BiLab03-23-Filezilla-Open-Lab-03-Folder.png"></p>
-<ol start="5">
-<li>On the desktop itself choose the input file <strong>outb810.txt</strong> from the file system.  </li>
-</ol>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Generally, there may be something to note here later....placeholder kept.  </p>
-</div>
 <ol start="6">
-<li>Drag the input file over into the lab03 directory on the remote site</li>
+<li>Drag the <strong>Orders_inbound_testdata.txt</strong> input file over into the lab03 directory on the remote site</li>
 </ol>
 <p><img alt="" src="../_attachments/B2BiLab03-25-Filezilla-Drag-File-To-Folder.png"></p>
 <ol start="7">
-<li>The input file will be automatically picked up by the B2B Integrator process.  This specific process does not delete the file in the directory once it is processed.   In order to re-run the process, the file in lab03 directory on the remote site can be manually deleted via Fielzilla.   </li>
+<li>The input file will be automatically picked up by the B2B Integrator process.  This specific process does not delete the file in the directory once it is processed.   In order to re-run the process, the file in lab03 directory on the remote site can be manually deleted via Filezilla or just overwritten on the next submission.</li>
 </ol>
 <p><img alt="" src="../_attachments/B2BiLab03-26-Filezilla-File-Was-Uploaded.png"></p>
 <h2 id="view-the-business-process-results">View the Business Process Results</h2>
@@ -685,7 +671,7 @@
 <li>Back on the Monitor page the Business Processes are shown again.         Click on the numeric <strong>ID</strong> field associated with the EDIInboundFileSystemExtraction.   </li>
 </ol>
 <p><img alt="" src="../_attachments/B2BiLab03-34-B2Bi-Select-File-Extraction.png"></p>
-<ol>
+<ol start="6">
 <li>
 <p>To see the final output of the process, Click on <strong>Info</strong> in the last row under Document column.<br>
 <img alt="" src="../_attachments/B2BiLab03-35-B2Bi-Select-Translated-File.png"></p>
@@ -699,7 +685,7 @@
 <summary>BP quiz question</summary>
 <p>There is a quiz question somewhere around here....</p>
 </details>
-<p>This concludes lab03. </p></div>
+<p>This concludes Demo 3</p></div>
 
 
 
