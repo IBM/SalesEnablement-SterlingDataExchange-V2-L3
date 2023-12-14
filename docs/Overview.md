@@ -4,11 +4,13 @@ Before proceeding, take 10 minutes to listen to Thomas Limanek, B2B subject matt
 
 ![type:video](./_videos/B2BIntegratorExplained.mp4)
 
+This demonstration solution uses the IBM Certified Containers for IBM Sterling B2B Integrator version of B2Bi. This version provides enterprise-grade and security-rich product editions with integrated common software services for consistent-deployment lifecycle management, including easy install and configure options, management of upgrade and roll-back, scalability, and security.
+
 This course consists of four demos (and may be extended to others):
 
-The first demo is a secure partner-to-partner data exchange solution created using IBM Sterling Business to Business Integrator (B2Bi) and Sterling FileGateway (SFG). More specifically, this demonstration solution uses the IBM Certified Containers for IBM Sterling B2B Integrator version of B2Bi. This version provides enterprise-grade and security-rich product editions with integrated common software services for consistent-deployment lifecycle management, including easy install and configure options, management of upgrade and roll-back, scalability, and security.
+The first demo is a secure partner-to-partner data exchange solution created using IBM Sterling Business to Business Integrator (B2Bi) and Sterling FileGateway (SFG).  The setup process is detailed and fully hands on for the user to become familiar with the SterlingFIle Gateway terms such as Partner, Community, Routing Channel Template, and Routing Channel.  If the user is already familiar with SFG terms, a "Shortcut" import can be executed to save setup time. 
 
-The second demo shows how B2B Integrator processes outbound ANSI X12 EDI files.  A set of invoices in a single batch file is pushed into a business process.  The data is split out by different receivers and translated into ANSI X12 "810" documents via the envelope setups and a B2Bi map.  
+The second demo shows how B2B Integrator processes outbound ANSI X12 EDI files.  A set of invoices in a single batch file is pushed into a business process.  The data is split out by different receiving partners and translated into ANSI X12 "810" documents via the envelope setups and a B2Bi map.  
 
 The third demo shows how B2B Integrator handles incoming EDI data, in this case an EDIFACT "ORDERS" document.  A key here is that B2Bi receives the document into a general mailbox that is able to process an array of EDI standards.  The process is able to determine that it is an EDIFACT document, and processes the envelope as such.   The process matches the Identifiers in the document envelopes and is able to determine a translation map to run.  The data is then translated into a "flat file" application format.  
 
