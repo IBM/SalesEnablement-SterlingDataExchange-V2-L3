@@ -125,7 +125,7 @@ The file name is not important but the specific contents are very important.  Th
 ![](_attachments/B2BiLab04-22-SelectLocalFile.png)
 
 
-4.   1. Click open the **zip** directory in the remote site.   2. Drag the **TestData.zip** file into the opened zip directory.   3. The file will be deleted automatically after being pulled into the business process.  
+4.  **A.** Click open the **zip** directory in the remote site.   **B.** Drag the **TestData.zip** file into the opened **zip directory**.   **C.** The file will be deleted automatically after being pulled into the business process.  You may need to Refresh on Filezilla to see the change. 
    
 ![](_attachments/B2BiLab04-23-OpenZipDirAndDragFile.png)
 
@@ -134,7 +134,8 @@ The file has been transmitted by the Agent partner, into their zip folder for pr
 
 ## View the Business Process Results
 
-Now that the Business Process has run, the user can view detail of the process.  In B2B Integrator, the process takes several steps to determine the type of file / data standard being sent, the document type, the receiver, and then finally what translation map to run given the receiving partner and document type.  
+Now that the Business Process has run, the user can view detail of the process.  
+
 
 1.   To follow the process, click **Current Processes** under **Monitor** which is under **Business Process**
 
