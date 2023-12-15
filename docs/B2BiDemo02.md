@@ -5,7 +5,7 @@ Before proceeding, take 2 minutes to listen to an explanation of the setup and d
 ![type:video](./_videos/Level3Demo02.mp4)
 
 
-## Open the B2Bi dashboard and import the lab02 definition
+## Import Demo 2 resources
 
 1. In the B2B Integrator web console, click **Import/Export** under the **Resource Manager** under **Deployment** in the left-hand panel.
 
@@ -39,12 +39,9 @@ Before proceeding, take 2 minutes to listen to an explanation of the setup and d
 ![](_attachments/B2BiLab02-06-Select-All-Envelopes.png)
 
 
-In the latest {{offering.name}} release, new password policies have been set that require users to change their password the first time they authenticate. 
-
 8. The trading partner envelopes are shown as all selected. Click **Next** 
 
 ![](_attachments/B2BiLab02-07-All-Envelopes-Selected.png)
-
 
 
 9. Use the **double down arrow** to select all of the BP (Business Process) Definitions.  Then click **Next**
@@ -75,15 +72,12 @@ In the latest {{offering.name}} release, new password policies have been set tha
     That is the end of the setup necessary for the lab.   In a customer demo situation, that should usually get setup ahead of time so that only the following steps are needed to show the demo scenario itself.
 
 
-## Execute the lab02 demo
+## Execute Demo 2
 
 1.  Click **Business Processes** and then **Manager**. In the Search box enter **lab02** to search for the process name. 
 
 ![](_attachments/B2BiLab02-19-Enter-BP-Selection.png)
 
-
-??? question "BP quiz question"
-    Not sure what question best here ir even if the popp up is functioning.
 
 2. Click on the **Execution Manager** 
 
@@ -143,13 +137,13 @@ Now that the Business Process has run, the user can view detail of the process.
 
 ![](_attachments/B2BiLab02-31-Select-Final-Output.png)
 
-
 14.   The output ANSI X12 document is shown.   
+    
+??? question "BP quiz question"
+    There is a quiz question on the BP quiz from the results of the EDI file above
 
 ![](_attachments/B2BiLab02-32-View-Final-Output-as-EDI.png)
 
-??? question "BP quiz question"
-    There is a quiz question on the BP quiz from the results of the EDI file above
 
 
 This concludes Demo 2. 

@@ -618,8 +618,8 @@
 <h2 id="execute-the-demo-3">Execute the Demo 3</h2>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-</div>
 <p>The demo instructions in the first lab in this course document how to setup Filezilla for a secure SFTP transfer into a B2B Integrator mailbox. If that lab has been completed, then the following additional steps are all that is required.  If that lab has not been completed, go back to do the Filezilla setup steps, then pickup here.  </p>
+</div>
 <ol>
 <li>The SFTP Protocol, the Host and Port are the same as what was set up in the first lab demo instructions.   For this lab ensure that the User is <strong>partner1</strong> and the Password is <strong>password</strong>.  Finally, click on <strong>Connect</strong>.   </li>
 </ol>
@@ -631,7 +631,10 @@
 <ol start="3">
 <li>Click the down arrow at the right of <strong>Local Site</strong> and navigate to where the sample input file is for this lab.  It should be in <strong>B2BiLevel3ImportsAndData/Demo3/Data</strong>. May look slightly different than the screenshot.  It is named <strong>Orders_inbound_testdata.txt</strong>.  </li>
 </ol>
-<p>The file name is not important but the specific contents are very important.  The initial process expects an EDI file, and then the translation maps will be expecting a specific usage of the EDIFACT ORDERS document for this partner.  The details of how B2B Integrator is setup to handle incoming EDI documents is fairly complex due to historical batching of many different partner, document type and even EDI standard that might be dropped into the "mailbox" / lab03 directory.  </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The input file name is not important but the specific contents are very important.  The initial process expects an EDI file, and then the translation maps will be expecting a specific usage of the EDIFACT ORDERS document for this partner.  The details of how B2B Integrator is setup to handle incoming EDI documents is fairly complex due to historical batching of many different partner, document type and even EDI standard that might be dropped into the "mailbox" / lab03 directory.  </p>
+</div>
 <p><img alt="" src="../_attachments/B2BiLab03-22-Filezilla-Select-Fileb.png"></p>
 <ol start="4">
 <li>Before moving the file over to partner1's mailbox directory, <strong>right click</strong> on the file and choose to view it.   The top line of the file contains the sender and receiver identification, in this case 12345678:00 for the sender, and STERLINGSPORTS:00 for the receiver.  This "Envelope" structure is well known by EDI parsing software, so the receiver identifier is all that is needed to find the receiving party's preferred method of getting the data.   Close this view.  </li>
@@ -681,10 +684,6 @@
 </li>
 </ol>
 <p><img alt="" src="../_attachments/B2BiLab03-36-B2Bi-Show-Translated-File.png"></p>
-<details class="question">
-<summary>BP quiz question</summary>
-<p>There is a quiz question somewhere around here....</p>
-</details>
 <p>This concludes Demo 3</p></div>
 
 
