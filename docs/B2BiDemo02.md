@@ -1,4 +1,4 @@
-Example 2 simulates an application file containing multiple invoices in a proprietary format and splits it into two or three EDI ANSI X12 810 documents.   This chapter contains both the B2Bi Configuration import steps and the client demo steps (Demo 1 is split into 2 chapters). The import steps would likely not be part of a client demonstration.   The business process, maps, and envelopes are imported into B2B integrator.  
+Demo 2 simulates an application file containing multiple invoices in a proprietary format which gets splits it into multiple EDI ANSI X12 810 documents for two partners.   This chapter contains both the B2Bi Configuration import steps and the client demo steps (Demo 1 is split into 2 chapters). The import steps would likely not be part of a client demonstration.   The business process, maps, and envelopes are imported into B2B integrator.  
 
 Before proceeding, take 2 minutes to listen to an explanation of the setup and demo. 
 
@@ -15,7 +15,7 @@ Before proceeding, take 2 minutes to listen to an explanation of the setup and d
 
 ![](_attachments/B2BiLab02-01-Select-Import-XML.png)
 
-3. Select the **Lab02_All_Import.xml** in the **Demo2/AllConfig** sub folder of the B2BiLevel3ImportsAndData directory you downloaded  earlier. Based on historic purposes, the Import in the "Imports" folder for Demo 2 is only partial.    
+3. Select the **Lab02_All_Import.xml** in the **Demo2/AllConfig** sub folder of the **B2BiLevel3ImportsAndData** directory you downloaded  earlier. Based on historic purposes, the Import in the "Imports" folder for Demo 2 is only partial.    
 
 !!! Note
     If you have not downloaded the B2BiLevel3ImportsAndData zip file and expanded, see the explanation in the Optional: Shortcut Method section of Demo 1 Setup chapter.  
@@ -69,7 +69,7 @@ Before proceeding, take 2 minutes to listen to an explanation of the setup and d
 
 !!! important "Important"
 
-    That is the end of the setup necessary for the lab.   In a customer demo situation, that should usually get setup ahead of time so that only the following steps are needed to show the demo scenario itself.
+    That is the end of the setup necessary for the demo. In a client demo situation, that should usually get setup ahead of time so that only the following steps are needed to show the demo scenario itself.  It is possible that a client may want to understand how setup is done, so showing this import might be an option.
 
 
 ## Execute Demo 2
@@ -99,7 +99,7 @@ Before proceeding, take 2 minutes to listen to an explanation of the setup and d
 
     Generally, documents sent by the B2B Integrator host company to trading partners are considered "outbound" and ANSI X12 invoices are "810"s, hence the outb810 name.  This contents and formatting of this file is critical for the proper functioning of the business process.  The file format is typical of many flat file formatted application files.  The file is processed by two different maps in the Business Process.   The first finds the partner name off an internal supplier number in the application file.   The second translates the contents of the file into into an ANSI X12 EDI format.  is the end of the setup necessary for the lab.   In a customer demo situation, that should usually get setup ahead of time so that only the following steps are needed to show the demo scenario itself.
 
-![](_attachments/B2BiLab02-23-Select-Input-File-on-PC.png)
+![](_attachments/B2BiLab02-23-Select-Input-File-on-PCb.png)
 
 6.   Once the file is shown as selected next to **Choose File** click **GO!**
 
@@ -113,34 +113,34 @@ Before proceeding, take 2 minutes to listen to an explanation of the setup and d
 
 Now that the Business Process has run, the user can view detail of the process.  
 
-8.   Click **Current Processes** under **Monitor** which is under **Business Process**
+1.   Click **Current Processes** under **Monitor** which is under **Business Process**
 
 ![](_attachments/B2BiLab02-26-Select-Current-Processes.png)
 
-9. Click the **ID** next to the **Lab02_Process_Positional** step
+2. Click the **ID** next to the **Lab02_Process_Positional** step
     
 ![](_attachments/B2BiLab02-27-Select-Start-of-Process.png)
 
-10.   Inside the  **Lab02_Process_Positional** click on **info** in the first line under the **Document** column
+3.   Inside the  **Lab02_Process_Positional** click on **info** in the first line under the **Document** column
 
 ![](_attachments/B2BiLab02-28-Select-Input-File-in-Process.png)
 
-11.  The Input application file is shown.  This is the format coming out of an Accounts Receivable module most likely in an ERP system.  Close out of this screen.
+4.  The Input application file is shown.  This is the format coming out of an Accounts Receivable module most likely in an ERP system.  Close out of this screen and then click back on **Current Processes**
 
 ![](_attachments/B2BiLab02-29-View-Input-File-In-Process.png)
 
-12.  Click on the top process in the **Id** Column.
+5.  Since there are two partners receiving the invoices, there are two Outbound processes.  In the screenshot below, those are ID 1943 and 1942.   The IDs will be different on your demo, so just click on the top process in the **Id** Column.  You may want to repeat the next couple of steps for the second row as well, to show that the invoices were also packaged for the other partner. 
 
 ![](_attachments/B2BiLab02-30-Select-End-of-Process.png)
 
-13.  View the final output document by clicking on **info** in the last row under the **Document** column. 
+6.  View the final output document by clicking on **info** in the last row under the **Document** column. 
 
 ![](_attachments/B2BiLab02-31-Select-Final-Output.png)
 
-14.   The output ANSI X12 document is shown.   
+7.   The output ANSI X12 document is shown.   
     
 ??? question "BP quiz question"
-    There is a quiz question on the BP quiz from the results of the EDI file above
+    There is a quiz question on the BP quiz from the results of the EDI file below
 
 ![](_attachments/B2BiLab02-32-View-Final-Output-as-EDI.png)
 
