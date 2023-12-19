@@ -20,11 +20,7 @@ The following steps must be performed before delivering the demonstration. These
     
     While the setup is given step by step below, it may be helpful to watch a video of the installation process happening.  The Terminal window and the documentation are shown side by side.  <a href="https://ibm.seismic.com/Link/Content/DC8M6VX94gqgf8cDJmF3q69fCPWG" target="_blank">Video with diagrams showing architecture</a>.
 
-    Explanation of the Sterling B2B Integrator Certified Container edition deployment technical essentials course. This course gives a deeper explanation of B2Bi installation on Openshift Containers.  
-    
-        <a href="https://ibm.seismic.com/Link/Content/DC8b7fRR2DJ928TQP2HFHCm7cCVV" target="_blank">Explanation of the course </a>.  
-
-        <a href="https://learn.ibm.com/course/view.php?id=12418" target="_blank">B2Bi Certified Container Course on IBM Learning</a>.      
+    Explanation of the Sterling B2B Integrator Certified Container edition deployment technical essentials course. This course gives a deeper explanation of B2Bi installation on Openshift Containers.  <a href="https://ibm.seismic.com/Link/Content/DC8b7fRR2DJ928TQP2HFHCm7cCVV" target="_blank">Explanation of the course </a>.  <a href="https://learn.ibm.com/course/view.php?id=12418" target="_blank">B2Bi Certified Container Course on IBM Learning</a>.      
 
     
 ## Access the OpenShift web console and verify the OpenShift cluster's health

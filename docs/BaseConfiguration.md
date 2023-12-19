@@ -198,9 +198,7 @@ The default **SFTP Server Listen Port** must be changed to the B2Bi service port
 
 ## Download Imports and Inputs zip file
 
-1.  To setup to have all of the Import files and Data Input files, download the **B2Bi Imports and Data** Zip File by right click on the links, and click **Save link as** to a local directory.  
-
-  <a href="https://raw.githubusercontent.com/IBM/SalesEnablement-SterlingDataExchange-V2-L3/main/tools/B2BiLevel3ImportsAndData.zip" target="_blank">B2BiDataAndImports.zip</a>
+1.  Download all of the Import files and Data Input files contained in the  **B2Bi Level 3 Imports and Data** Zip File by right click on the links, and click **Save link as** to a local directory.  <a href="https://raw.githubusercontent.com/IBM/SalesEnablement-SterlingDataExchange-V2-L3/main/tools/B2BiLevel3ImportsAndData.zip" target="_blank">B2BiLevel3ImportsAndData.zip</a>
 
 2. UnZip the file into a directory.  Should look similar to this.  
 
