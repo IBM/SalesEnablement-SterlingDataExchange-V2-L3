@@ -4,12 +4,29 @@ At this point, all users should have completed the steps in the {{learningplan.n
 
 !!! warning 
 
-    Note, some screen captures below will show the name of the ITZ environment as **OpenShift Cluster (VMware on IBM Cloud) - UPI**. This demonstration script now uses the ITZ environment **OpenShift Cluster (VMware on IBM Cloud) - UPI**. 
+    Note, some screen captures below will show the name of the ITZ environment as **OpenShift Cluster (VMware on IBM Cloud) - IPI**. This demonstration script now uses the ITZ environment **OpenShift Cluster (VMware on IBM Cloud) - UPI**. 
 
 ![](_attachments/TZReady-2.png)
 
 The following steps must be performed before delivering the demonstration. These steps should be performed well in advance of starting an actual client demonstration as it will take approximately **90 minutes** for all steps to complete.
 
+!!! tip Optional videos to help the beginner and advanced learner  
+
+    Additional videos were created to support this version of the Level 3 training.  These are optional, but learners new to B2Bi and/or Openshift containers may find the first two very helpful.  The last video can be watched after the installation steps of this course are completed, to give a fuller explanation of B2Bi on Openshift Containers.
+    
+    This demonstration guide assumes a Red Hat OpenShift cluster running on VMware on IBM Cloud environment provisioned in IBM Technology Zone (ITZ) <a href="https://techzone.ibm.com/my/reservations/create/63a3a25a3a4689001740dbb3" target="_blank">here</a>.
+
+    There are many environments to keep track of which may be confusing initially.  A Powerpoint presentation was created with diagrams showing how the various components relate to each other and what is provisioned as the setup progresses. <a href="https://ibm.seismic.com/Link/Content/DC82f27CJJJ6T82JcGm9BTBV3pQ8" target="_blank">Seven minute video with diagrams showing architecture</a>.
+    
+    While the setup is given step by step below, it may be helpful to watch a video of the installation process happening.  The Terminal window and the documentation are shown side by side.  <a href="https://ibm.seismic.com/Link/Content/DC8M6VX94gqgf8cDJmF3q69fCPWG" target="_blank">Video with diagrams showing architecture</a>.
+
+    Explanation of the Sterling B2B Integrator Certified Container edition deployment technical essentials course. This course gives a deeper explanation of B2Bi installation on Openshift Containers.  
+    
+        <a href="https://ibm.seismic.com/Link/Content/DC8b7fRR2DJ928TQP2HFHCm7cCVV" target="_blank">Explanation of the course </a>.  
+
+        <a href="https://learn.ibm.com/course/view.php?id=12418" target="_blank">B2Bi Certified Container Course on IBM Learning</a>.      
+
+    
 ## Access the OpenShift web console and verify the OpenShift cluster's health
 
 1. From the <a href="https://techzone.ibm.com/my/reservations" target="_blank">ITZ My Reservations page</a>, click the tile for your OpenShift cluster reservation (must be in the **Ready** state).
