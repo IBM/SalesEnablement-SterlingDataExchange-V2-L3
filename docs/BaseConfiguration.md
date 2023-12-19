@@ -196,16 +196,19 @@ The default **SFTP Server Listen Port** must be changed to the B2Bi service port
 
 ![](_attachments/B2BiSFTPAdapterStatus-3.png)
 
+41. Click the **Logout** link to log out of the **B2Bi dashboard**.
+
+![](_attachments/B2BiLogout-2.png)
+
 ## Download Imports and Inputs zip file
 
-1.  Download all of the Import files and Data Input files contained in the  **B2Bi Level 3 Imports and Data** Zip File by right click on the links, and click **Save link as** to a local directory.  <a href="https://raw.githubusercontent.com/IBM/SalesEnablement-SterlingDataExchange-V2-L3/main/tools/B2BiLevel3ImportsAndData.zip" target="_blank">B2BiLevel3ImportsAndData.zip</a>
+A set of Imports and data input files for all of the demos are available in a single zip file.   Before proceeding with the demo scenarios, download the zip file for use later on.  
 
-2. UnZip the file into a directory.  Should look similar to this.  
+1.  Download all of the demo Import files and Data Input files contained in the  **B2Bi Level 3 Imports and Data** Zip File by right clicking on the following:  <a href="https://raw.githubusercontent.com/IBM/SalesEnablement-SterlingDataExchange-V2-L3/main/tools/B2BiLevel3ImportsAndData.zip" target="_blank">B2BiLevel3ImportsAndData.zip</a>  Then **Save link as** to a local directory. 
+
+2. UnZip the file into a directory.  Should appear as follows.  
 
 ![](_attachments/B2BiLab01-02-DirectoryOfImports.png)
 
-3. Click the **Logout** link to log out of the **B2Bi dashboard**.
-
-![](_attachments/B2BiLogout-2.png)
 
 Now that the SFTP adapter is running and the inputs are downloaded, it time to move to the next step in the configuration of B2Bi.

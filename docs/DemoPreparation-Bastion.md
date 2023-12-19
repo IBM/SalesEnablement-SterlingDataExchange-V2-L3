@@ -10,7 +10,7 @@ At this point, all users should have completed the steps in the {{learningplan.n
 
 The following steps must be performed before delivering the demonstration. These steps should be performed well in advance of starting an actual client demonstration as it will take approximately **90 minutes** for all steps to complete.
 
-!!! tip Optional videos to help the beginner and advanced learner  
+??? tip Optional videos to help the beginner and advanced learner  
 
     Additional videos were created to support this version of the Level 3 training.  These are optional, but learners new to B2Bi and/or Openshift containers may find the first two very helpful.  The last video can be watched after the installation steps of this course are completed, to give a fuller explanation of B2Bi on Openshift Containers.
     
