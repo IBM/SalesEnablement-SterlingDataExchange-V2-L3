@@ -6,7 +6,7 @@ Before proceeding, take 10 minutes to listen to Thomas Limanek, B2B subject matt
 
 This demonstration solution uses the IBM Certified Containers for IBM Sterling B2B Integrator version of B2Bi. This version provides enterprise-grade and security-rich product editions with integrated common software services for consistent-deployment lifecycle management, including easy install and configure options, management of upgrade and roll-back, scalability, and security.
 
-This course consists of four demos (and may be extended to others):
+This course consists of four demos (and may be extended to others).
 
 The first demo is a secure partner-to-partner data exchange solution created using IBM Sterling Business to Business Integrator (B2Bi) and Sterling FileGateway (SFG).  The setup process is detailed and fully hands on for the user to become familiar with the SterlingFIle Gateway terms such as Partner, Community, Routing Channel Template, and Routing Channel.  If the user is already familiar with SFG terms, a "Shortcut" import can be executed to save setup time. 
 
@@ -16,7 +16,7 @@ The third demo shows how B2B Integrator handles incoming EDI data, in this case 
 
 The fourth demo focuses on Sterling FileGateway processes.  Unlike the first SFG demo, the detailed setup steps are skipped and a quicker Import process is used.  The demo shows how a zip file is sent by an "Agent" into the solution where it is unzipped, and then routed to specific directories based on the file extension. 
 
-Learn more about B2Bi <a href="https://www.ibm.com/products/b2b-integrator" target="_blank">here</a> and access the B2Bi product documentation <a href="https://www.ibm.com/docs/en/b2b-integrator?topic=SS3JSW/sb2b_home/product_welcome_kc_b2bi.html" target="_blank">here</a>. This demonstration solution uses Secure File Transfer Protocol (SFTP) to allow two partners to exchange files in a secure manner.
+Learn more about B2Bi <a href="https://www.ibm.com/products/b2b-integrator" target="_blank">here</a> and access the B2Bi product documentation <a href="https://www.ibm.com/docs/en/b2b-integrator/6.1.2?topic=overview-introduction-sterling-b2b-integrator" target="_blank">here</a>. This demonstration solution uses Secure File Transfer Protocol (SFTP) to allow two partners to exchange files in a secure manner.
 
 To create this demonstration solution, the containerized version of B2Bi will be deployed to a Red Hat OpenShift Cluster in IBM Technology Zone.
 
