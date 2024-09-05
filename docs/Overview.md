@@ -6,7 +6,7 @@ Before proceeding, take 10 minutes to listen to Thomas Limanek, B2B subject matt
 
 This demonstration solution uses the IBM Certified Containers for IBM Sterling B2B Integrator version of B2Bi. This version provides enterprise-grade and security-rich product editions with integrated common software services for consistent-deployment lifecycle management, including easy install and configure options, management of upgrade and roll-back, scalability, and security.
 
-This course consists of four demos (and may be extended to others).
+This course consists of four demos.
 
 The first demo is a secure partner-to-partner data exchange solution created using IBM Sterling Business to Business Integrator (B2Bi) and Sterling FileGateway (SFG).  The setup process is detailed and fully hands on for the user to become familiar with the SterlingFIle Gateway terms such as Partner, Community, Routing Channel Template, and Routing Channel.  If the user is already familiar with SFG terms, a "Shortcut" import can be executed to save setup time. 
 
