@@ -13,7 +13,7 @@ In this chapter, learn how to configure a Secure File Transfer Protocol (SFTP) a
 ??? question "BP quiz question"
     Several BP quiz questions will come from the **OpenShift web console**. When taking the BP quiz make sure the ITZ environment is still active and keep this demonstration script open.
 
-3. Notice all the routes that are currently defined in the b2bi Project, there are 15 of them
+3. Notice all the routes that are currently defined in the b2bi Project, there are approximately 15 of them
 
 ![](_attachments/OSB2BiAllRoutes.png)
 
