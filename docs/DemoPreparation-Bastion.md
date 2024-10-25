@@ -597,7 +597,15 @@ cat env.sh
 
 ## Install B2Bi in the OpenShift cluster
 
-43. Deploy the B2Bi related containers on OpenShift.
+
+
+43. Due to a change September 2024 in how TechZone provisions the environments and users, enter this line.
+
+```
+sudo chown itzuser /usr/local/bin/helm
+```
+
+    Deploy the B2Bi related containers on OpenShift.
 
 ```
 ./deploy_b2bi.sh
