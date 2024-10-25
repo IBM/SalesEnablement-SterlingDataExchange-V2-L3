@@ -1092,9 +1092,13 @@ service/mq-web created</p>
 </div>
 <h2 id="install-b2bi-in-the-openshift-cluster">Install B2Bi in the OpenShift cluster</h2>
 <ol start="43">
-<li>Deploy the B2Bi related containers on OpenShift.</li>
+<li>Due to a change September 2024 in how TechZone provisions the environments and users, enter this line.</li>
 </ol>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>./deploy_b2bi.sh
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>sudo chown itzuser /usr/local/bin/helm
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Deploy the B2Bi related containers on OpenShift.
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>./deploy_b2bi.sh
 </code></pre></div>
 <div class="admonition warning">
 <p class="admonition-title">This will take approximately 70 minutes</p>

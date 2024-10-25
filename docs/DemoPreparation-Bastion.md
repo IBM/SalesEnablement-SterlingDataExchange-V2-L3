@@ -598,18 +598,15 @@ cat env.sh
 ## Install B2Bi in the OpenShift cluster
 
 
-
 43. Due to a change September 2024 in how TechZone provisions the environments and users, enter this line.
-
 ```
 sudo chown itzuser /usr/local/bin/helm
 ```
-
-    Deploy the B2Bi related containers on OpenShift.
+44. Deploy the B2Bi related containers on OpenShift.
 
 ```
 ./deploy_b2bi.sh
-```
+```    
 
 !!! warning "This will take approximately 70 minutes"
     This script will take approximately 70 minutes to complete.
@@ -684,13 +681,14 @@ Do not close the **ssh** session or the terminal window until the command comple
 
 ## Verify all three B2Bi **pods** are running in OpenShift
 
-44. Return to the OpenShift web console window in your browser.
-45. Click the **Home** menu on the right-hand menu bar, and then click **Projects**.
+45. Return to the OpenShift web console window in your browser.
+    
+46. Click the **Home** menu on the right-hand menu bar, and then click **Projects**.
 
 ![](_attachments/OpenShiftProjects.png)
 
-46. Click the **b2bi** project link.
-47. Click the **Pods** link under **Inventory**.
+47. Click the **b2bi** project link.
+48. Click the **Pods** link under **Inventory**.
 
 ![](_attachments/OpenShiftB2BiInventory.png)
 
