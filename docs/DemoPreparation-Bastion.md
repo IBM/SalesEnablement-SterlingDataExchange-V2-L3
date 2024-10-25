@@ -599,9 +599,11 @@ cat env.sh
 
 
 43. Due to a change September 2024 in how TechZone provisions the environments and users, enter this line.
+
 ```
 sudo chown itzuser /usr/local/bin/helm
 ```
+
 44. Deploy the B2Bi related containers on OpenShift.
 
 ```
