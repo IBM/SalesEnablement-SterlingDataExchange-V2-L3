@@ -2,15 +2,24 @@ This demonstration guide assumes a Red Hat OpenShift cluster running on VMware o
 
 These parameters are in the Yourlearning Activity, but repeated here.
 
-IMPORTANT: When completing the registration form in ITZ use these values:
+**IMPORTANT: When completing the registration form in ITZ use these values:**
+
 Purpose: Practice/Self-Education
+
 Purpose Description: Level 3 training
+
 Preferred Geography: choose location nearest to you
+
 OpenShift Version (required): 4.13 (possible 4.14 if 4.13 no longer available)
+
 Enable FIPS Security: No
+
 Enable nested hardware virtualization on workers: No
+
 Storage: ODF - 1 TB
+
 Worker Node Count: 3
+
 Worker Node Flavor: 16 vCPU x 64GB - 300 GB ephemeral storage
 
 At this point, all users should have completed the steps in the {{learningplan.name}} learning plan to reserve the Red Hat OpenShift environment as described in the {{learningplan.name}} <a href="https://ibm.seismic.com/Link/Content/DC8JQcd2PWDTR8fB2FmjmV3cPC8P" target="_blank">Introduction video</a>. Before proceeding, validate that the reservation has been fully provisioned and is in the **Ready** state in ITZ. If not, please complete those steps before proceeding.
