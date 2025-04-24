@@ -5,7 +5,7 @@ This demonstration guide assumes a Red Hat OpenShift cluster running on VMware o
 **Purpose:** Practice/Self-Education
 **Purpose Description:** Level 3 training
 **Preferred Geography:** choose location nearest to you
-**OpenShift Version (required):** 4.13 (possible 4.14 if 4.13 no longer available)
+**OpenShift Version (required):** 4.13 (Contact course owner if 4.13 no longer is an option)
 **Enable FIPS Security:** No
 **Enable nested hardware virtualization on workers:** No
 **Storage:** ODF - 1 TB
