@@ -1,4 +1,4 @@
-This demonstration guide assumes a Red Hat OpenShift cluster running on VMware on IBM Cloud environment provisioned in IBM Technology Zone (ITZ) <a href="https://techzone.ibm.com/my/reservations/create/63a3a25a3a4689001740dbb3" target="_blank">here</a>.
+This demonstration guide assumes a Red Hat OpenShift cluster running on VMware on IBM Cloud environment provisioned in IBM Technology Zone (ITZ) <a href="https://techzone.ibm.com/my/reservations/create/682e34b21963bc77f28910f4" target="_blank">here</a>.
 
 **IMPORTANT - IMPORTANT - IMPORTANT: When completing the registration form in ITZ use these values:**
 
